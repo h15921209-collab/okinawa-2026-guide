@@ -44,7 +44,7 @@
   <rect x="110" y="366" width="215" height="110" rx="12" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
   <text x="217" y="398" text-anchor="middle" fill="#713f12" font-size="18" font-weight="900">🥇【第1步】下車先進這！</text>
   <text x="217" y="426" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• 投 ¥100 退幣寄物櫃塞外套</text>
-  <text x="217" y="452" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• 服務台借推車＆最後退稅</text>
+  <text x="217" y="452" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• 服務台拿中文樓層圖＆退稅</text>
 
   <rect x="340" y="366" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
   <text x="457" y="405" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">🛒 3COINS+plus 雜貨</text>
@@ -54,5 +54,5 @@
   <rect x="590" y="366" width="185" height="110" rx="12" fill="#bae6fd" stroke="#0284c7" stroke-width="4"/>
   <text x="682" y="398" text-anchor="middle" fill="#0c4a6e" font-size="18" font-weight="900">🚌【第5步】16:10集合</text>
   <text x="682" y="426" text-anchor="middle" fill="#0369a1" font-size="16" font-weight="900">16:20 直達歌町站巴士</text>
-  <text x="682" y="452" text-anchor="middle" fill="#b91c1c" font-size="15" font-weight="900">（全家現金 ¥750）</text>
+  <text x="682" y="452" text-anchor="middle" fill="#b91c1c" font-size="15" font-weight="900">（2大2小現金 ¥900）</text>
 </svg>
