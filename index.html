@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" class="font-scale-lg">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#0284c7">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="沖繩親子攻略">
-  <title>2026 沖繩 4天3夜不自駕親子隨身寶典｜12/17-12/20</title>
+  <title>2026 沖繩 4天3夜不自駕親子隨身寶典｜12/17-12/20（大字清晰版）</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+    /* 基礎字級全面放大：預設採用特大舒適字級，支援三段式切換 */
+    html.font-scale-md { font-size: 17px; }
+    html.font-scale-lg { font-size: 19.5px; } /* 預設：特大清晰字體 */
+    html.font-scale-xl { font-size: 22px; }   /* 超大長輩/戶外強光模式 */
+
     body {
       font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: #f1f5f9;
-      padding-bottom: 88px;
+      padding-bottom: 108px;
+      line-height: 1.7;
       -webkit-tap-highlight-color: transparent;
     }
     .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -31,56 +37,75 @@
       color: #0284c7 !important;
       font-weight: 900;
     }
+    .font-btn-active {
+      background-color: #fbbf24 !important;
+      color: #0f172a !important;
+      font-weight: 900;
+    }
     .card-shadow {
-      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
     }
-    @keyframes pulse-soft {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-    }
-    .animate-pulse-soft { animation: pulse-soft 2.5s infinite; }
   </style>
 </head>
-<body class="text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+<body class="text-slate-900 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Top Sticky Font-Size & Quick Bar -->
+  <div class="bg-slate-900 text-white px-3.5 py-2 sticky top-0 z-40 shadow-md border-b border-slate-700">
+    <div class="max-w-xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-1.5 text-sm font-bold text-amber-300">
+        <i class="fa-solid fa-text-height"></i>
+        <span>字體大小：</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <button onclick="setFontScale('md')" id="fbtn-md" class="px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-sm font-bold border border-slate-600 transition">
+          標準大
+        </button>
+        <button onclick="setFontScale('lg')" id="fbtn-lg" class="font-btn-active px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-sm font-bold border border-slate-600 transition">
+          特大(預設)
+        </button>
+        <button onclick="setFontScale('xl')" id="fbtn-xl" class="px-3 py-1 rounded-lg bg-slate-800 text-slate-200 text-sm font-bold border border-slate-600 transition">
+          超大A+
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Top Hero Banner -->
-  <header class="relative bg-gradient-to-br from-sky-700 via-cyan-600 to-teal-500 text-white pt-5 pb-6 px-4 shadow-lg overflow-hidden">
-    <div class="absolute -right-8 -top-8 w-40 h-40 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
-    <div class="absolute -left-10 -bottom-10 w-36 h-36 rounded-full bg-amber-300/20 blur-xl pointer-events-none"></div>
-
+  <header class="relative bg-gradient-to-br from-sky-700 via-cyan-700 to-teal-600 text-white pt-5 pb-6 px-4 shadow-lg overflow-hidden">
     <div class="max-w-xl mx-auto relative z-10">
-      <div class="flex items-center justify-between gap-2 mb-2">
-        <span class="inline-flex items-center gap-1.5 bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full shadow-sm">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <span class="inline-flex items-center gap-1.5 bg-amber-400 text-slate-950 text-sm font-black px-3.5 py-1 rounded-full shadow-sm">
           <i class="fa-solid fa-plane-departure"></i> 2026/12/17(四) - 12/20(日)
         </span>
-        <span id="countdown-badge" class="bg-slate-900/40 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full border border-white/20">
+        <span id="countdown-badge" class="bg-slate-900/50 backdrop-blur-md text-white text-sm font-bold px-3.5 py-1 rounded-full border border-white/25">
           載入倒數中...
         </span>
       </div>
 
-      <h1 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug mb-1">
-        沖繩 4天3夜 不自駕親子寶典
+      <h1 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug mb-1.5">
+        沖繩 4天3夜 親子隨身寶典
       </h1>
-      <p class="text-xs sm:text-sm text-sky-100 font-medium mb-4">
-        👨‍👩‍👧‍👦 勝穩 ‧ Mia ‧ 群祐(11歲) ‧ 妹妹(大班)｜🏨 歌町站・自由花園酒店連住
+      <p class="text-base text-sky-100 font-bold mb-4">
+        👨‍👩‍👧‍👦 勝穩 ‧ Mia ‧ 群祐(11歲) ‧ 妹妹(大班)<br>
+        🏨 連住：歌町站・自由花園酒店 (Libre Garden)
       </p>
 
       <!-- Quick Action Bar in Header -->
-      <div class="grid grid-cols-4 gap-2 text-center text-xs font-bold">
-        <button onclick="openTaxiModal('リブレガーデンホテル', '那覇市おもろまち 4-17-28 (歌町站旁)', '回飯店：自由花園酒店')" class="bg-white/15 hover:bg-white/25 active:scale-95 transition backdrop-blur-md rounded-xl p-2.5 border border-white/25 flex flex-col items-center gap-1">
-          <i class="fa-solid fa-hotel text-amber-300 text-base"></i>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center text-sm font-black">
+        <button onclick="openTaxiModal('リブレガーデンホテル', '那覇市おもろまち 4-17-28 (歌町站旁)', '回飯店：自由花園酒店')" class="bg-white/20 hover:bg-white/30 active:scale-95 transition backdrop-blur-md rounded-2xl p-3 border border-white/30 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-hotel text-amber-300 text-lg"></i>
           <span>回飯店字卡</span>
         </button>
-        <button onclick="switchMainView('jpcard')" class="bg-white/15 hover:bg-white/25 active:scale-95 transition backdrop-blur-md rounded-xl p-2.5 border border-white/25 flex flex-col items-center gap-1">
-          <i class="fa-solid fa-language text-emerald-300 text-base"></i>
+        <button onclick="switchMainView('jpcard')" class="bg-white/20 hover:bg-white/30 active:scale-95 transition backdrop-blur-md rounded-2xl p-3 border border-white/30 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-language text-emerald-300 text-lg"></i>
           <span>手指日文卡</span>
         </button>
-        <button onclick="switchMainView('calc')" class="bg-white/15 hover:bg-white/25 active:scale-95 transition backdrop-blur-md rounded-xl p-2.5 border border-white/25 flex flex-col items-center gap-1">
-          <i class="fa-solid fa-calculator text-pink-200 text-base"></i>
+        <button onclick="switchMainView('calc')" class="bg-white/20 hover:bg-white/30 active:scale-95 transition backdrop-blur-md rounded-2xl p-3 border border-white/30 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-calculator text-pink-200 text-lg"></i>
           <span>退稅/匯率算</span>
         </button>
-        <a href="https://vjw-lp.digital.go.jp/zh-hant/" target="_blank" rel="noopener" class="bg-white/15 hover:bg-white/25 active:scale-95 transition backdrop-blur-md rounded-xl p-2.5 border border-white/25 flex flex-col items-center gap-1">
-          <i class="fa-solid fa-qrcode text-sky-200 text-base"></i>
+        <a href="https://vjw-lp.digital.go.jp/zh-hant/" target="_blank" rel="noopener" class="bg-white/20 hover:bg-white/30 active:scale-95 transition backdrop-blur-md rounded-2xl p-3 border border-white/30 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-qrcode text-sky-200 text-lg"></i>
           <span>開啟 VJW</span>
         </a>
       </div>
@@ -91,199 +116,182 @@
   <main class="max-w-xl mx-auto px-3.5 pt-4 space-y-5">
 
     <!-- ================= VIEW 1: 行程總覽與每日時間軸 (ITINERARY) ================= -->
-    <section id="view-itinerary" class="space-y-4">
+    <section id="view-itinerary" class="space-y-5">
 
-      <!-- Day Selector Pills (Sticky under top) -->
-      <div class="sticky top-2 z-30 bg-white/95 backdrop-blur-md p-1.5 rounded-2xl shadow-md border border-slate-200/80 flex gap-1.5 overflow-x-auto no-scrollbar">
-        <button onclick="switchDay('day1')" id="btn-day1" class="day-tab tab-active shrink-0 px-3.5 py-2 rounded-xl text-xs font-black transition">
-          Day 1 <span class="block text-[10px] font-normal opacity-90">12/17 (四)</span>
+      <!-- Day Selector Pills (Sticky under font bar) -->
+      <div class="sticky top-12 z-30 bg-white/95 backdrop-blur-md p-2 rounded-2xl shadow-md border border-slate-300 grid grid-cols-5 gap-1.5 text-center">
+        <button onclick="switchDay('day1')" id="btn-day1" class="day-tab tab-active py-2.5 px-1 rounded-xl text-sm font-black transition leading-tight">
+          Day 1<span class="block text-xs font-bold opacity-95 mt-0.5">12/17四</span>
         </button>
-        <button onclick="switchDay('day2')" id="btn-day2" class="day-tab text-slate-600 hover:bg-slate-100 shrink-0 px-3.5 py-2 rounded-xl text-xs font-black transition">
-          Day 2 <span class="block text-[10px] font-normal opacity-80">12/18 (五)</span>
+        <button onclick="switchDay('day2')" id="btn-day2" class="day-tab text-slate-700 hover:bg-slate-100 py-2.5 px-1 rounded-xl text-sm font-black transition leading-tight">
+          Day 2<span class="block text-xs font-bold opacity-80 mt-0.5">12/18五</span>
         </button>
-        <button onclick="switchDay('day3')" id="btn-day3" class="day-tab text-slate-600 hover:bg-slate-100 shrink-0 px-3.5 py-2 rounded-xl text-xs font-black transition">
-          Day 3 <span class="block text-[10px] font-normal opacity-80">12/19 (六)</span>
+        <button onclick="switchDay('day3')" id="btn-day3" class="day-tab text-slate-700 hover:bg-slate-100 py-2.5 px-1 rounded-xl text-sm font-black transition leading-tight">
+          Day 3<span class="block text-xs font-bold opacity-80 mt-0.5">12/19六</span>
         </button>
-        <button onclick="switchDay('day4')" id="btn-day4" class="day-tab text-slate-600 hover:bg-slate-100 shrink-0 px-3.5 py-2 rounded-xl text-xs font-black transition">
-          Day 4 <span class="block text-[10px] font-normal opacity-80">12/20 (日)</span>
+        <button onclick="switchDay('day4')" id="btn-day4" class="day-tab text-slate-700 hover:bg-slate-100 py-2.5 px-1 rounded-xl text-sm font-black transition leading-tight">
+          Day 4<span class="block text-xs font-bold opacity-80 mt-0.5">12/20日</span>
         </button>
-        <button onclick="switchDay('events')" id="btn-events" class="day-tab text-rose-600 bg-rose-50 hover:bg-rose-100 shrink-0 px-3.5 py-2 rounded-xl text-xs font-black transition">
-          🎄 限定活動 <span class="block text-[10px] font-normal">12/17-20</span>
+        <button onclick="switchDay('events')" id="btn-events" class="day-tab text-rose-700 bg-rose-50 hover:bg-rose-100 py-2.5 px-1 rounded-xl text-sm font-black transition leading-tight">
+          🎄活動<span class="block text-xs font-bold mt-0.5">限定</span>
         </button>
       </div>
 
       <!-- Weather / Clothing Tip Banner -->
-      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-3.5 flex items-start gap-3 text-xs text-amber-900">
-        <i class="fa-solid fa-wind text-amber-500 text-lg mt-0.5"></i>
+      <div class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-4 flex items-start gap-3 text-base text-amber-950">
+        <i class="fa-solid fa-wind text-amber-600 text-xl mt-1 shrink-0"></i>
         <div>
-          <span class="font-black">12月中旬沖繩穿搭防呆（17°C～22°C）：</span>
-          雖不寒冷但<strong>海風（東北季風）強勁</strong>！去 PARCO 海邊與奧武山公園溜滑梯務必採<strong>「短袖/薄長袖＋防風連帽外套」</strong>洋蔥式穿法，隨身帶小毛巾幫孩子擦汗。
+          <span class="font-black">12月中旬沖繩穿搭提醒（17°C～22°C）：</span><br>
+          雖不寒冷但<strong>海風強勁</strong>！去 PARCO 海邊與奧武山公園溜滑梯請採<strong>「短袖/薄長袖＋防風連帽外套」</strong>洋蔥式穿法，隨身帶小毛巾幫孩子擦汗。
         </div>
       </div>
 
       <!-- ==================== DAY 1 ==================== -->
-      <div id="content-day1" class="day-content space-y-4">
-        <div class="bg-gradient-to-r from-sky-600 to-blue-700 text-white rounded-2xl p-4 shadow-md">
-          <div class="flex justify-between items-center">
-            <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full">Day 1 ‧ 12月17日 (週四)</span>
-            <span class="text-xs font-bold">預估花費：¥9,150</span>
+      <div id="content-day1" class="day-content space-y-5">
+        <div class="bg-gradient-to-r from-sky-700 to-blue-800 text-white rounded-2xl p-5 shadow-md">
+          <div class="flex flex-wrap justify-between items-center gap-2">
+            <span class="text-sm font-black bg-white/20 px-3 py-1 rounded-full">Day 1 ‧ 12月17日 (週四)</span>
+            <span class="text-sm font-black bg-amber-400 text-slate-950 px-3 py-1 rounded-full">預估：¥9,150</span>
           </div>
-          <h2 class="text-lg font-black mt-1.5">高雄出發 ➔ 抵達那霸 ➔ 新都心深夜美食與超市半價尋寶</h2>
-          <p class="text-xs text-sky-100 mt-1">重點：VJW 截圖快速通關、單軌 QR 感應、21:25 零壓力深夜海鮮居酒屋＋23:00 超市半價熟食草莓</p>
+          <h2 class="text-xl font-black mt-2.5 leading-snug">高雄出發 ➔ 抵達那霸 ➔ 新都心深夜美食與超市半價尋寶</h2>
+          <p class="text-sm text-sky-100 mt-1.5 font-medium">重點：VJW 截圖快速通關、單軌 QR 感應、21:25 零壓力深夜海鮮居酒屋＋23:00 超市半價熟食草莓</p>
         </div>
 
         <!-- Step 1.1 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-sky-100 text-sky-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">15:00 鳳山出發 ➔ 17:30 起飛</span>
-              <h3 class="text-base font-black text-slate-900">✈️ 高雄小港機場 (KHH) 台灣虎航 IT728</h3>
-            </div>
-            <span class="text-xs font-bold text-slate-500 shrink-0">車資約 $300</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-sky-100 text-sky-900 text-sm font-black px-3 py-1 rounded-lg">15:00 鳳山出發 ➔ 17:30 起飛</span>
+            <span class="text-sm font-black text-slate-600">計程車約 $300</span>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            <strong>【執行步驟】：</strong>週四下午帶兩小與大行李箱，直接用 Uber / Yoxi 叫車從鳳山直達小港機場國際線大廳（約 20-25 分鐘）。<strong>15:30 抵達虎航櫃檯</strong>完成託運。<br>
-            <strong>【機上提醒】：</strong>因已填妥 Visit Japan Web 並截圖 4 張 QR Code，機上空服員發放紙本入境卡時<strong>不需索取填寫</strong>。
-          </p>
+          <h3 class="text-lg font-black text-slate-900">✈️ 高雄小港機場 (KHH) 台灣虎航 IT728</h3>
+          <div class="text-base text-slate-700 space-y-2">
+            <p><strong>【執行步驟】：</strong>週四下午帶兩小與大行李箱，直接用 Uber / Yoxi 叫車從鳳山直達小港機場國際線大廳（車程約 20-25 分鐘）。<strong>15:30 抵達虎航櫃檯</strong>完成託運。</p>
+            <p><strong>【機上提醒】：</strong>因已填妥 Visit Japan Web 並截圖 4 張 QR Code，機上空服員發放紙本入境卡時<strong>不需索取填寫</strong>。</p>
+          </div>
         </div>
 
         <!-- Step 1.2 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-sky-100 text-sky-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">19:55 降落那霸 ➔ 21:15 入住</span>
-              <h3 class="text-base font-black text-slate-900">🚝 單軌電車直達「歌町站」＆ 自由花園酒店</h3>
-            </div>
-            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-lg shrink-0">單軌 ¥750</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3.5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-sky-100 text-sky-900 text-sm font-black px-3 py-1 rounded-lg">19:55 降落那霸 ➔ 21:15 入住</span>
+            <span class="text-sm font-black text-emerald-800 bg-emerald-100 px-3 py-1 rounded-lg">單軌 ¥750</span>
           </div>
-          <div class="text-xs text-slate-600 space-y-2 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🚝 單軌電車直達「歌町站」＆ 自由花園酒店</h3>
+          <div class="text-base text-slate-700 space-y-2.5">
             <p><strong>1. 機場到單軌：</strong>領行李走出國際線大廳 ➔ 順著「Monorail / ゆいレール」指標搭電梯上 2 樓 ➔ 走戶外空橋至單軌「那霸機場站」。</p>
             <p><strong>2. 買票防呆：</strong>售票機右上角點「繁體中文」➔ 左側點選人數<strong>「2大1小」</strong>（大班妹妹免費免算！）➔ 點選「おもろまち（歌町站，車程 19 分鐘）」。</p>
-            <p class="bg-rose-50 text-rose-800 p-2.5 rounded-xl border border-rose-200 font-medium">
-              <i class="fa-solid fa-circle-exclamation mr-1"></i><strong>進站極重要：</strong>單軌車票是<strong>「QR Code 面朝下」平貼在閘門藍色感應窗</strong>，嗶一聲即通過，千萬別把票塞進機器細縫！
-            </p>
+            <div class="bg-rose-50 text-rose-900 p-3.5 rounded-xl border-2 border-rose-300 font-bold">
+              <i class="fa-solid fa-circle-exclamation mr-1 text-rose-600"></i><strong>進站極重要：</strong>單軌車票是<strong>「QR Code 面朝下」平貼在閘門藍色感應窗</strong>，嗶一聲即通過，千萬別把票塞進機器細縫！
+            </div>
             <p><strong>3. 抵達飯店：</strong>歌町站出閘門往<strong>左前方（新都心方向出口）</strong>，沿寬敞天橋直走 3 分鐘搭手扶梯下 1 樓，即達 <strong>Libre Garden Hotel（自由花園酒店）</strong>。</p>
           </div>
-          <div class="flex flex-wrap gap-2 pt-1">
-            <a href="https://www.google.com/maps/search/?api=1&query=Libre+Garden+Hotel+Okinawa" target="_blank" class="flex-1 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+            <a href="https://www.google.com/maps/search/?api=1&query=Libre+Garden+Hotel+Okinawa" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white text-base font-black py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 shadow">
               <i class="fa-solid fa-location-dot"></i> 導航至自由花園酒店
             </a>
-            <button onclick="openTaxiModal('リブレガーデンホテル', '那覇市おもろまち 4-17-28', '自由花園酒店 (歌町站旁)')" class="bg-slate-800 text-white text-xs font-bold py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-taxi text-amber-400"></i> 司機字卡
+            <button onclick="openTaxiModal('リブレガーデンホテル', '那覇市おもろまち 4-17-28', '自由花園酒店 (歌町站旁)')" class="bg-slate-800 text-white text-base font-black py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow">
+              <i class="fa-solid fa-taxi text-amber-400"></i> 放大司機字卡
             </button>
           </div>
         </div>
 
         <!-- Step 1.3 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border-l-4 border-amber-500 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-amber-100 text-amber-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">21:25 晚餐（雙選一・零時間壓力）</span>
-              <h3 class="text-base font-black text-slate-900">🍶 飯店旁 3 分鐘：魚萬海產濱燒 或 ぱいかじ琉球料理</h3>
-            </div>
-            <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-lg shrink-0">預估 ¥6,000</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border-l-8 border-amber-500 space-y-3.5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-amber-100 text-amber-900 text-sm font-black px-3 py-1 rounded-lg">21:25 晚餐（雙選一・零時間壓力）</span>
+            <span class="text-sm font-black text-amber-800 bg-amber-50 px-3 py-1 rounded-lg">預估 ¥6,000</span>
           </div>
-          <div class="text-xs text-slate-600 space-y-2 leading-relaxed">
-            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-              <div class="font-black text-slate-900 text-sm mb-1">🔥 推薦 1：濱燒北海道 魚萬（おもろまち駅前店）</div>
+          <h3 class="text-lg font-black text-slate-900">🍶 飯店旁 3 分鐘：魚萬海產濱燒 或 ぱいかじ琉球料理</h3>
+          <div class="text-base text-slate-700 space-y-3">
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-300 space-y-1.5">
+              <div class="font-black text-slate-900 text-lg">🔥 推薦 1：濱燒北海道 魚萬（おもろまち駅前店）</div>
               <p>就在自由花園酒店同一排、歌町站旁（步行 3 分鐘），<strong>營業至深夜 00:00 後</strong>！可在桌邊現烤活扇貝、蟹味噌甲羅燒，還有生魚片拼盤、握壽司，以及孩子最愛的炸雞塊、薯條、茶碗蒸、烏龍麵，班機再晚都不怕！</p>
-              <div class="mt-2 flex gap-2">
-                <a href="https://www.google.com/maps/search/?api=1&query=濱焼北海道魚萬+おもろまち駅前店" target="_blank" class="text-sky-600 font-bold underline"><i class="fa-solid fa-map-pin"></i> Google Maps 位置</a>
-              </div>
+              <a href="https://www.google.com/maps/search/?api=1&query=濱焼北海道魚萬+おもろまち駅前店" target="_blank" class="inline-block mt-1 text-sky-700 font-black underline"><i class="fa-solid fa-map-pin mr-1"></i>開啟 Google Maps 位置</a>
             </div>
-            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-              <div class="font-black text-slate-900 text-sm mb-1">🌺 推薦 2：沖繩之台所 ぱいかじ (Paikaji) 沖繩本店</div>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-300 space-y-1.5">
+              <div class="font-black text-slate-900 text-lg">🌺 推薦 2：沖繩之台所 ぱいかじ (Paikaji) 沖繩本店</div>
               <p>飯店步行 5 分鐘，營業至 23:00（L.O. 22:00）。傳統琉球古民家氛圍、有寬敞榻榻米包廂，必點海葡萄、阿古豬、苦瓜炒蛋、沖繩麵。</p>
-              <div class="mt-2 flex gap-2">
-                <a href="https://www.google.com/maps/search/?api=1&query=沖縄の台所+ぱいかじ+沖縄本店" target="_blank" class="text-sky-600 font-bold underline"><i class="fa-solid fa-map-pin"></i> Google Maps 位置</a>
-              </div>
+              <a href="https://www.google.com/maps/search/?api=1&query=沖縄の台所+ぱいかじ+沖縄本店" target="_blank" class="inline-block mt-1 text-sky-700 font-black underline"><i class="fa-solid fa-map-pin mr-1"></i>開啟 Google Maps 位置</a>
             </div>
           </div>
         </div>
 
         <!-- Step 1.4 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-2.5">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-purple-100 text-purple-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">22:15 飯後尋寶（營業至 23:00！）</span>
-              <h3 class="text-base font-black text-slate-900">🛒 San-A Naha Main Place 1F 食品館（半價熟食＆草莓）</h3>
-            </div>
-            <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-lg shrink-0">預估 ¥1,500</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-purple-100 text-purple-900 text-sm font-black px-3 py-1 rounded-lg">22:15 飯後尋寶（營業至 23:00！）</span>
+            <span class="text-sm font-black text-purple-800 bg-purple-50 px-3 py-1 rounded-lg">預估 ¥1,500</span>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🛒 San-A Naha Main Place 1F 食品館（半價熟食＆草莓）</h3>
+          <p class="text-base text-slate-700">
             <strong>【為什麼改逛這家】：</strong>對面 Apple Town 超市 22:00 就關門，但飯店步行 5 分鐘的 <strong>Main Place 1樓超市營業到 23:00</strong>（商場外還有聖誕點燈）！<br>
             <strong>【省錢秘訣】：</strong>21:30 後生魚片、炸物熟食全面貼上 <strong>5～7 折特價貼紙</strong>，順便買沖繩縣產鮮奶、當季日本草莓與隔天早餐回飯店！
           </p>
-          <a href="https://www.google.com/maps/search/?api=1&query=San-A+Naha+Main+Place" target="_blank" class="block w-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-2 rounded-xl text-center">
-            <i class="fa-solid fa-location-dot text-rose-500"></i> 導航至 San-A Naha Main Place
+          <a href="https://www.google.com/maps/search/?api=1&query=San-A+Naha+Main+Place" target="_blank" class="block w-full bg-slate-800 hover:bg-slate-900 text-white text-base font-black py-3 rounded-xl text-center shadow">
+            <i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> 導航至 San-A Naha Main Place
           </a>
         </div>
       </div>
 
       <!-- ==================== DAY 2 ==================== -->
-      <div id="content-day2" class="day-content hidden space-y-4">
-        <div class="bg-gradient-to-r from-teal-600 to-emerald-700 text-white rounded-2xl p-4 shadow-md">
-          <div class="flex justify-between items-center">
-            <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full">Day 2 ‧ 12月18日 (週五)</span>
-            <span class="text-xs font-bold">預估花費：¥23,250</span>
+      <div id="content-day2" class="day-content hidden space-y-5">
+        <div class="bg-gradient-to-r from-teal-700 to-emerald-800 text-white rounded-2xl p-5 shadow-md">
+          <div class="flex flex-wrap justify-between items-center gap-2">
+            <span class="text-sm font-black bg-white/20 px-3 py-1 rounded-full">Day 2 ‧ 12月18日 (週五)</span>
+            <span class="text-sm font-black bg-amber-400 text-slate-950 px-3 py-1 rounded-full">預估：¥23,250</span>
           </div>
-          <h2 class="text-lg font-black mt-1.5">泊港漁市場海鮮 ➔ PARCO CITY 專家級攻略 ➔ 目利きの銀次</h2>
-          <p class="text-xs text-teal-100 mt-1">重點：早午餐批發價生魚片、中午 PARCO 現炸天婦羅(明太子吃到飽)/親子丼、3F 雙卡牌店、16:20 接駁車、木桶生魚片居酒屋</p>
+          <h2 class="text-xl font-black mt-2.5 leading-snug">泊港漁市場海鮮 ➔ PARCO CITY 專家級攻略 ➔ 目利きの銀次</h2>
+          <p class="text-sm text-teal-100 mt-1.5 font-medium">重點：早午餐批發價生魚片、中午 PARCO 現炸天婦羅(明太子吃到飽)/親子丼、3F 雙卡牌店、16:20 接駁車、木桶生魚片居酒屋</p>
         </div>
 
         <!-- Step 2.1 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-teal-100 text-teal-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">09:30 - 10:50 早午餐</span>
-              <h3 class="text-base font-black text-slate-900">🐟 泊港漁市場（泊いゆまち）批發價海鮮</h3>
-            </div>
-            <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded-lg shrink-0">計程車 ¥1,000<br>餐費 ¥5,000</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3.5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-teal-100 text-teal-900 text-sm font-black px-3 py-1 rounded-lg">09:30 - 10:50 早午餐</span>
+            <span class="text-sm font-black text-teal-800 bg-teal-50 px-3 py-1 rounded-lg">計程車 ¥1,000 / 餐 ¥5,000</span>
           </div>
-          <div class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🐟 泊港漁市場（泊いゆまち）批發價海鮮</h3>
+          <div class="text-base text-slate-700 space-y-2">
             <p><strong>【前往方式】：</strong>在飯店前大馬路揮手攔計程車，出示下方司機字卡直達漁市場門口（車程約 8 分鐘，四人搭計程車比公車更快更划算）。</p>
             <p><strong>👍【大師推薦】：</strong>平日早上 9:30 魚貨最齊全且不擠！必買<strong>黑鮪魚中腹/大腹生魚片、海膽、大干貝、甜蝦丼</strong>（價格僅國際通一半）。不吃生食的大班妹妹可買<strong>現烤扇貝、焗烤大蝦、厚燒玉子燒、炸魚塊</strong>。</p>
-            <p class="text-rose-700 bg-rose-50 p-2 rounded-lg border border-rose-200">
-              <strong>⚠️【避雷提醒】：</strong>市場內無冷氣座位（僅立食桌與戶外座位），且<strong>多數攤位只收現金</strong>，請備妥千元鈔與濕紙巾！
-            </p>
+            <div class="text-rose-900 bg-rose-50 p-3.5 rounded-xl border-2 border-rose-200 font-bold">
+              ⚠️【避雷提醒】：市場內無冷氣座位（僅立食桌與戶外座位），且<strong>多數攤位只收現金</strong>，請備妥千元鈔與濕紙巾！
+            </div>
           </div>
-          <div class="flex gap-2">
-            <a href="https://www.google.com/maps/search/?api=1&query=泊いゆまち" target="_blank" class="flex-1 bg-teal-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至泊港漁市場
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <a href="https://www.google.com/maps/search/?api=1&query=泊いゆまち" target="_blank" class="bg-teal-600 text-white text-base font-black py-3 px-4 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至泊港漁市場
             </a>
-            <button onclick="openTaxiModal('泊いゆまち（とまりいゆまち）', '那覇市港町 1-1-18', '泊港漁市場 (Tomari Iyumachi)')" class="bg-slate-800 text-white text-xs font-bold py-2.5 px-3 rounded-xl">
-              <i class="fa-solid fa-taxi text-amber-400"></i> 司機字卡
+            <button onclick="openTaxiModal('泊いゆまち（とまりいゆまち）', '那覇市港町 1-1-18', '泊港漁市場 (Tomari Iyumachi)')" class="bg-slate-800 text-white text-base font-black py-3 px-4 rounded-xl shadow">
+              <i class="fa-solid fa-taxi text-amber-400 mr-1"></i> 放大司機字卡
             </button>
           </div>
         </div>
 
         <!-- Step 2.2 PARCO CITY MASTER GUIDE -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border-2 border-sky-500 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-sky-600 text-white text-xs font-black px-2.5 py-0.5 rounded-md mb-1">11:00 - 16:20 專家級省力全攻略</span>
-              <h3 class="text-base font-black text-slate-900">🛍️ SAN-A 浦添西海岸 PARCO CITY</h3>
-            </div>
-            <span class="text-xs font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-lg shrink-0">去程計程車 ¥1,300</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border-4 border-sky-500 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-sky-600 text-white text-sm font-black px-3 py-1 rounded-lg">11:00 - 16:20 專家級省力全攻略</span>
+            <span class="text-sm font-black text-sky-800 bg-sky-100 px-3 py-1 rounded-lg">計程車 ¥1,300</span>
           </div>
-
-          <p class="text-xs text-slate-600">
-            <strong>【前往方式】：</strong>從泊港漁市場外搭計程車直達 PARCO CITY 1樓中央大門（車程約 12 分鐘）。館內正展出<strong>全沖繩最大級室內巨型聖誕樹</strong>！
+          <h3 class="text-xl font-black text-slate-900">🛍️ SAN-A 浦添西海岸 PARCO CITY</h3>
+          <p class="text-base text-slate-700">
+            <strong>【前往方式】：</strong>從泊港漁市場外搭計程車直達 PARCO CITY 1樓中央大門（約 12 分鐘）。館內正展出<strong>全沖繩最大級室內巨型聖誕樹</strong>！
           </p>
 
           <!-- Sub-steps inside PARCO CITY -->
-          <div class="space-y-2.5 text-xs">
-            <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3">
-              <div class="font-black text-emerald-950 mb-1">📍 第一步 (11:15)：1F 綠區「零負重」置物櫃 ＆ 免費租推車</div>
-              <p class="text-emerald-900 leading-relaxed">
+          <div class="space-y-3.5 text-base">
+            <div class="bg-emerald-50 border-2 border-emerald-300 rounded-xl p-4">
+              <div class="font-black text-emerald-950 text-lg mb-1">📍 第一步 (11:15)：1F 綠區「零負重」置物櫃 ＆ 免費租推車</div>
+              <p class="text-emerald-950">
                 從 1F 中央大門進入立刻<strong>往左走（Green Zone 綠區）</strong>，找服務台後方的<strong>「退幣式置物櫃」</strong>把重背包與外套鎖進去（投 ¥100 取物退還＝免費）。並在 1F 服務台幫妹妹<strong>免費租借兒童推車</strong>（同樣退幣），妹妹免走路又能掛戰利品！<br>
-                <span class="text-rose-700 font-bold">⚠️ 務必用手機拍下置物櫃編號與所在顏色區（綠/橘/藍區）！</span>
+                <span class="text-rose-700 font-black block mt-1">⚠️ 務必用手機拍下置物櫃編號與所在顏色區（綠/橘/藍區）！</span>
               </p>
             </div>
 
-            <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-3">
-              <div class="font-black text-indigo-950 mb-1">📍 第二步 (11:25-12:45)：3F 群祐卡牌雙聖地 ＆ 妹妹樂園（趁午餐尖峰前先逛）</div>
-              <ul class="list-disc pl-4 space-y-1 text-indigo-900 leading-relaxed">
+            <div class="bg-indigo-50 border-2 border-indigo-300 rounded-xl p-4">
+              <div class="font-black text-indigo-950 text-lg mb-1.5">📍 第二步 (11:25-12:45)：3F 群祐卡牌雙聖地 ＆ 妹妹樂園</div>
+              <ul class="list-disc pl-5 space-y-2 text-indigo-950">
                 <li><strong>Hobby Zone（3F 橘區）：</strong>專業模型與卡牌店，滿滿寶可夢 PTCG 擴充包、海賊王卡牌與專屬卡套（建議給群祐固定預算如 ¥2,000 自己精算）。</li>
                 <li><strong>HMV トレカショップ（3F HMV書店內）：</strong>🔥<strong>2025/4 全新開幕</strong>的寶可夢/卡牌專賣店，提供大量單卡與二手卡尋寶！</li>
                 <li><strong>namco 遊戲中心 ＆ 吉卜力/森林家族（3F）：</strong>有最新 <strong>Pokémon Frienda 機台</strong>（備妥 ¥100 硬幣）；旁邊就是<strong>橡子共和國（吉卜力）</strong>與<strong>森林家族</strong>讓妹妹逛。</li>
@@ -291,291 +299,265 @@
               </ul>
             </div>
 
-            <div class="bg-amber-50 border border-amber-200 rounded-xl p-3">
-              <div class="font-black text-amber-950 mb-1">📍 第三步 (12:45)：熱騰騰熟食午餐三選一（已排除吃過的 A&W 與敘敘苑！）</div>
-              <div class="space-y-2 text-amber-900 leading-relaxed mt-1.5">
-                <div class="bg-white p-2.5 rounded-lg border border-amber-200">
-                  <span class="font-black text-rose-600">🥇 首選 1（老饕最推）：3F「博多天ぷら たかお（博多天婦羅 Takao）」</span>
-                  <p class="mt-0.5">九州排隊名店！師傅現炸後逐道送上桌前瀝油盤（炸蝦、炸白身魚、炸豚肉、炸雞腿、野菜），永遠酥脆燙口！內用<strong>「昆布明太子 ＆ 自家製淺漬蔬菜 無限吃到飽」</strong>、黑烏龍茶免費喝，配白飯超下飯、小孩也超愛（午間定食約 ¥1,300-1,800）。</p>
+            <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4">
+              <div class="font-black text-amber-950 text-lg mb-2">📍 第三步 (12:45)：熱騰騰熟食午餐三選一（已排除吃過的 A&W 與敘敘苑）</div>
+              <div class="space-y-3 text-amber-950">
+                <div class="bg-white p-3.5 rounded-xl border border-amber-300">
+                  <div class="font-black text-rose-700 text-lg">🥇 首選 1（老饕最推）：3F「博多天ぷら たかお（博多天婦羅 Takao）」</div>
+                  <p class="mt-1">九州排隊名店！師傅現炸後逐道送上桌前瀝油盤（炸蝦、炸白身魚、炸豚肉、炸雞腿、野菜），永遠酥脆燙口！內用<strong>「昆布明太子 ＆ 自家製淺漬蔬菜 無限吃到飽」</strong>、黑烏龍茶免費喝，配白飯超下飯、小孩也超愛（午間定食約 ¥1,300-1,800）。</p>
                 </div>
-                <div class="bg-white p-2.5 rounded-lg border border-amber-200">
-                  <span class="font-black text-amber-700">🥈 首選 2（小孩最愛）：2F「鳥と卵の専門店 鳥玉」</span>
-                  <p class="mt-0.5">沖繩在地起家名店！新鮮朝產雞蛋製作的「黃金濃厚滑蛋親子丼」、「自家製塔塔醬南蠻炸雞定食」與「高湯厚燒玉子燒」（約 ¥1,100-1,400）。</p>
+                <div class="bg-white p-3.5 rounded-xl border border-amber-300">
+                  <div class="font-black text-amber-800 text-lg">🥈 首選 2（小孩最愛）：2F「鳥と卵の専門店 鳥玉」</div>
+                  <p class="mt-1">沖繩在地起家名店！新鮮朝產雞蛋製作的「黃金濃厚滑蛋親子丼」、「自家製塔塔醬南蠻炸雞定食」與「高湯厚燒玉子燒」（約 ¥1,100-1,400）。</p>
                 </div>
-                <div class="bg-white p-2.5 rounded-lg border border-amber-200">
-                  <span class="font-black text-sky-700">🥉 首選 3（海景共享）：2F 海景美食街「極味や鐵板和牛漢堡排 ＋ 一風堂拉麵 ＋ きじむなぁ歐姆蛋塔可飯」</span>
-                  <p class="mt-0.5">坐大片西海岸落地窗前，各自點喜歡的熱食共享，餐後吃 <strong>Blue Seal 冰淇淋</strong>！</p>
+                <div class="bg-white p-3.5 rounded-xl border border-amber-300">
+                  <div class="font-black text-sky-800 text-lg">🥉 首選 3（海景共享）：2F 海景美食街「極味や鐵板和牛漢堡排 ＋ 一風堂拉麵 ＋ きじむなぁ歐姆蛋塔可飯」</div>
+                  <p class="mt-1">坐大片西海岸落地窗前，各自點喜歡的熱食共享，餐後吃 <strong>Blue Seal 冰淇淋</strong>！</p>
                 </div>
               </div>
             </div>
 
-            <div class="bg-pink-50 border border-pink-200 rounded-xl p-3">
-              <div class="font-black text-pink-950 mb-1">📍 第四步 (13:45-15:55)：2F & 3F 媽媽 Mia 服飾血拚黃金動線</div>
-              <ul class="list-disc pl-4 space-y-1 text-pink-900 leading-relaxed">
+            <div class="bg-pink-50 border-2 border-pink-300 rounded-xl p-4">
+              <div class="font-black text-pink-950 text-lg mb-1.5">📍 第四步 (13:45-15:55)：2F & 3F 媽媽 Mia 服飾血拚黃金動線</div>
+              <ul class="list-disc pl-5 space-y-2 text-pink-950">
                 <li><strong>3F 橘區 (Orange Zone)：</strong>全沖繩最大 <strong>UNIQLO</strong>（沖繩限定 Orion 啤酒 UT 最齊全，<strong>店內直接免稅</strong>結帳極快）＋ 最高等級 <strong>ABC-MART GRAND STAGE</strong>（稀有配色 Nike/NB）。</li>
                 <li><strong>2F 綠區 (Green Zone)：</strong>超大型 <strong>GU</strong>（台灣 6-7 折＋<strong>店內直接免稅</strong>）、<strong>ZARA</strong>、日系質感女裝 <strong>URBAN RESEARCH DOORS</strong>、<strong>Sense of Place</strong>。</li>
                 <li><strong>1F：</strong><strong>3COINS+plus</strong>（日系平價雜貨）與 <strong>EDION 愛電王</strong>（Switch 遊戲與模型）。</li>
-                <li class="text-rose-700 font-bold">⚠️ 退稅避雷：UNIQLO、GU、ZARA 直接在店內付免稅價（10%全退免排隊）；貼綠色 Tax-Free 標籤的店鋪須去 1F 綜合櫃台退稅（會扣 1.55% 手續費）。</li>
+                <li class="text-rose-700 font-black">⚠️ 退稅避雷：UNIQLO、GU、ZARA 直接在店內付免稅價（10%全退免排隊）；貼綠色 Tax-Free 標籤的店鋪須去 1F 綜合櫃台退稅（會扣 1.55% 手續費）。</li>
               </ul>
             </div>
 
-            <div class="bg-slate-900 text-white rounded-xl p-3">
-              <div class="font-black text-amber-300 mb-1">🚌 第五步 (16:05 集合)：搭 16:20 直達接駁公車回歌町站！</div>
-              <p class="text-slate-200 leading-relaxed">
+            <div class="bg-slate-900 text-white rounded-xl p-4">
+              <div class="font-black text-amber-300 text-lg mb-1.5">🚌 第五步 (16:05 集合)：搭 16:20 直達接駁公車回歌町站！</div>
+              <p class="text-slate-100">
                 16:05 回 1F 綠區取回置物櫃物品並還推車 ➔ 走出 1F 中央大門外巴士站牌，找<strong>「カリー観光（Karry 觀光）」</strong>接駁車直達「おもろまち駅前（歌町站）」。<br>
-                <span class="text-amber-300 font-bold">★ 強烈建議搭 16:20 班次</span>（避開 17:00 後國道 58 號下班塞車！下一班為 17:30）。<br>
-                <span class="text-rose-300 font-bold">⚠️ 僅收現金（不可刷交通卡）：</span>大人 ¥300×2 ＋ 小學生 ¥150 ＝ <strong>全家僅 ¥750</strong>！
+                <span class="text-amber-300 font-black block mt-1">★ 強烈建議搭 16:20 班次（避開 17:00 後國道 58 號下班塞車！下一班為 17:30）。</span>
+                <span class="text-rose-300 font-black block mt-1">⚠️ 僅收現金（不可刷交通卡）：大人 ¥300×2 ＋ 小學生 ¥150 ＝ 全家僅 ¥750！</span>
               </p>
             </div>
           </div>
 
-          <div class="flex gap-2 pt-1">
-            <a href="https://www.google.com/maps/search/?api=1&query=SAN-A+Urasoe+West+Coast+PARCO+CITY" target="_blank" class="flex-1 bg-sky-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至 PARCO CITY
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+            <a href="https://www.google.com/maps/search/?api=1&query=SAN-A+Urasoe+West+Coast+PARCO+CITY" target="_blank" class="bg-sky-600 text-white text-base font-black py-3 px-4 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至 PARCO CITY
             </a>
-            <button onclick="openTaxiModal('サンエー浦添西海岸 パルコシティ', '浦添市西洲 3-1-1', 'PARCO CITY 購物中心')" class="bg-slate-800 text-white text-xs font-bold py-2.5 px-3 rounded-xl">
-              <i class="fa-solid fa-taxi text-amber-400"></i> 司機字卡
+            <button onclick="openTaxiModal('サンエー浦添西海岸 パルコシティ', '浦添市西洲 3-1-1', 'PARCO CITY 購物中心')" class="bg-slate-800 text-white text-base font-black py-3 px-4 rounded-xl shadow">
+              <i class="fa-solid fa-taxi text-amber-400 mr-1"></i> 放大司機字卡
             </button>
           </div>
         </div>
 
         <!-- Step 2.3 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-rose-100 text-rose-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">19:00 晚餐（行前必先網路訂位！）</span>
-              <h3 class="text-base font-black text-slate-900">🍺 目利きの銀次 新都心本舖（巨型木酒桶居酒屋）</h3>
-            </div>
-            <span class="text-xs font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-lg shrink-0">預估 ¥8,000</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3.5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-rose-100 text-rose-900 text-sm font-black px-3 py-1 rounded-lg">19:00 晚餐（行前必先網路訂位！）</span>
+            <span class="text-sm font-black text-rose-800 bg-rose-50 px-3 py-1 rounded-lg">預估 ¥8,000</span>
           </div>
-          <div class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🍺 目利きの銀次 新都心本舖（巨型木酒桶居酒屋）</h3>
+          <div class="text-base text-slate-700 space-y-2">
             <p><strong>【週五夜間加碼】：</strong>18:00–19:00 若有空檔，飯店步行 10 分鐘的沖繩縣立博物館正舉辦週五限定<strong>「おきみゅーナイトミュージアム（夜間博物館）」</strong>可順道散步拍照。</p>
             <p><strong>👍【必點名物】：</strong>招牌<strong>「生魚片五點盛合（刺身の桶盛り 5点）」只要 ¥500</strong>（小木桶浮誇上桌）！還有<strong>海膽醬烤牡蠣、明太子烤飯糰、阿古豬煎餃</strong>。</p>
             <p><strong>⚠️【避雷與備案】：</strong>每人有約 ¥350 座位小菜費（お通し）。12/18(五) 是日本忘年會旺季，務必行前於 HotPepper / Klook 預約；若無位置則從歌町搭單軌 1 站至「古島站」Across Plaza 2F 吃<strong>「無添くら寿司（藏壽司）」</strong>抽扭蛋！</p>
           </div>
-          <div class="flex gap-2">
-            <a href="https://www.google.com/maps/search/?api=1&query=目利きの銀次+新都心本舗" target="_blank" class="flex-1 bg-rose-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至目利きの銀次
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <a href="https://www.google.com/maps/search/?api=1&query=目利きの銀次+新都心本舗" target="_blank" class="bg-rose-600 text-white text-base font-black py-3 px-4 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至目利きの銀次
             </a>
-            <button onclick="openTaxiModal('目利きの銀次 新都心本舗', '那覇市天久 1-9-19', '目利きの銀次 新都心本舖')" class="bg-slate-800 text-white text-xs font-bold py-2.5 px-3 rounded-xl">
-              <i class="fa-solid fa-taxi text-amber-400"></i> 司機字卡
+            <button onclick="openTaxiModal('目利きの銀次 新都心本舗', '那覇市天久 1-9-19', '目利きの銀次 新都心本舖')" class="bg-slate-800 text-white text-base font-black py-3 px-4 rounded-xl shadow">
+              <i class="fa-solid fa-taxi text-amber-400 mr-1"></i> 放大司機字卡
             </button>
           </div>
         </div>
       </div>
 
       <!-- ==================== DAY 3 ==================== -->
-      <div id="content-day3" class="day-content hidden space-y-4">
-        <div class="bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-2xl p-4 shadow-md">
-          <div class="flex justify-between items-center">
-            <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full">Day 3 ‧ 12月19日 (週六)</span>
-            <span class="text-xs font-bold">預估花費：¥19,980</span>
+      <div id="content-day3" class="day-content hidden space-y-5">
+        <div class="bg-gradient-to-r from-amber-600 to-orange-700 text-white rounded-2xl p-5 shadow-md">
+          <div class="flex flex-wrap justify-between items-center gap-2">
+            <span class="text-sm font-black bg-white/20 px-3 py-1 rounded-full">Day 3 ‧ 12月19日 (週六)</span>
+            <span class="text-sm font-black bg-slate-900 text-amber-300 px-3 py-1 rounded-full">預估：¥19,980</span>
           </div>
-          <h2 class="text-lg font-black mt-1.5">牧志市場銅板美食 ➔ 駿河屋卡牌＆買滑草板 ➔ 奧武山公園 ➔ 傑克牛排＆聖誕燈海</h2>
-          <p class="text-xs text-amber-100 mt-1">重點：2F 免代客料理費定食、駿河屋 PTCG 聖地、大創 ¥110 滑草板、Ryubo 熱可樂餅野餐、久茂地聖誕點燈</p>
+          <h2 class="text-xl font-black mt-2.5 leading-snug">牧志市場銅板美食 ➔ 駿河屋卡牌＆買滑草板 ➔ 奧武山公園 ➔ 傑克牛排＆聖誕燈海</h2>
+          <p class="text-sm text-amber-100 mt-1.5 font-medium">重點：2F 免代客料理費定食、駿河屋 PTCG 聖地、大創 ¥110 滑草板、Ryubo 熱可樂餅野餐、久茂地聖誕點燈</p>
         </div>
 
         <!-- Step 3.1 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-amber-100 text-amber-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">09:30 - 12:00 早午餐</span>
-              <h3 class="text-base font-black text-slate-900">🍙 豬肉蛋飯糰 ‧ 吳屋銅板天婦羅 ‧ 第一牧志公設市場</h3>
-            </div>
-            <span class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-lg shrink-0">單軌 ¥680<br>餐費 ¥4,500</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3.5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-amber-100 text-amber-900 text-sm font-black px-3 py-1 rounded-lg">09:30 - 12:00 早午餐</span>
+            <span class="text-sm font-black text-amber-800 bg-amber-50 px-3 py-1 rounded-lg">單軌 ¥680 / 餐 ¥4,500</span>
           </div>
-          <div class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🍙 豬肉蛋飯糰 ‧ 吳屋銅板天婦羅 ‧ 第一牧志公設市場</h3>
+          <div class="text-base text-slate-700 space-y-2">
             <p><strong>【前往方式】：</strong>從「歌町站」搭單軌至「牧志站」，沿國際通左轉綠色遮雨棚「市場本通」直走 5 分鐘。</p>
             <p><strong>👍【老饕省錢吃法（免付每人 ¥550 代客料理費！）】：</strong></p>
-            <ul class="list-disc pl-4 space-y-1">
+            <ul class="list-disc pl-5 space-y-2">
               <li><strong>第一口：</strong>市場旁買現做 <strong>Pork Tamago Onigiri（豬肉蛋飯糰 牧志市場本店）</strong>炸蝦口味。</li>
               <li><strong>第二口：</strong>市場本通內買在地人排隊的<strong>「吳屋天婦羅（呉屋てんぷら屋）」</strong>，現炸紅芋、魚塊、花枝天婦羅<strong>一個才 ¥100</strong>，小孩超愛！</li>
               <li><strong>主餐上 2 樓：</strong>1F 逛活夜光貝與熱帶魚拍照後，直接搭電扶梯上 <strong>2F 食堂單點現成「生魚片定食、阿古豬定食、苦瓜炒蛋定食與 ¥100 中味汁（豬肚湯）」</strong>（每份僅 ¥900-1,500，完全免收每人 ¥550 代客料理費，立省 ¥3,500！）。</li>
             </ul>
           </div>
-          <div class="flex gap-2">
-            <a href="https://www.google.com/maps/search/?api=1&query=第一牧志公設市場" target="_blank" class="flex-1 bg-amber-500 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至第一牧志公設市場
-            </a>
-          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=第一牧志公設市場" target="_blank" class="block w-full bg-amber-500 text-slate-950 text-base font-black py-3 rounded-xl text-center shadow">
+            <i class="fa-solid fa-location-dot mr-1"></i> 導航至第一牧志公設市場
+          </a>
         </div>
 
         <!-- Step 3.2 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border-2 border-indigo-500 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-indigo-600 text-white text-xs font-black px-2.5 py-0.5 rounded-md mb-1">12:15 - 14:45 國際通黃金順路三連星</span>
-              <h3 class="text-base font-black text-slate-900">🃏 駿河屋卡牌聖地 ➔ 大創買滑草板 ➔ Ryubo 熱熟食</h3>
+        <div class="bg-white rounded-2xl p-5 card-shadow border-4 border-indigo-500 space-y-3.5">
+          <span class="inline-block bg-indigo-600 text-white text-sm font-black px-3 py-1 rounded-lg">12:15 - 14:45 國際通黃金順路三連星</span>
+          <h3 class="text-xl font-black text-slate-900">🃏 駿河屋卡牌聖地 ➔ 大創買滑草板 ➔ Ryubo 熱熟食</h3>
+          <div class="space-y-3 text-base text-slate-800">
+            <div class="bg-indigo-50 p-4 rounded-xl border-2 border-indigo-200">
+              <div class="font-black text-indigo-950 text-lg">1️⃣ 駿河屋 那霸沖映通り店（D-naha 大樓 B1）📍群祐必去</div>
+              <p class="mt-1">從牧志市場轉入沖映大通（美榮橋站方向走 3 分鐘），<strong>直接走進 Junkudo（淳久堂書店）搭電扶梯下 B1</strong>！全那霸最強寶可夢 PTCG 單卡牆、PSA 鑑定卡、オリパ（自製盲包）與二手公仔聖地！</p>
+            </div>
+            <div class="bg-emerald-50 p-4 rounded-xl border-2 border-emerald-200">
+              <div class="font-black text-emerald-950 text-lg">2️⃣ 同棟 D-naha 大樓 3F「DAISO 大創百貨」📍屁股救星</div>
+              <p class="mt-1">逛完 B1 駿河屋，直接搭電梯上同棟 3 樓大創，花 <strong>¥110 買兩塊「滑草板（ヒップソリ）」</strong>！等一下去奧武山公園溜超長滾輪溜滑梯屁股完全不痛、不起靜電！</p>
+            </div>
+            <div class="bg-rose-50 p-4 rounded-xl border-2 border-rose-200">
+              <div class="font-black text-rose-950 text-lg">3️⃣ Ryubo 琉貿百貨 B1 超市（縣廳前站直結）📍精緻熟食</div>
+              <p class="mt-1">沿國際通散步（可順逛浮島通日系服飾）至終點「縣廳前站」旁的 Ryubo 百貨 B1 超市，買<strong>剛出爐熱騰騰的阿古豬/和牛可樂餅、熟食串燒與日本草莓</strong>，買完直接走連通道進「縣廳前站」搭單軌，4 分鐘後在公園熱熱吃！</p>
             </div>
           </div>
-          <div class="space-y-2 text-xs text-slate-700 leading-relaxed">
-            <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-200">
-              <div class="font-black text-indigo-950">1️⃣ 駿河屋 那霸沖映通り店（D-naha 大樓 B1）📍群祐必去</div>
-              <p class="mt-0.5">從牧志市場轉入沖映大通（美榮橋站方向走 3 分鐘），<strong>直接走進 Junkudo（淳久堂書店）搭電扶梯下 B1</strong>！全那霸最強寶可夢 PTCG 單卡牆、PSA 鑑定卡、オリパ（自製盲包）與二手公仔聖地！</p>
-            </div>
-            <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200">
-              <div class="font-black text-emerald-950">2️⃣ 同棟 D-naha 大樓 3F「DAISO 大創百貨」📍屁股救星</div>
-              <p class="mt-0.5">逛完 B1 駿河屋，直接搭電梯上同棟 3 樓大創，花 <strong>¥110 買兩塊「滑草板（ヒップソリ）」</strong>！等一下去奧武山公園溜超長滾輪溜滑梯屁股完全不痛、不起靜電！</p>
-            </div>
-            <div class="bg-rose-50 p-3 rounded-xl border border-rose-200">
-              <div class="font-black text-rose-950">3️⃣ Ryubo 琉貿百貨 B1 超市（縣廳前站直結）📍精緻熟食</div>
-              <p class="mt-0.5">沿國際通散步（可順逛浮島通日系服飾）至終點「縣廳前站」旁的 Ryubo 百貨 B1 超市，買<strong>剛出爐熱騰騰的阿古豬/和牛可樂餅、熟食串燒與日本草莓</strong>，買完直接走連通道進「縣廳前站」搭單軌，4 分鐘後在公園熱熱吃！</p>
-            </div>
-          </div>
-          <div class="flex gap-2">
-            <a href="https://www.google.com/maps/search/?api=1&query=駿河屋+那覇沖映通り店" target="_blank" class="flex-1 bg-indigo-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至駿河屋 (淳久堂B1)
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <a href="https://www.google.com/maps/search/?api=1&query=駿河屋+那覇沖映通り店" target="_blank" class="bg-indigo-600 text-white text-base font-black py-3 px-4 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至駿河屋 (淳久堂B1)
             </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=デパートリウボウ" target="_blank" class="flex-1 bg-rose-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至 Ryubo 百貨
+            <a href="https://www.google.com/maps/search/?api=1&query=デパートリウボウ" target="_blank" class="bg-rose-600 text-white text-base font-black py-3 px-4 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至 Ryubo 百貨
             </a>
           </div>
         </div>
 
         <!-- Step 3.3 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-2.5">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-emerald-100 text-emerald-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">15:00 - 17:00 親子放電神點</span>
-              <h3 class="text-base font-black text-slate-900">🛝 奧武山公園（超長龍形滾輪溜滑梯＆野餐）</h3>
-            </div>
-            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-lg shrink-0">單軌 ¥580</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-emerald-100 text-emerald-900 text-sm font-black px-3 py-1 rounded-lg">15:00 - 17:00 親子放電神點</span>
+            <span class="text-sm font-black text-emerald-800 bg-emerald-50 px-3 py-1 rounded-lg">單軌 ¥580</span>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🛝 奧武山公園（超長龍形滾輪溜滑梯＆野餐）</h3>
+          <p class="text-base text-slate-700">
             <strong>【執行步驟】：</strong>從「縣廳前站」搭單軌 2 站（僅 4 分鐘）至「奧武山公園站」，出站沿步道下樓走 3 分鐘即達遊具廣場。拿出剛買好的大創滑草板與 Ryubo 熱可樂餅，群祐挑戰巨型攀爬塔與超長溜滑梯，妹妹玩幼兒沙坑與幼齡滑梯！
           </p>
-          <a href="https://www.google.com/maps/search/?api=1&query=奥武山公園+あおぞらパーク" target="_blank" class="block w-full bg-emerald-600 text-white text-xs font-bold py-2.5 rounded-xl text-center">
-            <i class="fa-solid fa-location-dot"></i> 導航至奧武山公園遊具廣場
+          <a href="https://www.google.com/maps/search/?api=1&query=奥武山公園+あおぞらパーク" target="_blank" class="block w-full bg-emerald-600 text-white text-base font-black py-3 rounded-xl text-center shadow">
+            <i class="fa-solid fa-location-dot mr-1"></i> 導航至奧武山公園遊具廣場
           </a>
         </div>
 
         <!-- Step 3.4 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-rose-100 text-rose-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">17:15 晚餐 ➔ 19:00 聖誕燈海＆深夜超市</span>
-              <h3 class="text-base font-black text-slate-900">🥩 傑克牛排館 ➔ 🎄 久茂地聖誕點燈 / MaxValu 若狹店</h3>
-            </div>
-            <span class="text-xs font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-lg shrink-0">牛排 ¥9,500</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3.5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-rose-100 text-rose-900 text-sm font-black px-3 py-1 rounded-lg">17:15 晚餐 ➔ 19:00 聖誕燈海＆深夜超市</span>
+            <span class="text-sm font-black text-rose-800 bg-rose-50 px-3 py-1 rounded-lg">牛排 ¥9,500</span>
           </div>
-          <div class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🥩 傑克牛排館 ➔ 🎄 久茂地聖誕點燈 / MaxValu 若狹店</h3>
+          <div class="text-base text-slate-700 space-y-2">
             <p><strong>【傑克牛排】：</strong>在奧武山公園外攔計程車，過橋 3-5 分鐘即達（車資約 ¥700）。17:15 到剛好避開 18:00 排隊潮！必點<strong>「特選烤里脊牛排（テンダーロインステーキ Tenderloin / 菲力，三分或五分熟）」</strong>，無筋超軟嫩！古早味白濃湯記得加黑胡椒。</p>
             <p><strong>🎄【飯後雙路線】：</strong></p>
-            <ul class="list-disc pl-4 space-y-1">
+            <ul class="list-disc pl-5 space-y-1.5">
               <li><strong>看聖誕樹燈海：</strong>散步 10 分鐘（或計程車 3 分鐘）至「縣廳前站 Palette Kumoji 廣場」，拍 <strong>17:00-23:00 點燈的「くもじイルミネーション（久茂地巨型聖誕樹與藍白燈海）」</strong>，再搭單軌回歌町。</li>
               <li><strong>深夜超市補貨（🌟 MaxValu）：</strong>往波上宮方向走 5 分鐘至 <strong>24 小時營業的 MaxValu 若狹店</strong> 大買便宜零食與早餐，門口直接攔計程車回自由花園酒店（車資約 ¥1,300）。</li>
             </ul>
           </div>
-          <div class="flex gap-2">
-            <a href="https://www.google.com/maps/search/?api=1&query=Jack's+Steak+House+Okinawa" target="_blank" class="flex-1 bg-rose-600 text-white text-xs font-bold py-2.5 px-3 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至傑克牛排館
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <a href="https://www.google.com/maps/search/?api=1&query=Jack's+Steak+House+Okinawa" target="_blank" class="bg-rose-600 text-white text-base font-black py-3 px-4 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至傑克牛排館
             </a>
-            <button onclick="openTaxiModal('ジャッキーステーキハウス', '那覇市西 1-7-3', '傑克牛排館 (Jack\'s Steak House)')" class="bg-slate-800 text-white text-xs font-bold py-2.5 px-3 rounded-xl">
-              <i class="fa-solid fa-taxi text-amber-400"></i> 司機字卡
+            <button onclick="openTaxiModal('ジャッキーステーキハウス', '那覇市西 1-7-3', '傑克牛排館 (Jack\'s Steak House)')" class="bg-slate-800 text-white text-base font-black py-3 px-4 rounded-xl shadow">
+              <i class="fa-solid fa-taxi text-amber-400 mr-1"></i> 放大司機字卡
             </button>
           </div>
         </div>
       </div>
 
       <!-- ==================== DAY 4 ==================== -->
-      <div id="content-day4" class="day-content hidden space-y-4">
-        <div class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-2xl p-4 shadow-md">
-          <div class="flex justify-between items-center">
-            <span class="text-xs font-bold uppercase tracking-wider bg-white/20 px-2.5 py-0.5 rounded-full">Day 4 ‧ 12月20日 (週日)</span>
-            <span class="text-xs font-bold">預估花費：¥17,660</span>
+      <div id="content-day4" class="day-content hidden space-y-5">
+        <div class="bg-gradient-to-r from-purple-700 to-indigo-800 text-white rounded-2xl p-5 shadow-md">
+          <div class="flex flex-wrap justify-between items-center gap-2">
+            <span class="text-sm font-black bg-white/20 px-3 py-1 rounded-full">Day 4 ‧ 12月20日 (週日)</span>
+            <span class="text-sm font-black bg-amber-400 text-slate-950 px-3 py-1 rounded-full">預估：¥17,660</span>
           </div>
-          <h2 class="text-lg font-black mt-1.5">首里城完成紀念慶典 ➔ 新都心公園＆沖繩麵 ➔ 蔦屋卡牌爆買 ➔ やざえもん壽司 ➔ 返台</h2>
-          <p class="text-xs text-purple-100 mt-1">重點：行李免費寄放飯店、12/20 限定博物館旗頭演舞、蔦屋 2F 卡牌專區、16:00 離峰免排隊吃黑鮪魚壽司</p>
+          <h2 class="text-xl font-black mt-2.5 leading-snug">首里城完成紀念慶典 ➔ 新都心公園＆沖繩麵 ➔ 蔦屋卡牌爆買 ➔ やざえもん壽司 ➔ 返台</h2>
+          <p class="text-sm text-purple-100 mt-1.5 font-medium">重點：行李免費寄放飯店、12/20 限定博物館旗頭演舞、蔦屋 2F 卡牌專區、16:00 離峰免排隊吃黑鮪魚壽司</p>
         </div>
 
         <!-- Step 4.1 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border-2 border-amber-400 space-y-3">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-amber-100 text-amber-900 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">09:45 寄放行李 ➔ 10:00 當日限定慶典</span>
-              <h3 class="text-base font-black text-slate-900">🎉 沖繩縣立博物館 (OKIMYU)「首里城完成紀念慶典」</h3>
-            </div>
-            <span class="text-xs font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-lg shrink-0">門票 ¥1,210</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border-4 border-amber-400 space-y-3.5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-amber-100 text-amber-950 text-sm font-black px-3 py-1 rounded-lg">09:45 寄放行李 ➔ 10:00 當日限定慶典</span>
+            <span class="text-sm font-black text-amber-900 bg-amber-50 px-3 py-1 rounded-lg">門票 ¥1,210</span>
           </div>
-          <div class="text-xs text-slate-600 space-y-1.5 leading-relaxed">
-            <p><strong>1. 免費寄放行李：</strong>09:45 於飯店 1F 退房，向櫃檯說 <code>Luggage Keep, please</code>，大行李箱免費寄放飯店大廳，全身輕裝步行 8-10 分鐘至博物館！</p>
-            <p class="bg-amber-50 text-amber-950 p-2.5 rounded-xl border border-amber-200">
-              <strong>🌟 2026/12/20 (日) 當日限定特殊活動：</strong><br>
+          <h3 class="text-lg font-black text-slate-900">🎉 沖繩縣立博物館 (OKIMYU)「首里城完成紀念慶典」</h3>
+          <div class="text-base text-slate-700 space-y-2.5">
+            <p><strong>1. 免費寄放行李：</strong>09:45 於飯店 1F 退房，向櫃檯出示寄行李字卡（或說 <code>Luggage Keep, please</code>），大行李箱免費寄放飯店大廳，全身輕裝步行 8-10 分鐘至博物館！</p>
+            <div class="bg-amber-50 text-amber-950 p-3.5 rounded-xl border-2 border-amber-300 font-bold">
+              🌟 2026/12/20 (日) 當日限定特殊活動：<br>
               適逢首里城正殿完成紀念事業，12/20 當天在博物館講堂與戶外展示場舉辦<strong>「首里城漫才！ぐすーじさびら」</strong>，戶外有超震撼的沖繩傳統<strong>「旗頭演舞（巨旗民俗技藝）」</strong>、琉球古典藝能組踊與慶祝舞台！
-            </p>
+            </div>
             <p><strong>2. 1F 兒童觸摸體驗室：</strong>買常設展門票（大人 ¥530×2＋小學生 ¥150＝¥1,210，大班免費）即可進入觸摸室穿琉球服飾、彈三線琴、玩古早童玩，並看「首里城特展」。</p>
           </div>
-          <a href="https://www.google.com/maps/search/?api=1&query=沖縄県立博物館・美術館" target="_blank" class="block w-full bg-amber-500 text-slate-950 text-xs font-black py-2.5 rounded-xl text-center">
-            <i class="fa-solid fa-location-dot"></i> 導航至沖繩縣立博物館・美術館
+          <a href="https://www.google.com/maps/search/?api=1&query=沖縄県立博物館・美術館" target="_blank" class="block w-full bg-amber-400 text-slate-950 text-base font-black py-3 rounded-xl text-center shadow">
+            <i class="fa-solid fa-location-dot mr-1"></i> 導航至沖繩縣立博物館・美術館
           </a>
         </div>
 
         <!-- Step 4.2 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-2.5">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-purple-100 text-purple-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">11:45 新都心公園 ➔ 12:15 午餐</span>
-              <h3 class="text-base font-black text-slate-900">🍜 けんぱーのすばやー (Kenpa 軟骨沖繩麵)</h3>
-            </div>
-            <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-lg shrink-0">預估 ¥3,800</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-purple-100 text-purple-900 text-sm font-black px-3 py-1 rounded-lg">11:45 新都心公園 ➔ 12:15 午餐</span>
+            <span class="text-sm font-black text-purple-800 bg-purple-50 px-3 py-1 rounded-lg">預估 ¥3,800</span>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">🍜 けんぱーのすばやー (Kenpa 軟骨沖繩麵)</h3>
+          <p class="text-base text-slate-700">
             走出博物館正對面就是廣闊的<strong>「新都心公園」</strong>放電 30 分鐘 ➔ 12:15 走 2 分鐘至對面名店「けんぱーのすばやー」。門口自動食券機必點：<strong>ミックスすば（招牌軟骨肉＋三層肉綜合麵，軟骨入口即化）</strong>＋<strong>じゅーしー（沖繩高湯炊飯）</strong>！
           </p>
-          <a href="https://www.google.com/maps/search/?api=1&query=けんぱーのすばやー+おもろまち" target="_blank" class="block w-full bg-purple-600 text-white text-xs font-bold py-2.5 rounded-xl text-center">
-            <i class="fa-solid fa-location-dot"></i> 導航至 Kenpa 沖繩麵
+          <a href="https://www.google.com/maps/search/?api=1&query=けんぱーのすばやー+おもろまち" target="_blank" class="block w-full bg-purple-600 text-white text-base font-black py-3 rounded-xl text-center shadow">
+            <i class="fa-solid fa-location-dot mr-1"></i> 導航至 Kenpa 沖繩麵
           </a>
         </div>
 
         <!-- Step 4.3 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-2.5">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-indigo-100 text-indigo-800 text-xs font-black px-2.5 py-0.5 rounded-md mb-1">13:15 - 15:55 新都心商圈終極爆買</span>
-              <h3 class="text-base font-black text-slate-900">🛍️ 蔦屋書店卡牌專區 ‧ 310台扭蛋 ‧ San-A 一次買齊</h3>
-            </div>
-          </div>
-          <ul class="list-disc pl-4 text-xs text-slate-600 space-y-1.5 leading-relaxed">
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3">
+          <span class="inline-block bg-indigo-100 text-indigo-900 text-sm font-black px-3 py-1 rounded-lg">13:15 - 15:55 新都心商圈終極爆買</span>
+          <h3 class="text-lg font-black text-slate-900">🛍️ 蔦屋書店卡牌專區 ‧ 310台扭蛋 ‧ San-A 一次買齊</h3>
+          <ul class="list-disc pl-5 text-base text-slate-700 space-y-2">
             <li><strong>🃏 TSUTAYA 蔦屋書店 那霸新都心店 (2F)：</strong>Main Place 對面獨立建築，2 樓有<strong>全新改裝超大「Trading Card 交換卡牌專區」與對戰桌</strong>，群祐最後衝刺！</li>
             <li><strong>ガチャ 萬代官方扭蛋專賣店 ＆ namco（Main Place 2F）：</strong>高達 <strong>310 台扭蛋機</strong>與假面騎士機台，把剩餘日幣零錢扭光！</li>
             <li><strong>👗 媽媽服飾與超市（🌟 一次買齊 San-A）：</strong>Main Place 2F 逛 <strong>Global Work</strong>、<strong>earth music&ecology</strong>；1F 食品館把沖繩泡麵、石垣島辣油、黑糖一次買齊（滿 ¥5,000 直接退稅）。</li>
             <li><strong>🍓 Apple Town 1F：</strong>順逛白天營業的 <strong>Toys "R" Us 玩具反斗城</strong> 與 <strong>Coop Apple Town 超市（🌟 找島蔬果）</strong>。</li>
           </ul>
-          <div class="flex gap-2">
-            <a href="https://www.google.com/maps/search/?api=1&query=TSUTAYA+那覇新都心店" target="_blank" class="flex-1 bg-indigo-600 text-white text-xs font-bold py-2 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至蔦屋書店
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+            <a href="https://www.google.com/maps/search/?api=1&query=TSUTAYA+那覇新都心店" target="_blank" class="bg-indigo-600 text-white text-base font-black py-3 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至蔦屋書店
             </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=コープあっぷるタウン" target="_blank" class="flex-1 bg-sky-600 text-white text-xs font-bold py-2 rounded-xl text-center">
-              <i class="fa-solid fa-location-dot"></i> 導航至 Apple Town
+            <a href="https://www.google.com/maps/search/?api=1&query=コープあっぷるタウン" target="_blank" class="bg-sky-600 text-white text-base font-black py-3 rounded-xl text-center shadow">
+              <i class="fa-solid fa-location-dot mr-1"></i> 導航至 Apple Town
             </a>
           </div>
         </div>
 
         <!-- Step 4.4 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border-2 border-rose-500 space-y-2.5">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-rose-600 text-white text-xs font-black px-2.5 py-0.5 rounded-md mb-1">16:00 - 17:00 黃金離峰免排隊大餐</span>
-              <h3 class="text-base font-black text-slate-900">🍣 まぐろ問屋やざえもん 迴轉壽司（Apple Town 2F）</h3>
-            </div>
-            <span class="text-xs font-bold text-rose-700 bg-rose-50 px-2 py-0.5 rounded-lg shrink-0">預估 ¥7,000</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border-4 border-rose-500 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-rose-600 text-white text-sm font-black px-3 py-1 rounded-lg">16:00 - 17:00 黃金離峰免排隊大餐</span>
+            <span class="text-sm font-black text-rose-800 bg-rose-50 px-3 py-1 rounded-lg">預估 ¥7,000</span>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            <strong>【神級時段安排】：</strong>Apple Town 就在<strong>自由花園酒店正對面（過馬路 2 分鐘）</strong>！下午 16:00 離峰時段<strong>完全免排隊</strong>，平板切換繁體中文，大啖鮪魚批發商直營的<strong>「極上本まぐろ中とろ（黑鮪魚中腹 ¥640）」</strong>、<strong>「海葡萄軍艦」</strong>与妹妹愛的<strong>「お子様寿司（兒童壽司拼盤 ¥540）」</strong>、茶碗蒸、炸蝦手卷！<br>
+          <h3 class="text-lg font-black text-slate-900">🍣 まぐろ問屋やざえもん 迴轉壽司（Apple Town 2F）</h3>
+          <p class="text-base text-slate-700">
+            <strong>【神級時段安排】：</strong>Apple Town 就在<strong>自由花園酒店正對面（過馬路 2 分鐘）</strong>！下午 16:00 離峰時段<strong>完全免排隊</strong>，平板切換繁體中文，大啖鮪魚批發商直營的<strong>「極上本まぐろ中とろ（黑鮪魚中腹 ¥640）」</strong>、<strong>「海葡萄軍艦」</strong>與妹妹愛的<strong>「お子様寿司（兒童壽司拼盤 ¥540）」</strong>、茶碗蒸、炸蝦手卷！<br>
             <strong>17:00 吃飽下樓</strong>，直接過馬路回自由花園酒店領行李並把最後戰利品塞進行李箱，去機場完全不慌張！
           </p>
         </div>
 
         <!-- Step 4.5 -->
-        <div class="bg-white rounded-2xl p-4 card-shadow border border-slate-100 space-y-2.5">
-          <div class="flex items-start justify-between gap-2">
-            <div>
-              <span class="inline-block bg-slate-800 text-white text-xs font-black px-2.5 py-0.5 rounded-md mb-1">17:15 領行李 ➔ 18:00 那霸機場 ➔ 21:30 起飛</span>
-              <h3 class="text-base font-black text-slate-900">✈️ 那霸機場「國內線航廈」伴手禮 ＆ 虎航 IT289 返台</h3>
-            </div>
-            <span class="text-xs font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-lg shrink-0">單軌 ¥750</span>
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-slate-200 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="bg-slate-800 text-white text-sm font-black px-3 py-1 rounded-lg">17:15 領行李 ➔ 18:00 那霸機場 ➔ 21:30 起飛</span>
+            <span class="text-sm font-black text-slate-700 bg-slate-100 px-3 py-1 rounded-lg">單軌 ¥750</span>
           </div>
-          <p class="text-xs text-slate-600 leading-relaxed">
+          <h3 class="text-lg font-black text-slate-900">✈️ 那霸機場「國內線航廈」伴手禮 ＆ 虎航 IT289 返台</h3>
+          <p class="text-base text-slate-700">
             <strong>⚠️【機場黃金法則】：</strong>搭單軌抵達那霸機場站後，<strong>一定要先逛「國內線航廈 2 樓」</strong>（國際線幾乎沒店）！買齊御菓子御殿紅芋塔、福砂屋蛋糕，並吃 <strong>Calbee+ 現炸紫薯薯條</strong>。<br>
             <strong>19:15</strong> 沿 2 樓連通道走 5 分鐘至「國際線航廈」辦理 21:30 台灣虎航 IT289 報到，22:25 抵達高雄小港機場搭計程車回鳳山！
           </p>
@@ -583,43 +565,43 @@
       </div>
 
       <!-- ==================== SPECIAL EVENTS TAB ==================== -->
-      <div id="content-events" class="day-content hidden space-y-3">
-        <div class="bg-gradient-to-r from-rose-600 to-pink-600 text-white rounded-2xl p-4 shadow-md">
-          <h2 class="text-lg font-black">🎄 2026/12/17–12/20 期間可參加之特殊活動</h2>
-          <p class="text-xs text-rose-100 mt-1">已為您篩選「不自駕最順路、免跑遠路吹冷風」的 4 大市區限定活動＋1 個週日封街體驗！</p>
+      <div id="content-events" class="day-content hidden space-y-4">
+        <div class="bg-gradient-to-r from-rose-600 to-pink-600 text-white rounded-2xl p-5 shadow-md">
+          <h2 class="text-xl font-black">🎄 2026/12/17–12/20 期間可參加之特殊活動</h2>
+          <p class="text-base text-rose-100 mt-1">已為您篩選「不自駕最順路、免跑遠路吹冷風」的 4 大市區限定活動＋1 個週日封街體驗！</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-4 card-shadow border-l-4 border-amber-500 space-y-1.5">
-          <span class="bg-amber-100 text-amber-900 text-xs font-black px-2 py-0.5 rounded">Day 4 (12/20 日) 白天 ‧ 100% 行程重合！</span>
-          <h3 class="text-base font-black text-slate-900">1. 首里城正殿完成紀念事業「首里城漫才！ぐすーじさびら」＆ 首里城特展</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
+        <div class="bg-white rounded-2xl p-5 card-shadow border-l-8 border-amber-500 space-y-2">
+          <span class="bg-amber-100 text-amber-950 text-sm font-black px-3 py-1 rounded-lg inline-block">Day 4 (12/20 日) 白天 ‧ 100% 行程重合！</span>
+          <h3 class="text-lg font-black text-slate-900">1. 首里城正殿完成紀念事業「首里城漫才！ぐすーじさびら」＆ 首里城特展</h3>
+          <p class="text-base text-slate-700">
             <strong>📍 地點：</strong>沖繩縣立博物館・美術館 (OKIMYU) 講堂及戶外展示場（自由花園酒店步行 10 分鐘）。<br>
             <strong>✨ 亮點：</strong>2026 適逢首里城正殿重建完成紀念！12/20 (日) 當天在 OKIMYU 戶外展示場有極具魄力的沖繩傳統<strong>「旗頭演舞（巨旗民俗表演）」</strong>、琉球古典藝能組踊、搞笑藝人慶祝舞台，館內常設展同步展出「首里城與琉中關係」特展。
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-4 card-shadow border-l-4 border-sky-500 space-y-1.5">
-          <span class="bg-sky-100 text-sky-900 text-xs font-black px-2 py-0.5 rounded">每日 17:00–23:00（推薦 Day 3 晚餐後順遊）</span>
-          <h3 class="text-base font-black text-slate-900">2. 那霸久茂地聖誕點燈節（くもじイルミネーション）</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
+        <div class="bg-white rounded-2xl p-5 card-shadow border-l-8 border-sky-500 space-y-2">
+          <span class="bg-sky-100 text-sky-950 text-sm font-black px-3 py-1 rounded-lg inline-block">每日 17:00–23:00（推薦 Day 3 晚餐後順遊）</span>
+          <h3 class="text-lg font-black text-slate-900">2. 那霸久茂地聖誕點燈節（くもじイルミネーション）</h3>
+          <p class="text-base text-slate-700">
             <strong>📍 地點：</strong>單軌「縣廳前站」Palette Kumoji（Ryubo 琉貿百貨前廣場）至沖繩 Times 大樓與國際通入口。<br>
             <strong>✨ 亮點：</strong>那霸市中心最具代表性的冬季聖誕燈海與巨型聖誕樹，數萬顆藍白與暖金燈飾點亮國際通入口，免費拍照打卡超浪漫！
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-4 card-shadow border-l-4 border-purple-500 space-y-1.5">
-          <span class="bg-purple-100 text-purple-900 text-xs font-black px-2 py-0.5 rounded">Day 2 (12/18 五) 18:00–20:00 週五限定</span>
-          <h3 class="text-base font-black text-slate-900">3. おきみゅーナイトミュージアム（OKIMYU 週五夜間博物館）</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
+        <div class="bg-white rounded-2xl p-5 card-shadow border-l-8 border-purple-500 space-y-2">
+          <span class="bg-purple-100 text-purple-950 text-sm font-black px-3 py-1 rounded-lg inline-block">Day 2 (12/18 五) 18:00–20:00 週五限定</span>
+          <h3 class="text-lg font-black text-slate-900">3. おきみゅーナイトミュージアム（OKIMYU 週五夜間博物館）</h3>
+          <p class="text-base text-slate-700">
             <strong>📍 地點：</strong>沖繩縣立博物館・美術館（飯店步行 10 分鐘）。<br>
             <strong>✨ 亮點：</strong>12/25 前每週五夜晚限定延長開放至 20:00，建築夜間點燈並舉辦夜間文化體驗，從 PARCO CITY 回飯店後、去吃目利きの銀次前可順路散步。
           </p>
         </div>
 
-        <div class="bg-white rounded-2xl p-4 card-shadow border-l-4 border-emerald-500 space-y-1.5">
-          <span class="bg-emerald-100 text-emerald-900 text-xs font-black px-2 py-0.5 rounded">12/17–12/20 全日 ‧ 聖誕前夕最高潮</span>
-          <h3 class="text-base font-black text-slate-900">4. PARCO CITY 巨型室內聖誕樹 ＆ 週日國際通步行者天國</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
+        <div class="bg-white rounded-2xl p-5 card-shadow border-l-8 border-emerald-500 space-y-2">
+          <span class="bg-emerald-100 text-emerald-950 text-sm font-black px-3 py-1 rounded-lg inline-block">12/17–12/20 全日 ‧ 聖誕前夕最高潮</span>
+          <h3 class="text-lg font-black text-slate-900">4. PARCO CITY 巨型室內聖誕樹 ＆ 週日國際通步行者天國</h3>
+          <p class="text-base text-slate-700">
             <strong>✨ PARCO CITY ＆ Main Place：</strong>PARCO CITY 館內設置全沖繩最大級室內聖誕樹與聖誕快閃市集；Main Place 1F 戶外亦有大型聖誕燈飾。<br>
             <strong>✨ 國際通步行者天國（12/20 週日 12:00–18:00）：</strong>每週日國際通封街 1.3 公里變身無車徒步大道與街頭藝人表演區。
           </p>
@@ -629,276 +611,277 @@
     </section>
 
     <!-- ================= VIEW 2: 手指日文卡 (POINT & SPEAK CARDS) ================= -->
-    <section id="view-jpcard" class="hidden space-y-4">
-      <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-2xl p-4 shadow-md">
-        <h2 class="text-lg font-black"><i class="fa-solid fa-language mr-1.5"></i>隨身手指日文卡（點一下全螢幕放大）</h2>
-        <p class="text-xs text-emerald-100 mt-1">搭計程車、飯店寄放行李、餐廳兒童不加芥末、群祐買寶可夢卡，點卡片直接放大給店員看！</p>
+    <section id="view-jpcard" class="hidden space-y-5">
+      <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-2xl p-5 shadow-md">
+        <h2 class="text-xl font-black"><i class="fa-solid fa-language mr-1.5"></i>隨身手指日文卡（點一下全螢幕放大）</h2>
+        <p class="text-base text-emerald-100 mt-1">搭計程車、飯店寄放行李、餐廳兒童不加芥末、群祐買寶可夢卡，點卡片直接放大給店員看！</p>
       </div>
 
       <!-- Category 1: Taxi Destinations -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-2.5">
-        <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3">
+        <h3 class="text-lg font-black text-slate-900 flex items-center gap-2">
           <i class="fa-solid fa-taxi text-amber-500"></i> 🚕 計程車司機指路卡（點擊放大）
         </h3>
-        <div class="grid grid-cols-2 gap-2 text-xs">
-          <button onclick="openTaxiModal('リブレガーデンホテル', '那覇市おもろまち 4-17-28（おもろまち駅近く）', '回飯店：自由花園酒店')" class="p-3 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 text-left">
-            <div class="font-black text-slate-900">🏨 自由花園酒店</div>
-            <div class="text-slate-500 text-[11px] truncate">リブレガーデンホテル</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
+          <button onclick="openTaxiModal('リブレガーデンホテル', '那覇市おもろまち 4-17-28（おもろまち駅近く）', '回飯店：自由花園酒店')" class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50 border-2 border-slate-200 text-left">
+            <div class="font-black text-slate-900">🏨 自由花園酒店 (回飯店)</div>
+            <div class="text-slate-600 text-sm mt-0.5">リブレガーデンホテル</div>
           </button>
-          <button onclick="openTaxiModal('泊いゆまち（とまりいゆまち）', '那覇市港町 1-1-18', 'Day 2 早午餐：泊港漁市場')" class="p-3 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 text-left">
+          <button onclick="openTaxiModal('泊いゆまち（とまりいゆまち）', '那覇市港町 1-1-18', 'Day 2 早午餐：泊港漁市場')" class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50 border-2 border-slate-200 text-left">
             <div class="font-black text-slate-900">🐟 泊港漁市場</div>
-            <div class="text-slate-500 text-[11px] truncate">泊いゆまち</div>
+            <div class="text-slate-600 text-sm mt-0.5">泊いゆまち（那覇市港町1-1-18）</div>
           </button>
-          <button onclick="openTaxiModal('サンエー浦添西海岸 パルコシティ', '浦添市西洲 3-1-1（1階 中央入口）', 'Day 2 購物：PARCO CITY')" class="p-3 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 text-left">
+          <button onclick="openTaxiModal('サンエー浦添西海岸 パルコシティ', '浦添市西洲 3-1-1（1階 中央入口）', 'Day 2 購物：PARCO CITY')" class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50 border-2 border-slate-200 text-left">
             <div class="font-black text-slate-900">🛍️ PARCO CITY</div>
-            <div class="text-slate-500 text-[11px] truncate">サンエー パルコシティ</div>
+            <div class="text-slate-600 text-sm mt-0.5">サンエー浦添西海岸 パルコシティ</div>
           </button>
-          <button onclick="openTaxiModal('目利きの銀次 新都心本舗', '那覇市天久 1-9-19', 'Day 2 晚餐：目利きの銀次')" class="p-3 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 text-left">
-            <div class="font-black text-slate-900">🍺 目利きの銀次</div>
-            <div class="text-slate-500 text-[11px] truncate">新都心本舗（天久1-9-19）</div>
+          <button onclick="openTaxiModal('目利きの銀次 新都心本舗', '那覇市天久 1-9-19', 'Day 2 晚餐：目利きの銀次')" class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50 border-2 border-slate-200 text-left">
+            <div class="font-black text-slate-900">🍺 目利きの銀次 新都心本舖</div>
+            <div class="text-slate-600 text-sm mt-0.5">那覇市天久 1-9-19</div>
           </button>
-          <button onclick="openTaxiModal('ジャッキーステーキハウス', '那覇市西 1-7-3', 'Day 3 晚餐：傑克牛排館')" class="p-3 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 text-left">
+          <button onclick="openTaxiModal('ジャッキーステーキハウス', '那覇市西 1-7-3', 'Day 3 晚餐：傑克牛排館')" class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50 border-2 border-slate-200 text-left">
             <div class="font-black text-slate-900">🥩 傑克牛排館</div>
-            <div class="text-slate-500 text-[11px] truncate">ジャッキーステーキハウス</div>
+            <div class="text-slate-600 text-sm mt-0.5">ジャッキーステーキハウス</div>
           </button>
-          <button onclick="openTaxiModal('マックスバリュ 若狭店', '那覇市若狭 2-3-19', 'Day 3 超市：MaxValu 若狹店')" class="p-3 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 text-left">
+          <button onclick="openTaxiModal('マックスバリュ 若狭店', '那覇市若狭 2-3-19', 'Day 3 超市：MaxValu 若狹店')" class="p-4 rounded-xl bg-slate-50 hover:bg-sky-50 border-2 border-slate-200 text-left">
             <div class="font-black text-slate-900">🛒 MaxValu 若狹店</div>
-            <div class="text-slate-500 text-[11px] truncate">マックスバリュ若狭店</div>
+            <div class="text-slate-600 text-sm mt-0.5">マックスバリュ若狭店</div>
           </button>
         </div>
       </div>
 
       <!-- Category 2: Restaurant & Kid Friendly -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-2.5">
-        <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3">
+        <h3 class="text-lg font-black text-slate-900 flex items-center gap-2">
           <i class="fa-solid fa-utensils text-rose-500"></i> 🍣 餐廳點餐 ＆ 孩童友善字卡（點擊放大）
         </h3>
-        <div class="grid grid-cols-1 gap-2 text-xs">
-          <button onclick="openPhraseModal('サビ抜きでお願いします。', '請不要加芥末（給小孩吃的壽司）', 'Sabi-nuki de onegaishimasu')" class="p-3 rounded-xl bg-rose-50/70 border border-rose-200 text-left flex justify-between items-center">
+        <div class="grid grid-cols-1 gap-3 text-base">
+          <button onclick="openPhraseModal('サビ抜きでお願いします。', '請不要加芥末（給小孩吃的壽司）', 'Sabi-nuki de onegaishimasu')" class="p-4 rounded-xl bg-rose-50 border-2 border-rose-200 text-left flex justify-between items-center">
             <div>
               <div class="font-black text-rose-950">🍣 壽司請不要加芥末（給孩子吃的）</div>
-              <div class="text-rose-700 text-[11px]">サビ抜きでお願いします</div>
+              <div class="text-rose-800 text-sm mt-0.5">サビ抜きでお願いします</div>
             </div>
-            <i class="fa-solid fa-expand text-rose-400"></i>
+            <i class="fa-solid fa-expand text-rose-500 text-xl"></i>
           </button>
-          <button onclick="openPhraseModal('子供用の取り皿と、スプーン・フォークをいただけますか？', '請給我們兒童分食碗盤與湯匙、叉子', 'Kodomo-yo no torizara to spoon/fork...')" class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-left flex justify-between items-center">
+          <button onclick="openPhraseModal('子供用の取り皿と、スプーン・フォークをいただけますか？', '請給我們兒童分食碗盤與湯匙、叉子', 'Kodomo-yo no torizara to spoon/fork...')" class="p-4 rounded-xl bg-slate-50 border-2 border-slate-200 text-left flex justify-between items-center">
             <div>
               <div class="font-black text-slate-900">🍽️ 請給我們兒童碗盤與湯匙叉子</div>
-              <div class="text-slate-500 text-[11px]">子供用の取り皿とスプーン・フォークを...</div>
+              <div class="text-slate-600 text-sm mt-0.5">子供用の取り皿とスプーン・フォークを...</div>
             </div>
-            <i class="fa-solid fa-expand text-slate-400"></i>
+            <i class="fa-solid fa-expand text-slate-500 text-xl"></i>
           </button>
-          <button onclick="openPhraseModal('テンダーロインステーキ（Lサイズ）をミディアムレアでお願いします。\n子供用のお肉はウェルダン（よく焼き）でお願いします。', '傑克牛排：特選菲力(L)請做五分熟；小孩吃的肉請做全熟', 'Jack\'s Steak House 點餐專用')" class="p-3 rounded-xl bg-amber-50/70 border border-amber-200 text-left flex justify-between items-center">
+          <button onclick="openPhraseModal('テンダーロインステーキ（Lサイズ）をミディアムレアでお願いします。\n子供用のお肉はウェルダン（よく焼き）でお願いします。', '傑克牛排：特選菲力(L)請做五分熟；小孩吃的肉請做全熟', 'Jack\'s Steak House 點餐專用')" class="p-4 rounded-xl bg-amber-50 border-2 border-amber-200 text-left flex justify-between items-center">
             <div>
               <div class="font-black text-amber-950">🥩 傑克牛排：菲力五分熟 ／ 小孩全熟</div>
-              <div class="text-amber-800 text-[11px]">テンダーロイン(ミディアムレア) / ウェルダン</div>
+              <div class="text-amber-900 text-sm mt-0.5">テンダーロイン(ミディアムレア) / ウェルダン</div>
             </div>
-            <i class="fa-solid fa-expand text-amber-500"></i>
+            <i class="fa-solid fa-expand text-amber-600 text-xl"></i>
           </button>
-          <button onclick="openPhraseModal('昆布明太と浅漬けのおかわりをお願いします。', '博多天婦羅 Takao：請續盤昆布明太子與淺漬蔬菜（免費無限續！）', 'PARCO CITY 3F 博多天ぷらたかお專用')" class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-left flex justify-between items-center">
+          <button onclick="openPhraseModal('昆布明太と浅漬けのおかわりをお願いします。', '博多天婦羅 Takao：請續盤昆布明太子與淺漬蔬菜（免費無限續！）', 'PARCO CITY 3F 博多天ぷらたかお專用')" class="p-4 rounded-xl bg-slate-50 border-2 border-slate-200 text-left flex justify-between items-center">
             <div>
               <div class="font-black text-slate-900">🍤 天婦羅 Takao：請續盤免費明太子＆淺漬菜</div>
-              <div class="text-slate-500 text-[11px]">昆布明太と浅漬けのおかわりをお願いします</div>
+              <div class="text-slate-600 text-sm mt-0.5">昆布明太と浅漬けのおかわりをお願いします</div>
             </div>
-            <i class="fa-solid fa-expand text-slate-400"></i>
+            <i class="fa-solid fa-expand text-slate-500 text-xl"></i>
           </button>
         </div>
       </div>
 
       <!-- Category 3: Hotel & Pokemon Cards -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-2.5">
-        <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3">
+        <h3 class="text-lg font-black text-slate-900 flex items-center gap-2">
           <i class="fa-solid fa-gamepad text-indigo-500"></i> 🏨 飯店寄行李 ＆ 🃏 群祐寶可夢卡牌尋寶卡
         </h3>
-        <div class="grid grid-cols-1 gap-2 text-xs">
-          <button onclick="openPhraseModal('チェックアウトをお願いします。\nその後、17時頃まで荷物を預かっていただけますか？', 'Day 4 退房並免費寄放行李至 17:00', '自由花園酒店 1F 櫃檯專用')" class="p-3 rounded-xl bg-sky-50 border border-sky-200 text-left flex justify-between items-center">
+        <div class="grid grid-cols-1 gap-3 text-base">
+          <button onclick="openPhraseModal('チェックアウトをお願いします。\nその後、17時頃まで荷物を預かっていただけますか？', 'Day 4 退房並免費寄放行李至 17:00', '自由花園酒店 1F 櫃檯專用')" class="p-4 rounded-xl bg-sky-50 border-2 border-sky-200 text-left flex justify-between items-center">
             <div>
               <div class="font-black text-sky-950">🧳 退房並請免費寄放行李到 17:00</div>
-              <div class="text-sky-700 text-[11px]">チェックアウト後、17時頃まで荷物を預かって...</div>
+              <div class="text-sky-800 text-sm mt-0.5">チェックアウト後、17時頃まで荷物を預かって...</div>
             </div>
-            <i class="fa-solid fa-expand text-sky-400"></i>
+            <i class="fa-solid fa-expand text-sky-500 text-xl"></i>
           </button>
-          <button onclick="openPhraseModal('ポケモンカード（ポケカ）のパックや、オリパ・シングルカード売り場はどこですか？', '請問寶可夢卡牌擴充包、盲包(オリパ)與單卡區在哪裡？', '駿河屋 / PARCO HMV / 蔦屋書店 專用')" class="p-3 rounded-xl bg-indigo-50 border border-indigo-200 text-left flex justify-between items-center">
+          <button onclick="openPhraseModal('ポケモンカード（ポケカ）のパックや、オリパ・シングルカード売り場はどこですか？', '請問寶可夢卡牌擴充包、盲包(オリパ)與單卡區在哪裡？', '駿河屋 / PARCO HMV / 蔦屋書店 專用')" class="p-4 rounded-xl bg-indigo-50 border-2 border-indigo-200 text-left flex justify-between items-center">
             <div>
               <div class="font-black text-indigo-950">🃏 請問寶可夢卡牌 (PTCG) 與盲包在哪裡？</div>
-              <div class="text-indigo-700 text-[11px]">ポケモンカードのパックやオリパ売り場はどこですか？</div>
+              <div class="text-indigo-800 text-sm mt-0.5">ポケモンカードのパックやオリパ売り場はどこですか？</div>
             </div>
-            <i class="fa-solid fa-expand text-indigo-400"></i>
+            <i class="fa-solid fa-expand text-indigo-500 text-xl"></i>
           </button>
-          <button onclick="openPhraseModal('雪ソリ（ヒップソリ）はどの売り場にありますか？', '請問滑草板（溜滑梯屁股墊）在哪一區？（大創 DAISO 專用）', 'Day 3 國際通 D-naha 3F 大創專用')" class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-left flex justify-between items-center">
+          <button onclick="openPhraseModal('雪ソリ（ヒップソリ）はどの売り場にありますか？', '請問滑草板（溜滑梯屁股墊）在哪一區？（大創 DAISO 專用）', 'Day 3 國際通 D-naha 3F 大創專用')" class="p-4 rounded-xl bg-emerald-50 border-2 border-emerald-200 text-left flex justify-between items-center">
             <div>
               <div class="font-black text-emerald-950">🛝 大創專用：請問滑草板（屁股墊）在哪裡？</div>
-              <div class="text-emerald-700 text-[11px]">雪ソリ（ヒップソリ）はどの売り場にありますか？</div>
+              <div class="text-emerald-800 text-sm mt-0.5">雪ソリ（ヒップソリ）はどの売り場にありますか？</div>
             </div>
-            <i class="fa-solid fa-expand text-emerald-400"></i>
+            <i class="fa-solid fa-expand text-emerald-500 text-xl"></i>
           </button>
         </div>
       </div>
 
       <!-- Hotel Email Copy Block -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-2">
-        <div class="flex justify-between items-center">
-          <h3 class="text-sm font-black text-slate-900">📧 自由花園酒店「2大2小免費添寢」日文信範本</h3>
-          <button onclick="copyHotelMessage()" id="copy-hotel-btn" class="bg-sky-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg">
-            <i class="fa-regular fa-copy"></i> 一鍵複製
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3">
+        <div class="flex flex-wrap justify-between items-center gap-2">
+          <h3 class="text-lg font-black text-slate-900">📧 自由花園酒店「2大2小免費添寢」日文信</h3>
+          <button onclick="copyHotelMessage()" id="copy-hotel-btn" class="bg-sky-600 text-white text-sm font-black px-4 py-2 rounded-xl shadow">
+            <i class="fa-regular fa-copy mr-1"></i> 一鍵複製
           </button>
         </div>
-        <p class="text-[11px] text-slate-500">訂房網選「2位大人」訂雙床房 (Twin Room) 後，傳送給飯店或寄至 info@libregardenhotel.com：</p>
-        <pre id="hotel-jp-text" class="bg-slate-100 p-3 rounded-xl text-xs text-slate-800 whitespace-pre-wrap leading-relaxed font-sans">12/17から3泊で、大人2名・子供2名（11歳と6歳）での宿泊を検討しております。11歳以下の添い寝無料規定を拝見し、ツインルームを希望していますが、予約サイトのシステム上、子供2名を入力するとツインルームの予約ができません。先にサイトで「大人2名」としてツインルームを予約し、その後メッセージで子供2名の添い寝をお伝えする形でもよろしいでしょうか？ご回答のほど、よろしくお願いいたします。</pre>
+        <p class="text-sm text-slate-600">訂房網選「2位大人」訂雙床房 (Twin Room) 後，傳送給飯店或寄至 info@libregardenhotel.com：</p>
+        <pre id="hotel-jp-text" class="bg-slate-100 p-4 rounded-xl text-base text-slate-900 whitespace-pre-wrap leading-relaxed font-sans border border-slate-300">12/17から3泊で、大人2名・子供2名（11歳と6歳）での宿泊を検討しております。11歳以下の添い寝無料規定を拝見し、ツインルームを希望していますが、予約サイトのシステム上、子供2名を入力するとツインルームの予約ができません。先にサイトで「大人2名」としてツインルームを予約し、その後メッセージで子供2名の添い寝をお伝えする形でもよろしいでしょうか？ご回答のほど、よろしくお願いいたします。</pre>
       </div>
     </section>
 
     <!-- ================= VIEW 3: 購物與卡牌聖地 (SHOPPING & PTCG) ================= -->
-    <section id="view-shop" class="hidden space-y-4">
-      <div class="bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-2xl p-4 shadow-md">
-        <h2 class="text-lg font-black"><i class="fa-solid fa-bag-shopping mr-1.5"></i>媽媽超市服飾攻略 ＆ 群祐卡牌尋寶圖</h2>
-        <p class="text-xs text-pink-100 mt-1">完美對應「沖繩超市分類神圖」與全那霸/浦添最強寶可夢卡牌動線！</p>
+    <section id="view-shop" class="hidden space-y-5">
+      <div class="bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-2xl p-5 shadow-md">
+        <h2 class="text-xl font-black"><i class="fa-solid fa-bag-shopping mr-1.5"></i>媽媽超市服飾攻略 ＆ 群祐卡牌尋寶圖</h2>
+        <p class="text-base text-pink-100 mt-1">完美對應「沖繩超市分類神圖」與全那霸/浦添最強寶可夢卡牌動線！</p>
       </div>
 
       <!-- 4 Supermarkets Guide -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-3">
-        <h3 class="text-sm font-black text-slate-900">🛒 媽媽專屬：沖繩 4 大超市精準打擊指南</h3>
-        <div class="grid grid-cols-1 gap-2.5 text-xs">
-          <div class="p-3 rounded-xl bg-amber-50 border border-amber-200">
-            <div class="font-black text-amber-950 text-sm">1. 【一次買齊：San-A】➔ 那霸 Main Place 1F ＆ PARCO 1F</div>
-            <p class="text-amber-900 mt-1"><strong>排入時段：</strong>Day 1 晚間 22:15（營業至 23:00 半價熟食）＆ Day 4 下午 14:00 退稅掃貨。<br><strong>必買強項：</strong>沖繩限定泡麵、石垣島辣油、雪鹽、黑糖、伴手禮最齊全，滿 ¥5,000 直接退稅！</p>
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3.5">
+        <h3 class="text-lg font-black text-slate-900">🛒 媽媽專屬：沖繩 4 大超市精準打擊指南</h3>
+        <div class="grid grid-cols-1 gap-3.5 text-base">
+          <div class="p-4 rounded-xl bg-amber-50 border-2 border-amber-300">
+            <div class="font-black text-amber-950 text-lg">1. 【一次買齊：San-A】➔ 那霸 Main Place 1F ＆ PARCO 1F</div>
+            <p class="text-amber-950 mt-1"><strong>排入時段：</strong>Day 1 晚間 22:15（營業至 23:00 半價熟食）＆ Day 4 下午 14:00 退稅掃貨。<br><strong>必買強項：</strong>沖繩限定泡麵、石垣島辣油、雪鹽、黑糖、伴手禮最齊全，滿 ¥5,000 直接退稅！</p>
           </div>
-          <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
-            <div class="font-black text-emerald-950 text-sm">2. 【找島蔬果：JA / A-Coop】➔ Coop Apple Town 1F</div>
-            <p class="text-emerald-900 mt-1"><strong>排入時段：</strong>Day 4 下午逛玩具反斗城與吃やざえもん壽司時順逛（飯店正對面）。<br><strong>必買強項：</strong>JA 農協體系，當季日本草莓、沖繩縣產鮮奶、島產水果最新鮮！</p>
+          <div class="p-4 rounded-xl bg-emerald-50 border-2 border-emerald-300">
+            <div class="font-black text-emerald-950 text-lg">2. 【找島蔬果：JA / A-Coop】➔ Coop Apple Town 1F</div>
+            <p class="text-emerald-950 mt-1"><strong>排入時段：</strong>Day 4 下午逛玩具反斗城與吃やざえもん壽司時順逛（飯店正對面）。<br><strong>必買強項：</strong>JA 農協體系，當季日本草莓、沖繩縣產鮮奶、島產水果最新鮮！</p>
           </div>
-          <div class="p-3 rounded-xl bg-rose-50 border border-rose-200">
-            <div class="font-black text-rose-950 text-sm">3. 【精緻熟食：Ryubo】➔ 縣廳前站 Ryubo 琉貿百貨 B1</div>
-            <p class="text-rose-900 mt-1"><strong>排入時段：</strong>Day 3 下午 14:30 去奧武山公園搭單軌前最後一站購買。<br><strong>必買強項：</strong>百貨級超市，現炸高級阿古豬/和牛可樂餅、炭烤串燒、頂級水果，買去公園野餐超享受！</p>
+          <div class="p-4 rounded-xl bg-rose-50 border-2 border-rose-300">
+            <div class="font-black text-rose-950 text-lg">3. 【精緻熟食：Ryubo】➔ 縣廳前站 Ryubo 琉貿百貨 B1</div>
+            <p class="text-rose-950 mt-1"><strong>排入時段：</strong>Day 3 下午 14:30 去奧武山公園搭單軌前最後一站購買。<br><strong>必買強項：</strong>百貨級超市，現炸高級阿古豬/和牛可樂餅、炭烤串燒、頂級水果，買去公園野餐超享受！</p>
           </div>
-          <div class="p-3 rounded-xl bg-sky-50 border border-sky-200">
-            <div class="font-black text-sky-950 text-sm">4. 【深夜補貨：MaxValu】➔ MaxValu 若狹店（24H 營業）</div>
-            <p class="text-sky-900 mt-1"><strong>排入時段：</strong>Day 3 晚上吃完傑克牛排步行 5 分鐘即達。<br><strong>必買強項：</strong>AEON 體系 24 小時不打烊，平價日本零食、明治牛奶、隔天早餐麵包大補貨！</p>
+          <div class="p-4 rounded-xl bg-sky-50 border-2 border-sky-300">
+            <div class="font-black text-sky-950 text-lg">4. 【深夜補貨：MaxValu】➔ MaxValu 若狹店（24H 營業）</div>
+            <p class="text-sky-950 mt-1"><strong>排入時段：</strong>Day 3 晚上吃完傑克牛排步行 5 分鐘即達。<br><strong>必買強項：</strong>AEON 體系 24 小時不打烊，平價日本零食、明治牛奶、隔天早餐麵包大補貨！</p>
           </div>
         </div>
       </div>
 
       <!-- Son's Pokemon Card Map -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-3 border-2 border-indigo-400">
-        <h3 class="text-sm font-black text-indigo-950 flex items-center justify-between">
-          <span>⚡ 群祐專屬：寶可夢卡牌 (PTCG) ＆ 機台四大聖地</span>
-          <span class="bg-indigo-100 text-indigo-800 text-[11px] px-2 py-0.5 rounded-full">小五朝聖地圖</span>
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3.5 border-4 border-indigo-400">
+        <h3 class="text-lg font-black text-indigo-950">
+          ⚡ 群祐專屬：寶可夢卡牌 (PTCG) ＆ 機台四大聖地
         </h3>
-        <div class="space-y-2 text-xs text-slate-700">
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <div class="font-black text-indigo-900">📍 Day 2：PARCO CITY 3F「Hobby Zone ＋ HMV トレカショップ」</div>
-            <p class="mt-0.5">3F 同時擁有老牌 Hobby Zone（原盒/擴充包/卡套）與 <strong>2025/4 新開幕的 HMV 卡牌專賣店</strong>（HMV書店內，單卡與二手卡），旁邊 namco 還有最新 <strong>Pokémon Frienda</strong> 機台！</p>
+        <div class="space-y-3 text-base text-slate-800">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-300">
+            <div class="font-black text-indigo-900 text-lg">📍 Day 2：PARCO CITY 3F「Hobby Zone ＋ HMV トレカショップ」</div>
+            <p class="mt-1">3F 同時擁有老牌 Hobby Zone（原盒/擴充包/卡套）與 <strong>2025/4 新開幕的 HMV 卡牌專賣店</strong>（HMV書店內，單卡與二手卡），旁邊 namco 還有最新 <strong>Pokémon Frienda</strong> 機台！</p>
           </div>
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <div class="font-black text-indigo-900">📍 Day 3：國際通「駿河屋 那霸沖映通り店」（淳久堂書店 B1）</div>
-            <p class="mt-0.5">全那霸最強單卡牆、PSA 鑑定卡與自製盲包（オリパ）聖地！記得直接從淳久堂書店搭手扶梯下 B1。</p>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-300">
+            <div class="font-black text-indigo-900 text-lg">📍 Day 3：國際通「駿河屋 那霸沖映通り店」（淳久堂書店 B1）</div>
+            <p class="mt-1">全那霸最強單卡牆、PSA 鑑定卡與自製盲包（オリパ）聖地！記得直接從淳久堂書店搭手扶梯下 B1。</p>
           </div>
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <div class="font-black text-indigo-900">📍 Day 4：新都心「TSUTAYA 蔦屋書店 2F」＋「Main Place 2F 扭蛋城」</div>
-            <p class="mt-0.5">飯店步行 5 分鐘的蔦屋書店 2F 擁有全新改裝超大交換卡牌專區與對戰桌；對面 Main Place 2F 有萬代 310 台扭蛋機與假面騎士機台！</p>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-300">
+            <div class="font-black text-indigo-900 text-lg">📍 Day 4：新都心「TSUTAYA 蔦屋書店 2F」＋「Main Place 2F 扭蛋城」</div>
+            <p class="mt-1">飯店步行 5 分鐘的蔦屋書店 2F 擁有全新改裝超大交換卡牌專區與對戰桌；對面 Main Place 2F 有萬代 310 台扭蛋機與假面騎士機台！</p>
           </div>
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <div class="font-black text-slate-800">💡 備案：漫畫倉庫 那霸赤嶺店（單軌赤嶺站步行 3 分鐘，24H 營業）</div>
-            <p class="mt-0.5">若還逛不夠，這家 24 小時營業的超巨大二手倉庫擁有堆積如山的卡牌、公仔與夾娃娃機！</p>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-300">
+            <div class="font-black text-slate-900 text-lg">💡 備案：漫畫倉庫 那霸赤嶺店（單軌赤嶺站步行 3 分鐘，24H 營業）</div>
+            <p class="mt-1">若還逛不夠，這家 24 小時營業的超巨大二手倉庫擁有堆積如山的卡牌、公仔與夾娃娃機！</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ================= VIEW 4: 匯率退稅計算機 & 旅費記帳 (CALC & BUDGET) ================= -->
-    <section id="view-calc" class="hidden space-y-4">
-      <div class="bg-gradient-to-r from-indigo-600 to-blue-700 text-white rounded-2xl p-4 shadow-md">
-        <h2 class="text-lg font-black"><i class="fa-solid fa-calculator mr-1.5"></i>秒算匯率＆退稅計算機 ＋ 隨手記帳本</h2>
-        <p class="text-xs text-indigo-100 mt-1">媽媽在 UNIQLO / GU / PARCO 買衣服輸入日幣，立刻算出「折合台幣」與「退稅後實付金額」！</p>
+    <section id="view-calc" class="hidden space-y-5">
+      <div class="bg-gradient-to-r from-indigo-600 to-blue-700 text-white rounded-2xl p-5 shadow-md">
+        <h2 class="text-xl font-black"><i class="fa-solid fa-calculator mr-1.5"></i>秒算匯率＆退稅計算機 ＋ 隨手記帳本</h2>
+        <p class="text-base text-indigo-100 mt-1">媽媽在 UNIQLO / GU / PARCO 買衣服輸入日幣，立刻算出「折合台幣」與「退稅後實付金額」！</p>
       </div>
 
       <!-- Instant Currency & Tax-Free Calculator -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-3 border border-slate-200">
-        <div class="flex items-center justify-between">
-          <span class="text-sm font-black text-slate-900">💴 日圓 (JPY) ⇄ 台幣 (TWD) 秒算</span>
-          <div class="flex items-center gap-1 text-xs">
-            <span class="text-slate-500">匯率:</span>
-            <input type="number" id="fx-rate" value="0.21" step="0.005" oninput="calculateFX()" class="w-16 bg-slate-100 border border-slate-300 rounded-lg px-2 py-1 text-center font-bold text-slate-800">
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-4 border border-slate-200">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="text-lg font-black text-slate-900">💴 日圓 (JPY) ⇄ 台幣 (TWD) 秒算</span>
+          <div class="flex items-center gap-1.5 text-sm">
+            <span class="text-slate-600 font-bold">匯率:</span>
+            <input type="number" id="fx-rate" value="0.21" step="0.005" oninput="calculateFX()" class="w-20 bg-slate-100 border-2 border-slate-300 rounded-xl px-2 py-1 text-center font-black text-slate-900">
           </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-3">
-          <div class="bg-sky-50 p-3 rounded-xl border border-sky-200">
-            <label class="block text-[11px] font-bold text-sky-800 mb-1">輸入日圓售價 (JPY)</label>
-            <input type="number" id="input-jpy" placeholder="例: 5500" oninput="calculateFX('jpy')" class="w-full bg-white border border-sky-300 rounded-xl px-3 py-2 text-lg font-black text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div class="bg-sky-50 p-4 rounded-2xl border-2 border-sky-300">
+            <label class="block text-sm font-black text-sky-900 mb-1.5">輸入日圓售價 (JPY)</label>
+            <input type="number" id="input-jpy" placeholder="例: 5500" oninput="calculateFX('jpy')" class="w-full bg-white border-2 border-sky-400 rounded-xl px-3.5 py-2.5 text-2xl font-black text-slate-900 focus:outline-none">
           </div>
-          <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200">
-            <label class="block text-[11px] font-bold text-emerald-800 mb-1">折合台幣 (TWD)</label>
-            <input type="number" id="input-twd" placeholder="自動換算" oninput="calculateFX('twd')" class="w-full bg-white border border-emerald-300 rounded-xl px-3 py-2 text-lg font-black text-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          <div class="bg-emerald-50 p-4 rounded-2xl border-2 border-emerald-300">
+            <label class="block text-sm font-black text-emerald-900 mb-1.5">折合台幣 (TWD)</label>
+            <input type="number" id="input-twd" placeholder="自動換算" oninput="calculateFX('twd')" class="w-full bg-white border-2 border-emerald-400 rounded-xl px-3.5 py-2.5 text-2xl font-black text-emerald-800 focus:outline-none">
           </div>
         </div>
 
         <!-- Tax Free Breakdown -->
-        <div class="grid grid-cols-2 gap-2.5 text-xs pt-1">
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-            <div class="text-slate-500 font-bold mb-0.5">✨ 店內直接免稅 (-10%)</div>
-            <div class="text-[10px] text-slate-400 mb-1">適用：UNIQLO / GU / ZARA / San-A</div>
-            <div id="taxfree-full" class="text-base font-black text-sky-700">¥0 <span class="text-xs font-bold text-slate-500">($0)</span></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base pt-1">
+          <div class="bg-slate-50 p-4 rounded-xl border-2 border-slate-200">
+            <div class="text-slate-800 font-black">✨ 店內直接免稅 (-10%)</div>
+            <div class="text-xs text-slate-500 mb-1">適用：UNIQLO / GU / ZARA / San-A</div>
+            <div id="taxfree-full" class="text-xl font-black text-sky-700">¥0 <span class="text-sm font-bold text-slate-600">($0)</span></div>
           </div>
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-            <div class="text-slate-500 font-bold mb-0.5">🏢 PARCO 1F 退稅櫃台 (-8.45%)</div>
-            <div class="text-[10px] text-slate-400 mb-1">扣除 1.55% 手續費後實付</div>
-            <div id="taxfree-parco" class="text-base font-black text-rose-700">¥0 <span class="text-xs font-bold text-slate-500">($0)</span></div>
+          <div class="bg-slate-50 p-4 rounded-xl border-2 border-slate-200">
+            <div class="text-slate-800 font-black">🏢 PARCO 1F 退稅櫃台 (-8.45%)</div>
+            <div class="text-xs text-slate-500 mb-1">扣除 1.55% 手續費後實付</div>
+            <div id="taxfree-parco" class="text-xl font-black text-rose-700">¥0 <span class="text-sm font-bold text-slate-600">($0)</span></div>
           </div>
         </div>
       </div>
 
       <!-- Quick Expense Logger (LocalStorage) -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-3">
-        <div class="flex justify-between items-center">
-          <h3 class="text-sm font-black text-slate-900">📒 隨手旅費記帳本（自動儲存於手機）</h3>
-          <span id="expense-total-badge" class="bg-amber-100 text-amber-900 text-xs font-black px-2.5 py-1 rounded-lg">已記總計：¥0 ($0)</span>
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-4">
+        <div class="flex flex-wrap justify-between items-center gap-2">
+          <h3 class="text-lg font-black text-slate-900">📒 隨手旅費記帳本</h3>
+          <span id="expense-total-badge" class="bg-amber-100 text-amber-950 text-sm font-black px-3 py-1 rounded-xl">已記總計：¥0 ($0)</span>
         </div>
 
-        <div class="flex gap-2">
-          <input type="text" id="exp-title" placeholder="項目 (如: 群祐卡包 / 泊港海膽)" class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-medium">
-          <input type="number" id="exp-amount" placeholder="日圓 ¥" class="w-24 bg-slate-50 border border-slate-300 rounded-xl px-2.5 py-2 text-xs font-bold">
-          <button onclick="addExpense()" class="bg-sky-600 text-white text-xs font-black px-3.5 py-2 rounded-xl shrink-0">
-            ＋記一筆
-          </button>
+        <div class="flex flex-col sm:flex-row gap-2.5">
+          <input type="text" id="exp-title" placeholder="項目 (如: 群祐卡包 / 泊港海膽)" class="flex-1 bg-slate-50 border-2 border-slate-300 rounded-xl px-3.5 py-2.5 text-base font-bold">
+          <div class="flex gap-2">
+            <input type="number" id="exp-amount" placeholder="日圓 ¥" class="flex-1 sm:w-32 bg-slate-50 border-2 border-slate-300 rounded-xl px-3.5 py-2.5 text-base font-black">
+            <button onclick="addExpense()" class="bg-sky-600 text-white text-base font-black px-5 py-2.5 rounded-xl shrink-0 shadow">
+              ＋記一筆
+            </button>
+          </div>
         </div>
 
-        <div id="expense-list" class="space-y-1.5 max-h-56 overflow-y-auto text-xs"></div>
+        <div id="expense-list" class="space-y-2 max-h-64 overflow-y-auto text-base"></div>
 
         <!-- Official Pre-calculated Budget Summary -->
-        <details class="bg-slate-50 rounded-xl p-3 border border-slate-200 text-xs">
-          <summary class="font-black text-slate-800 cursor-pointer">📊 查看四天三夜官方預估基礎總表（¥70,040 ≈ $14,708 TWD）</summary>
-          <div class="mt-2.5 space-y-1.5 text-slate-600 border-t border-slate-200 pt-2">
-            <div class="flex justify-between"><span>🚕 四日當地交通小計（單軌+接駁+計程車）</span><span class="font-bold">¥11,810</span></div>
-            <div class="flex justify-between"><span>🍣 Day 1 晚餐（魚萬/ぱいかじ＋超市半價）</span><span class="font-bold">¥7,000</span></div>
-            <div class="flex justify-between"><span>🐟 Day 2 泊港海鮮＋PARCO 天婦羅＋目利きの銀次</span><span class="font-bold">¥19,000</span></div>
-            <div class="flex justify-between"><span>🥩 Day 3 牧志美食＋Ryubo可樂餅＋傑克牛排</span><span class="font-bold">¥16,500</span></div>
-            <div class="flex justify-between"><span>🍜 Day 4 Kenpa 沖繩麵＋やざえもん壽司＋機場點心</span><span class="font-bold">¥14,300</span></div>
-            <div class="flex justify-between"><span>🎫 博物館門票(2大1小) ＋ 大創滑草板×2</span><span class="font-bold">¥1,430</span></div>
-            <div class="flex justify-between text-slate-900 font-black border-t border-slate-300 pt-1.5"><span>💰 四口之家基礎總計</span><span>¥70,040 (約 $14,708)</span></div>
+        <details class="bg-slate-50 rounded-xl p-4 border-2 border-slate-200 text-base">
+          <summary class="font-black text-slate-900 cursor-pointer">📊 查看四天三夜官方預估基礎總表（¥70,040 ≈ $14,708 TWD）</summary>
+          <div class="mt-3 space-y-2 text-slate-700 border-t border-slate-300 pt-3">
+            <div class="flex justify-between"><span>🚕 四日當地交通小計</span><span class="font-black">¥11,810</span></div>
+            <div class="flex justify-between"><span>🍣 Day 1 晚餐＋超市半價</span><span class="font-black">¥7,000</span></div>
+            <div class="flex justify-between"><span>🐟 Day 2 泊港＋PARCO＋銀次</span><span class="font-black">¥19,000</span></div>
+            <div class="flex justify-between"><span>🥩 Day 3 牧志＋可樂餅＋傑克牛排</span><span class="font-black">¥16,500</span></div>
+            <div class="flex justify-between"><span>🍜 Day 4 沖繩麵＋やざえもん＋機場</span><span class="font-black">¥14,300</span></div>
+            <div class="flex justify-between"><span>🎫 博物館門票 ＋ 大創滑草板×2</span><span class="font-black">¥1,430</span></div>
+            <div class="flex justify-between text-slate-950 font-black border-t border-slate-300 pt-2"><span>💰 四口之家基礎總計</span><span>¥70,040 (約 $14,708)</span></div>
           </div>
         </details>
       </div>
     </section>
 
     <!-- ================= VIEW 5: 交通時刻表與檢查表 (TRANSPORT & CHECKLIST) ================= -->
-    <section id="view-check" class="hidden space-y-4">
-      <div class="bg-gradient-to-r from-slate-800 to-slate-900 text-white rounded-2xl p-4 shadow-md">
-        <h2 class="text-lg font-black"><i class="fa-solid fa-bus mr-1.5 text-amber-400"></i>PARCO 接駁車時刻表 ＆ 行前隨身檢查表</h2>
-        <p class="text-xs text-slate-300 mt-1">打勾狀態會自動儲存在您的手機裡，不怕遺漏任何重要準備！</p>
+    <section id="view-check" class="hidden space-y-5">
+      <div class="bg-gradient-to-r from-slate-800 to-slate-900 text-white rounded-2xl p-5 shadow-md">
+        <h2 class="text-xl font-black"><i class="fa-solid fa-bus mr-1.5 text-amber-400"></i>PARCO 接駁車時刻表 ＆ 行前隨身檢查表</h2>
+        <p class="text-base text-slate-200 mt-1">打勾狀態會自動儲存在您的手機裡，不怕遺漏任何重要準備！</p>
       </div>
 
       <!-- Karry Kanko Shuttle Bus Timetable -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-3 border-l-4 border-sky-600">
-        <div class="flex justify-between items-center">
-          <h3 class="text-sm font-black text-slate-900">🚌 カリー観光（Karry 觀光）PARCO 接駁車時刻表</h3>
-          <span class="bg-rose-100 text-rose-800 text-[11px] font-black px-2 py-0.5 rounded">僅收現金 ‧ 全家 ¥750</span>
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3.5 border-l-8 border-sky-600">
+        <div class="flex flex-wrap justify-between items-center gap-2">
+          <h3 class="text-lg font-black text-slate-900">🚌 カリー観光 PARCO 接駁車時刻表</h3>
+          <span class="bg-rose-100 text-rose-900 text-sm font-black px-3 py-1 rounded-lg">僅收現金 ‧ 全家 ¥750</span>
         </div>
-        <p class="text-xs text-slate-600">車資：大人 ¥300、小學生 ¥150、未滿 6 歲免費（2大1小單程共 ¥750，不可刷 IC 卡）。</p>
-        <div class="grid grid-cols-2 gap-2.5 text-xs">
-          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-            <div class="font-black text-sky-900 mb-1">往 PARCO CITY<br><span class="text-[10px] font-normal text-slate-500">Main Place / 歌町站發</span></div>
-            <ul class="space-y-1 text-slate-700 font-mono">
+        <p class="text-base text-slate-700">車資：大人 ¥300、小學生 ¥150、未滿 6 歲免費（2大1小單程共 ¥750，不可刷 IC 卡）。</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-base">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-300">
+            <div class="font-black text-sky-900 text-lg mb-1.5">往 PARCO CITY<br><span class="text-xs font-bold text-slate-500">Main Place / 歌町站發</span></div>
+            <ul class="space-y-1.5 text-slate-800 font-mono font-bold">
               <li>10:47 / 10:52</li>
               <li>11:32 / 11:38</li>
               <li>12:32 / 12:38</li>
@@ -906,12 +889,12 @@
               <li>15:28 / 15:35</li>
             </ul>
           </div>
-          <div class="bg-amber-50 p-3 rounded-xl border border-amber-200">
-            <div class="font-black text-amber-950 mb-1">回 歌町站 (新都心)<br><span class="text-[10px] font-normal text-amber-800">PARCO 1F 大門外發</span></div>
-            <ul class="space-y-1 text-slate-800 font-mono">
+          <div class="bg-amber-50 p-4 rounded-xl border-2 border-amber-300">
+            <div class="font-black text-amber-950 text-lg mb-1.5">回 歌町站 (新都心)<br><span class="text-xs font-bold text-amber-800">PARCO 1F 大門外發</span></div>
+            <ul class="space-y-1.5 text-slate-900 font-mono font-bold">
               <li>13:10</li>
               <li>15:10</li>
-              <li class="font-black text-rose-600 bg-white px-1.5 py-0.5 rounded border border-rose-300">★ 16:20 (最推薦!)</li>
+              <li class="font-black text-rose-700 bg-white px-2 py-1 rounded-lg border-2 border-rose-400">★ 16:20 (最推薦!)</li>
               <li>17:30 (易塞車)</li>
               <li>18:45</li>
             </ul>
@@ -920,12 +903,12 @@
       </div>
 
       <!-- Interactive Checklist -->
-      <div class="bg-white rounded-2xl p-4 card-shadow space-y-3">
+      <div class="bg-white rounded-2xl p-5 card-shadow space-y-3.5">
         <div class="flex justify-between items-center">
-          <h3 class="text-sm font-black text-slate-900">✅ 行前與隨身必備檢查表（點擊打勾）</h3>
-          <button onclick="resetChecklist()" class="text-[11px] text-slate-400 underline">重置清單</button>
+          <h3 class="text-lg font-black text-slate-900">✅ 行前與隨身必備檢查表（點擊打勾）</h3>
+          <button onclick="resetChecklist()" class="text-sm text-slate-500 font-bold underline">重置清單</button>
         </div>
-        <div id="checklist-container" class="space-y-2 text-xs"></div>
+        <div id="checklist-container" class="space-y-2.5 text-base"></div>
       </div>
     </section>
 
@@ -933,47 +916,67 @@
 
   <!-- ================= FULLSCREEN MODAL FOR TAXI / JAPANESE PHRASES ================= -->
   <div id="fullscreen-modal" onclick="closeModal()" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex items-center justify-center p-4">
-    <div onclick="event.stopPropagation()" class="bg-white w-full max-w-md rounded-3xl p-6 text-center shadow-2xl border-4 border-amber-400 space-y-4">
-      <div id="modal-tag" class="inline-block bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full">
+    <div onclick="event.stopPropagation()" class="bg-white w-full max-w-lg rounded-3xl p-6 text-center shadow-2xl border-4 border-amber-400 space-y-5">
+      <div id="modal-tag" class="inline-block bg-amber-400 text-slate-950 text-base font-black px-4 py-1.5 rounded-full">
         計程車司機指路卡
       </div>
-      <div class="text-xs font-bold text-slate-400">運転手さん、ここまでお願いします</div>
-      <div id="modal-jp-main" class="text-2xl sm:text-3xl font-black text-slate-900 leading-snug break-words py-2"></div>
-      <div id="modal-jp-sub" class="text-sm font-bold text-sky-700 bg-sky-50 p-3 rounded-2xl border border-sky-200"></div>
-      <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-black py-3.5 rounded-2xl text-sm shadow-lg active:scale-95 transition">
+      <div class="text-base font-bold text-slate-500">運転手さん、ここまでお願いします</div>
+      <div id="modal-jp-main" class="text-3xl sm:text-4xl font-black text-slate-950 leading-snug break-words py-3"></div>
+      <div id="modal-jp-sub" class="text-lg font-black text-sky-800 bg-sky-50 p-4 rounded-2xl border-2 border-sky-200"></div>
+      <button onclick="closeModal()" class="w-full bg-slate-900 text-white font-black py-4 rounded-2xl text-lg shadow-lg active:scale-95 transition">
         關閉字卡 (Close)
       </button>
     </div>
   </div>
 
   <!-- ================= STICKY BOTTOM NAVIGATION BAR ================= -->
-  <nav class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-lg border-t border-slate-200 shadow-2xl">
-    <div class="max-w-xl mx-auto grid grid-cols-4 py-2 px-2 text-center text-[11px] font-bold text-slate-400">
+  <nav class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-lg border-t-2 border-slate-200 shadow-2xl">
+    <div class="max-w-xl mx-auto grid grid-cols-5 py-2.5 px-1 text-center text-xs font-black text-slate-500">
       <button onclick="switchMainView('itinerary')" id="nav-itinerary" class="nav-btn nav-active flex flex-col items-center gap-1 py-1">
-        <i class="fa-solid fa-calendar-day text-lg"></i>
+        <i class="fa-solid fa-calendar-day text-xl"></i>
         <span>每日行程</span>
       </button>
       <button onclick="switchMainView('jpcard')" id="nav-jpcard" class="nav-btn flex flex-col items-center gap-1 py-1">
-        <i class="fa-solid fa-comments text-lg"></i>
-        <span>手指日文卡</span>
+        <i class="fa-solid fa-comments text-xl"></i>
+        <span>日文字卡</span>
       </button>
       <button onclick="switchMainView('shop')" id="nav-shop" class="nav-btn flex flex-col items-center gap-1 py-1">
-        <i class="fa-solid fa-bag-shopping text-lg"></i>
-        <span>超市＆卡牌</span>
+        <i class="fa-solid fa-bag-shopping text-xl"></i>
+        <span>超市卡牌</span>
       </button>
       <button onclick="switchMainView('calc')" id="nav-calc" class="nav-btn flex flex-col items-center gap-1 py-1">
-        <i class="fa-solid fa-yen-sign text-lg"></i>
-        <span>退稅＆記帳</span>
+        <i class="fa-solid fa-yen-sign text-xl"></i>
+        <span>退稅記帳</span>
+      </button>
+      <button onclick="switchMainView('check')" id="nav-check" class="nav-btn flex flex-col items-center gap-1 py-1">
+        <i class="fa-solid fa-list-check text-xl"></i>
+        <span>時刻清單</span>
       </button>
     </div>
   </nav>
 
-  <!-- Floating Quick Button for Bus & Checklist -->
-  <button onclick="switchMainView('check')" class="fixed right-3.5 bottom-20 z-30 bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-xs px-3.5 py-2.5 rounded-full shadow-xl border-2 border-white flex items-center gap-1.5 active:scale-95 transition">
-    <i class="fa-solid fa-list-check"></i> 接駁車＆清單
-  </button>
-
   <script>
+    // 0. Font Scale Controller (Default: 'lg' 特大清晰字體, persists in localStorage)
+    const FONT_KEY = 'okinawa_2026_font_scale';
+    function setFontScale(scale) {
+      const html = document.documentElement;
+      html.classList.remove('font-scale-md', 'font-scale-lg', 'font-scale-xl');
+      html.classList.add('font-scale-' + scale);
+      ['md', 'lg', 'xl'].forEach(s => {
+        const btn = document.getElementById('fbtn-' + s);
+        if (btn) btn.classList.toggle('font-btn-active', s === scale);
+      });
+      try { localStorage.setItem(FONT_KEY, scale); } catch {}
+    }
+    (function initFontScale() {
+      try {
+        const saved = localStorage.getItem(FONT_KEY) || 'lg';
+        setFontScale(saved);
+      } catch {
+        setFontScale('lg');
+      }
+    })();
+
     // 1. Switch Main Bottom Views
     function switchMainView(viewName) {
       const views = ['itinerary', 'jpcard', 'shop', 'calc', 'check'];
@@ -1021,10 +1024,10 @@
       const text = document.getElementById('hotel-jp-text').textContent;
       navigator.clipboard.writeText(text).then(() => {
         const btn = document.getElementById('copy-hotel-btn');
-        btn.innerHTML = '<i class="fa-solid fa-check"></i> 已複製！';
+        btn.innerHTML = '<i class="fa-solid fa-check mr-1"></i> 已複製！';
         btn.classList.replace('bg-sky-600', 'bg-emerald-600');
         setTimeout(() => {
-          btn.innerHTML = '<i class="fa-regular fa-copy"></i> 一鍵複製';
+          btn.innerHTML = '<i class="fa-regular fa-copy mr-1"></i> 一鍵複製';
           btn.classList.replace('bg-emerald-600', 'bg-sky-600');
         }, 2000);
       });
@@ -1051,8 +1054,8 @@
       const parcoTaxFreeJpy = Math.round(jpy - (jpy - fullTaxFreeJpy) * (1 - 0.155));
       const parcoTaxFreeTwd = Math.round(parcoTaxFreeJpy * rate);
 
-      document.getElementById('taxfree-full').innerHTML = `¥${fullTaxFreeJpy.toLocaleString()} <span class="text-xs font-bold text-slate-500">($${fullTaxFreeTwd.toLocaleString()})</span>`;
-      document.getElementById('taxfree-parco').innerHTML = `¥${parcoTaxFreeJpy.toLocaleString()} <span class="text-xs font-bold text-slate-500">($${parcoTaxFreeTwd.toLocaleString()})</span>`;
+      document.getElementById('taxfree-full').innerHTML = `¥${fullTaxFreeJpy.toLocaleString()} <span class="text-sm font-bold text-slate-600">($${fullTaxFreeTwd.toLocaleString()})</span>`;
+      document.getElementById('taxfree-parco').innerHTML = `¥${parcoTaxFreeJpy.toLocaleString()} <span class="text-sm font-bold text-slate-600">($${parcoTaxFreeTwd.toLocaleString()})</span>`;
     }
 
     // 6. Expense Tracker (LocalStorage)
@@ -1066,15 +1069,15 @@
       const container = document.getElementById('expense-list');
       let totalJpy = 0;
       if (list.length === 0) {
-        container.innerHTML = '<div class="text-slate-400 text-center py-3">尚無記帳紀錄，可於上方輸入花費即時累加</div>';
+        container.innerHTML = '<div class="text-slate-500 text-center py-4 font-bold">尚無記帳紀錄，可於上方輸入花費即時累加</div>';
       } else {
         container.innerHTML = list.map((item, idx) => {
           totalJpy += item.amount;
-          return `<div class="flex justify-between items-center bg-slate-50 px-3 py-2 rounded-xl border border-slate-200">
-            <span class="font-bold text-slate-800">${item.title}</span>
-            <div class="flex items-center gap-2">
-              <span class="font-black text-sky-700">¥${item.amount.toLocaleString()} <span class="text-slate-400 font-normal">($${Math.round(item.amount * rate)})</span></span>
-              <button onclick="deleteExpense(${idx})" class="text-rose-400 hover:text-rose-600"><i class="fa-solid fa-trash-can"></i></button>
+          return `<div class="flex justify-between items-center bg-slate-50 px-4 py-3 rounded-xl border border-slate-300">
+            <span class="font-black text-slate-900">${item.title}</span>
+            <div class="flex items-center gap-3">
+              <span class="font-black text-sky-700">¥${item.amount.toLocaleString()} <span class="text-slate-500 font-bold">($${Math.round(item.amount * rate)})</span></span>
+              <button onclick="deleteExpense(${idx})" class="text-rose-500 hover:text-rose-700 p-1"><i class="fa-solid fa-trash-can"></i></button>
             </div>
           </div>`;
         }).join('');
@@ -1121,9 +1124,9 @@
       const list = getChecklist();
       const container = document.getElementById('checklist-container');
       container.innerHTML = list.map((item, idx) => `
-        <label onclick="toggleCheck(${idx})" class="flex items-center gap-3 p-3 rounded-xl border ${item.done ? 'bg-emerald-50/60 border-emerald-200 text-slate-400 line-through' : 'bg-slate-50 border-slate-200 text-slate-800'} cursor-pointer transition">
-          <input type="checkbox" ${item.done ? 'checked' : ''} class="w-4 h-4 accent-emerald-600 rounded pointer-events-none">
-          <span class="font-bold flex-1">${item.text}</span>
+        <label onclick="toggleCheck(${idx})" class="flex items-center gap-3.5 p-4 rounded-xl border-2 ${item.done ? 'bg-emerald-50/70 border-emerald-300 text-slate-400 line-through' : 'bg-slate-50 border-slate-300 text-slate-900'} cursor-pointer transition">
+          <input type="checkbox" ${item.done ? 'checked' : ''} class="w-5 h-5 accent-emerald-600 rounded pointer-events-none shrink-0">
+          <span class="font-black flex-1">${item.text}</span>
         </label>
       `).join('');
     }
