@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="440" rx="24" fill="#faf5ff" stroke="#9333ea" stroke-width="4"/>
+  <text x="400" y="44" text-anchor="middle" fill="#581c87" font-size="24" font-weight="900">🍜 【新手食券機圖解 ⑧】Kenpa 沖繩麵「買餐券 3 步驟＆按鈕翻譯」</text>
+  <!-- Vending Machine Buttons -->
+  <rect x="30" y="68" width="450" height="345" rx="18" fill="#1e293b" stroke="#64748b" stroke-width="4"/>
+  <text x="255" y="104" text-anchor="middle" fill="#fde047" font-size="20" font-weight="900">🤖 進門右手邊「自動食券機」必按這 3 顆：</text>
+
+  <rect x="50" y="122" width="410" height="82" rx="12" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
+  <text x="68" y="154" fill="#713f12" font-size="21" font-weight="900">🥇 ミックスすば（綜合沖繩麵・王牌必按！）</text>
+  <text x="68" y="186" fill="#0f172a" font-size="17" font-weight="900">同時有「軟骨排骨＋五花三枚肉」｜中 ¥950 / 大 ¥1,050</text>
+
+  <rect x="50" y="218" width="410" height="82" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+  <text x="68" y="250" fill="#0c4a6e" font-size="21" font-weight="900">🥈 本ソーキすば（軟骨排骨沖繩麵）</text>
+  <text x="68" y="282" fill="#0f172a" font-size="17" font-weight="900">滿滿燉到入口即化的軟骨排骨！｜中 ¥900 / 大 ¥1,000</text>
+
+  <rect x="50" y="314" width="410" height="80" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="68" y="346" fill="#14532d" font-size="21" font-weight="900">🥉 じゅーしー（沖繩高湯什錦炊飯・¥250）</text>
+  <text x="68" y="378" fill="#0f172a" font-size="17" font-weight="900">豚骨高湯炊飯超香濃，群祐與妹妹一人一碗最剛好！</text>
+
+  <!-- Right Steps -->
+  <rect x="500" y="68" width="275" height="345" rx="18" fill="#ffffff" stroke="#9333ea" stroke-width="3"/>
+  <text x="637" y="106" text-anchor="middle" fill="#6b21a8" font-size="21" font-weight="900">📋 現場操作順序：</text>
+  <text x="520" y="150" fill="#0f172a" font-size="18" font-weight="900">① 先塞入 ¥1,000 紙鈔</text>
+  <text x="520" y="178" fill="#475569" font-size="15" font-weight="700">（只收 ¥1,000 鈔票與硬幣）</text>
+  <text x="520" y="222" fill="#0f172a" font-size="18" font-weight="900">② 按下發亮的餐點按鈕</text>
+  <text x="520" y="250" fill="#475569" font-size="15" font-weight="700">（按完記得撥下退幣桿找零）</text>
+  <text x="520" y="294" fill="#0f172a" font-size="18" font-weight="900">③ 拿掉出來的紙券給店員</text>
+  <text x="520" y="322" fill="#475569" font-size="15" font-weight="700">（店員會帶您坐家庭桌）</text>
+  <text x="520" y="368" fill="#be123c" font-size="18" font-weight="900">④ 冰開水＆小碗在自助區</text>
+  <text x="520" y="394" fill="#be123c" font-size="15" font-weight="700">（桌上紅薑與辣椒泡盛可酌量加）</text>
+</svg>

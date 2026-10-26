@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="490" rx="24" fill="#fffbeb" stroke="#f59e0b" stroke-width="4"/>
+  <text x="400" y="46" text-anchor="middle" fill="#92400e" font-size="25" font-weight="900">🚝 【新手操作圖解 ②】單軌購票機按法 ＆ QR Code 感應過閘門</text>
+  <!-- Left: Ticket Machine -->
+  <rect x="25" y="70" width="365" height="395" rx="18" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+  <rect x="25" y="70" width="365" height="48" rx="15" fill="#0284c7"/>
+  <text x="207" y="102" text-anchor="middle" fill="#ffffff" font-size="21" font-weight="900">步驟 A：自動售票機怎麼按？</text>
+  <rect x="45" y="135" width="325" height="75" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="60" y="165" fill="#0369a1" font-size="19" font-weight="900">① 先按螢幕左側「人數鍵」：</text>
+  <text x="60" y="195" fill="#0f172a" font-size="18" font-weight="900">按【大人2 ＋ 小人1】（共3人圖示）</text>
+  <rect x="45" y="222" width="325" height="62" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="250" fill="#b91c1c" font-size="18" font-weight="900">👶 5歲大班妹妹「完全免費」！</text>
+  <text x="60" y="274" fill="#7f1d1d" font-size="16" font-weight="700">不用買她的票！只需買爸媽＋11歲群祐</text>
+  <rect x="45" y="296" width="325" height="75" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="60" y="325" fill="#15803d" font-size="19" font-weight="900">② 點選螢幕上的目的地：</text>
+  <text x="60" y="355" fill="#0f172a" font-size="18" font-weight="900">按【おもろまち 300円】➔ 總計 ¥750</text>
+  <text x="60" y="410" fill="#0f172a" font-size="18" font-weight="900">③ 投入 ¥1,000 紙鈔或硬幣</text>
+  <text x="60" y="440" fill="#b45309" font-size="18" font-weight="900">👉 下方掉出 3 張印有 QR Code 的紙票！</text>
+
+  <!-- Right: QR Gate -->
+  <rect x="410" y="70" width="365" height="395" rx="18" fill="#ffffff" stroke="#d97706" stroke-width="3"/>
+  <rect x="410" y="70" width="365" height="48" rx="15" fill="#d97706"/>
+  <text x="592" y="102" text-anchor="middle" fill="#ffffff" font-size="21" font-weight="900">步驟 B：怎麼刷票過閘門？</text>
+  <rect x="430" y="135" width="325" height="115" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="445" y="165" fill="#9a3412" font-size="19" font-weight="900">⚠️ 注意：不是塞進細縫裡！</text>
+  <text x="445" y="196" fill="#0f172a" font-size="18" font-weight="700">沖繩單軌全部改用「QR Code 掃描」：</text>
+  <text x="445" y="228" fill="#c2410c" font-size="19" font-weight="900">把紙票正面【對準發紅光的玻璃窗】</text>
+  <!-- Visual Gate Illustration -->
+  <rect x="460" y="265" width="120" height="85" rx="10" fill="#334155"/>
+  <rect x="480" y="280" width="80" height="45" rx="6" fill="#ef4444"/>
+  <text x="520" y="308" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="900">QR紅光窗</text>
+  <rect x="600" y="265" width="130" height="85" rx="10" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+  <text x="665" y="298" text-anchor="middle" fill="#0f172a" font-size="17" font-weight="900">車票往下貼</text>
+  <text x="665" y="326" text-anchor="middle" fill="#b45309" font-size="16" font-weight="900">「嗶！」門就開</text>
+  <rect x="430" y="368" width="325" height="80" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="445" y="398" fill="#065f46" font-size="18" font-weight="900">👧 妹妹怎麼過閘門？</text>
+  <text x="445" y="428" fill="#0f172a" font-size="17" font-weight="700">爸爸或媽媽刷票時，牽著妹妹一起走過去！</text>
+</svg>

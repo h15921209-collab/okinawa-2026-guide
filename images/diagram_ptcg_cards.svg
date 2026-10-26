@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="440" rx="24" fill="#fffbeb" stroke="#f59e0b" stroke-width="4"/>
+  <text x="400" y="44" text-anchor="middle" fill="#92400e" font-size="24" font-weight="900">⚡ 【群祐專屬圖解 ⑩】日本買寶可夢卡牌「單卡玻璃櫃＆機台」操作法</text>
+  <!-- Box 1: Glass Cabinet Single Cards -->
+  <rect x="25" y="72" width="365" height="340" rx="18" fill="#ffffff" stroke="#d97706" stroke-width="3"/>
+  <rect x="25" y="72" width="365" height="46" rx="14" fill="#d97706"/>
+  <text x="207" y="102" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">🃏 玻璃櫃稀有單卡怎麼買？</text>
+  <text x="45" y="148" fill="#0f172a" font-size="18" font-weight="900">① 在玻璃櫃前拿「點卡單＋筆」</text>
+  <text x="45" y="176" fill="#475569" font-size="15" font-weight="700">（HMV / 駿河屋 / 蔦屋 玻璃櫃旁都有放）</text>
+  <text x="45" y="218" fill="#0f172a" font-size="18" font-weight="900">② 抄下卡片標籤上的 3 個資訊：</text>
+  <rect x="45" y="232" width="325" height="82" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="260" fill="#92400e" font-size="17" font-weight="900">• 櫃號 (ショーケース番号) ＋ 卡名</text>
+  <text x="60" y="286" fill="#92400e" font-size="17" font-weight="900">• 標價 (例如 ¥1,280)</text>
+  <text x="60" y="308" fill="#b91c1c" font-size="15" font-weight="900">💡 嫌手寫麻煩？直接用手機拍下那張卡！</text>
+  <text x="45" y="352" fill="#0f172a" font-size="18" font-weight="900">③ 拿照片或單子給店員開櫃結帳</text>
+  <text x="45" y="384" fill="#047857" font-size="16" font-weight="900">✅ 駿河屋買滿 ¥5,000 出示護照直接免稅！</text>
+
+  <!-- Box 2: Frienda & Bargain Bins -->
+  <rect x="410" y="72" width="365" height="340" rx="18" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+  <rect x="410" y="72" width="365" height="46" rx="14" fill="#0284c7"/>
+  <text x="592" y="102" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">🎮 機台 ＆ ¥30 尋寶卡磚攻略</text>
+  <rect x="430" y="135" width="325" height="125" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="445" y="165" fill="#0c4a6e" font-size="19" font-weight="900">⚡ Pokémon Frienda 最新機台</text>
+  <text x="445" y="195" fill="#0f172a" font-size="17" font-weight="700">• 地點：PARCO CITY 3F namco</text>
+  <text x="445" y="222" fill="#0f172a" font-size="17" font-weight="700">• 先在機台旁兌幣機換好大量【¥100硬幣】</text>
+  <text x="445" y="248" fill="#0369a1" font-size="16" font-weight="900">• 投 ¥100 開始對戰，捕獲再投 ¥100 掉星盤！</text>
+
+  <rect x="430" y="275" width="325" height="118" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="445" y="305" fill="#14532d" font-size="19" font-weight="900">📦 ¥30～¥100 尋寶單卡盒 (ストレージ)</text>
+  <text x="445" y="335" fill="#0f172a" font-size="17" font-weight="700">• 整排開放式長條卡盒，自己翻找喜歡的卡</text>
+  <text x="445" y="362" fill="#0f172a" font-size="17" font-weight="700">• 抽出來放進店家提供的小籃子去櫃檯結帳</text>
+  <text x="445" y="385" fill="#15803d" font-size="15" font-weight="900">• 群祐可以用零用錢一次挑幾十張超划算！</text>
+</svg>

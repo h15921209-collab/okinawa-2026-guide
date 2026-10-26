@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="440" rx="24" fill="#ecfdf5" stroke="#10b981" stroke-width="4"/>
+  <text x="400" y="44" text-anchor="middle" fill="#065f46" font-size="24" font-weight="900">🛝 【新手親子圖解 ⑥】琉貿百貨買熱可樂餅 ➔ 奧武山公園滾輪溜滑梯</text>
+  <!-- Left: Ryubo B1 -->
+  <rect x="25" y="70" width="355" height="340" rx="18" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+  <rect x="25" y="70" width="355" height="46" rx="14" fill="#0284c7"/>
+  <text x="202" y="100" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">STEP 1：縣廳前站 Ryubo 百貨 B1</text>
+  <text x="45" y="145" fill="#0f172a" font-size="18" font-weight="900">🍓 公園野餐必買 3 寶：</text>
+  <rect x="45" y="165" width="315" height="65" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="60" y="193" fill="#b45309" font-size="18" font-weight="900">① 現炸「阿古豬可樂餅」</text>
+  <text x="60" y="218" fill="#475569" font-size="15" font-weight="700">あぐー豚コロッケ（酥脆爆汁超香！）</text>
+  <rect x="45" y="242" width="315" height="65" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="270" fill="#b91c1c" font-size="18" font-weight="900">② 冬季日本甘王草莓</text>
+  <text x="60" y="295" fill="#475569" font-size="15" font-weight="700">在超市洗手台沖一下就能帶去公園吃</text>
+  <text x="45" y="345" fill="#0369a1" font-size="18" font-weight="900">🚝 買完走上 2F 連通道進「縣廳前站」</text>
+  <text x="45" y="375" fill="#0f172a" font-size="17" font-weight="700">搭往那霸機場方向 2 站（4分鐘）</text>
+  <text x="45" y="400" fill="#059669" font-size="17" font-weight="900">👉 在「奥武山公園駅」下車！</text>
+
+  <!-- Right: Onoyama Park -->
+  <rect x="405" y="70" width="370" height="340" rx="18" fill="#ffffff" stroke="#10b981" stroke-width="3"/>
+  <rect x="405" y="70" width="370" height="46" rx="14" fill="#10b981"/>
+  <text x="590" y="100" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">STEP 2：奧武山公園「あおぞら公園」</text>
+  <text x="425" y="145" fill="#065f46" font-size="18" font-weight="900">📍 出站往右走 5 分鐘看到大複合遊具：</text>
+  <rect x="425" y="165" width="330" height="105" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+  <text x="440" y="195" fill="#047857" font-size="19" font-weight="900">👦 11歲群祐：3層樓高超長滾輪滑梯</text>
+  <text x="440" y="225" fill="#0f172a" font-size="17" font-weight="900">• 屁股墊著【大創 ¥110 滑草板】滑下來</text>
+  <text x="440" y="252" fill="#b91c1c" font-size="16" font-weight="900">✅ 速度超順暢、屁股完全不麻不痛！</text>
+  <rect x="425" y="285" width="330" height="105" rx="12" fill="#fdf2f8" stroke="#db2777" stroke-width="2"/>
+  <text x="440" y="315" fill="#9d174d" font-size="19" font-weight="900">👧 5歲妹妹：底部 3～6歲幼童專區</text>
+  <text x="440" y="345" fill="#0f172a" font-size="17" font-weight="700">• 緩坡小滑梯、攀爬繩網、彈跳床、沙坑</text>
+  <text x="440" y="372" fill="#0f172a" font-size="16" font-weight="700">• 爸媽坐旁邊長椅吃熱可樂餅＆草莓看顧</text>
+</svg>

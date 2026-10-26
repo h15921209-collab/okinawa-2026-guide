@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="450" rx="24" fill="#1e1b4b" stroke="#f59e0b" stroke-width="4"/>
+  <text x="400" y="44" text-anchor="middle" fill="#fbbf24" font-size="24" font-weight="900">🥩 【新手點餐圖解 ⑦】傑克牛排館「門外紅綠燈號 ＆ 熟度醬料」指南</text>
+  <!-- Left: Traffic Light -->
+  <rect x="25" y="68" width="330" height="355" rx="18" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+  <text x="190" y="104" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">🚦 門外招牌下的「空位紅綠燈」</text>
+  <circle cx="85" cy="160" r="28" fill="#ef4444"/><text x="85" y="167" text-anchor="middle" fill="#fff" font-size="18" font-weight="900">満席</text>
+  <text x="130" y="155" fill="#fca5a5" font-size="18" font-weight="900">紅燈（客滿候位）</text>
+  <text x="130" y="180" fill="#f8fafc" font-size="15" font-weight="700">進門跟櫃檯報「4人」領號碼牌</text>
+
+  <circle cx="85" cy="245" r="28" fill="#f59e0b"/><text x="85" y="252" text-anchor="middle" fill="#fff" font-size="16" font-weight="900">少し待</text>
+  <text x="130" y="240" fill="#fde047" font-size="18" font-weight="900">黃燈（稍微等一下）</text>
+  <text x="130" y="265" fill="#f8fafc" font-size="15" font-weight="700">翻桌超快！約 5～10 分鐘入座</text>
+
+  <circle cx="85" cy="330" r="28" fill="#10b981"/><text x="85" y="337" text-anchor="middle" fill="#fff" font-size="18" font-weight="900">空席</text>
+  <text x="130" y="325" fill="#6ee7b7" font-size="18" font-weight="900">綠燈（有空位直接進！）</text>
+  <text x="130" y="350" fill="#f8fafc" font-size="15" font-weight="700">17:15 離峰抵達最常遇到綠/黃燈</text>
+  <text x="190" y="402" text-anchor="middle" fill="#fde047" font-size="17" font-weight="900">⚠️ 結帳注意：店內【只收日圓現金】！</text>
+
+  <!-- Right: Ordering Guide -->
+  <rect x="375" y="68" width="400" height="355" rx="18" fill="#ffffff" stroke="#f59e0b" stroke-width="3"/>
+  <text x="575" y="104" text-anchor="middle" fill="#92400e" font-size="21" font-weight="900">🍽️ 全家 4 人這樣點最完美：</text>
+  <rect x="395" y="122" width="360" height="95" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="152" fill="#b45309" font-size="19" font-weight="900">👑 必點：テンダーロインステーキ (L)</text>
+  <text x="410" y="180" fill="#0f172a" font-size="17" font-weight="900">＝ 特選菲力牛排（大份 250g・¥3,600）</text>
+  <text x="410" y="205" fill="#475569" font-size="15" font-weight="700">零筋膜、極致軟嫩！免費附玉米濃湯＋高麗菜沙拉＋白飯</text>
+
+  <rect x="395" y="230" width="360" height="90" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="410" y="258" fill="#b91c1c" font-size="18" font-weight="900">🔥 熟度關鍵（鐵板非常燙！）：</text>
+  <text x="410" y="284" fill="#0f172a" font-size="17" font-weight="900">• 爸媽吃：點【ミディアム (Medium 5分熟)】</text>
+  <text x="410" y="308" fill="#0f172a" font-size="17" font-weight="900">• 小孩吃：點【ミディアムウェル (7分熟無血水)】</text>
+
+  <rect x="395" y="332" width="360" height="75" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="410" y="360" fill="#15803d" font-size="18" font-weight="900">🧂 桌上靈魂醬料：No.1 牛排醬 ＆ 蒜泥</text>
+  <text x="410" y="388" fill="#0f172a" font-size="16" font-weight="700">第一口先沾海鹽與黑胡椒，第二口淋「No.1 醬」超下飯！</text>
+</svg>

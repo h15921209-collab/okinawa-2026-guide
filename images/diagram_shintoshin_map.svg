@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="520" rx="24" fill="#f0f9ff" stroke="#0284c7" stroke-width="4"/>
+  <text x="400" y="42" text-anchor="middle" fill="#0c4a6e" font-size="24" font-weight="900">🗺️ 【新手位置圖解 ③】自由花園酒店周邊「步行 5 分鐘生活圈」</text>
+  <!-- Roads -->
+  <rect x="370" y="65" width="45" height="430" fill="#cbd5e1"/>
+  <rect x="40" y="255" width="720" height="42" fill="#cbd5e1"/>
+  <!-- North: OKIMYU & Park & Kenpa & Ginji -->
+  <rect x="50" y="75" width="300" height="90" rx="14" fill="#f3e8ff" stroke="#9333ea" stroke-width="3"/>
+  <text x="200" y="108" text-anchor="middle" fill="#581c87" font-size="19" font-weight="900">🏛️ 沖繩縣立博物館 OKIMYU</text>
+  <text x="200" y="136" text-anchor="middle" fill="#6b21a8" font-size="16" font-weight="700">Day 4 首里城慶典 / 旁有新都心公園</text>
+
+  <rect x="435" y="75" width="325" height="90" rx="14" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+  <text x="597" y="108" text-anchor="middle" fill="#9a3412" font-size="19" font-weight="900">🍜 Kenpa 沖繩麵 ＆ 🐟 目利きの銀次</text>
+  <text x="597" y="136" text-anchor="middle" fill="#c2410c" font-size="16" font-weight="700">新都心公園旁（飯店步行 8～10 分鐘）</text>
+
+  <!-- Middle Left: Apple Town -->
+  <rect x="50" y="180" width="300" height="135" rx="16" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+  <text x="200" y="212" text-anchor="middle" fill="#9f1239" font-size="21" font-weight="900">🍎 Apple Town 商場</text>
+  <text x="200" y="242" text-anchor="middle" fill="#be123c" font-size="17" font-weight="900">1F：玩具反斗城 ＋ Coop 超市</text>
+  <text x="200" y="270" text-anchor="middle" fill="#be123c" font-size="17" font-weight="900">2F：まぐろ問屋 黑鮪魚迴轉壽司</text>
+  <text x="200" y="296" text-anchor="middle" fill="#881337" font-size="15" font-weight="700">（就在飯店正對面！過斑馬線 2 分鐘）</text>
+
+  <!-- Center Right: HOTEL + Izakaya -->
+  <rect x="435" y="180" width="325" height="70" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="597" y="212" text-anchor="middle" fill="#14532d" font-size="18" font-weight="900">🏮 魚萬海鮮居酒屋 (24H) / ぱいかじ</text>
+  <text x="597" y="236" text-anchor="middle" fill="#166534" font-size="15" font-weight="700">Day 1 晚餐（飯店往北走 3 分鐘）</text>
+
+  <!-- HOTEL -->
+  <rect x="435" y="265" width="325" height="85" rx="16" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
+  <text x="597" y="300" text-anchor="middle" fill="#713f12" font-size="22" font-weight="900">🏨 自由花園酒店 (我們住這！)</text>
+  <text x="597" y="330" text-anchor="middle" fill="#854d0e" font-size="17" font-weight="900">リブレガーデンホテル (12歲以下免費)</text>
+
+  <!-- East/South-East: Main Place & TSUTAYA -->
+  <rect x="435" y="365" width="325" height="125" rx="16" fill="#e0e7ff" stroke="#4f46e5" stroke-width="3"/>
+  <text x="597" y="398" text-anchor="middle" fill="#312e81" font-size="20" font-weight="900">🛍️ San-A Naha Main Place</text>
+  <text x="597" y="426" text-anchor="middle" fill="#3730a3" font-size="17" font-weight="900">1F 超市(至23:00/可退稅) ‧ 2F 310台扭蛋</text>
+  <text x="597" y="454" text-anchor="middle" fill="#b45309" font-size="17" font-weight="900">🃏 對面：TSUTAYA 蔦屋 2F 寶可夢卡牌</text>
+  <text x="597" y="478" text-anchor="middle" fill="#4338ca" font-size="15" font-weight="700">（從飯店走過去只要 4 分鐘！）</text>
+
+  <!-- South: Omoromachi Station -->
+  <rect x="50" y="365" width="300" height="125" rx="16" fill="#0284c7"/>
+  <text x="200" y="405" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="900">🚝 單軌 おもろまち駅 (歌町站)</text>
+  <text x="200" y="438" text-anchor="middle" fill="#fde047" font-size="18" font-weight="900">西口電梯下 1F ➔ 直走 4 分鐘到飯店</text>
+  <text x="200" y="468" text-anchor="middle" fill="#e0f2fe" font-size="16" font-weight="700">Day 2 接駁巴士回程也在這下車！</text>
+</svg>

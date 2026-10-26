@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="470" rx="24" fill="#fff7ed" stroke="#ea580c" stroke-width="4"/>
+  <text x="400" y="44" text-anchor="middle" fill="#9a3412" font-size="24" font-weight="900">🏮 【新手動線圖解 ⑤】第一牧志公設市場避坑 ➔ 駿河屋＆大創同棟攻略</text>
+  <!-- Left Box: Makishi Market -->
+  <rect x="25" y="70" width="365" height="375" rx="18" fill="#ffffff" stroke="#ea580c" stroke-width="3"/>
+  <rect x="25" y="70" width="365" height="46" rx="14" fill="#ea580c"/>
+  <text x="207" y="100" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">STEP 1：第一牧志公設市場怎麼吃？</text>
+  <!-- 2F Good -->
+  <rect x="45" y="132" width="325" height="150" rx="14" fill="#ecfdf5" stroke="#10b981" stroke-width="3"/>
+  <text x="60" y="164" fill="#065f46" font-size="20" font-weight="900">⭕ 2樓：美食街食堂（直上2樓！）</text>
+  <text x="60" y="196" fill="#0f172a" font-size="17" font-weight="900">• 推薦：がんじゅう堂 / きらく</text>
+  <text x="60" y="224" fill="#0f172a" font-size="17" font-weight="700">• 直接看圖片菜單點「生魚片定食、</text>
+  <text x="60" y="250" fill="#0f172a" font-size="17" font-weight="700">  奶油烤扇貝、苦瓜炒蛋、阿古豬」</text>
+  <text x="60" y="274" fill="#047857" font-size="16" font-weight="900">✅ 完全免付每人 ¥550 代工費！</text>
+  <!-- 1F Skip -->
+  <rect x="45" y="298" width="325" height="125" rx="14" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="60" y="330" fill="#b91c1c" font-size="19" font-weight="900">❌ 1樓：生鮮海產攤（看看就好）</text>
+  <text x="60" y="360" fill="#7f1d1d" font-size="16" font-weight="700">• 在1樓買海鮮拿去2樓煮，每人要多收</text>
+  <text x="60" y="385" fill="#7f1d1d" font-size="16" font-weight="700">  ¥550 代工費，且單價偏高，新手不推！</text>
+  <text x="60" y="410" fill="#0369a1" font-size="16" font-weight="900">👉 進1樓大門直接搭手扶梯上 2樓就對了！</text>
+
+  <!-- Right Box: D-naha Building -->
+  <rect x="410" y="70" width="365" height="375" rx="18" fill="#ffffff" stroke="#4f46e5" stroke-width="3"/>
+  <rect x="410" y="70" width="365" height="46" rx="14" fill="#4f46e5"/>
+  <text x="592" y="100" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">STEP 2：走3分鐘進 D-naha 大樓</text>
+  <!-- 3F Daiso -->
+  <rect x="430" y="132" width="325" height="95" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
+  <text x="445" y="162" fill="#9d174d" font-size="20" font-weight="900">🛷 3樓：DAISO 大創百元店</text>
+  <text x="445" y="190" fill="#0f172a" font-size="17" font-weight="900">必買 2 個【¥110 塑膠滑草板】！</text>
+  <text x="445" y="215" fill="#be185d" font-size="15" font-weight="700">（等一下去奧武山公園溜超長滾輪滑梯神器）</text>
+  <!-- 1F-2F Junkudo -->
+  <rect x="430" y="238" width="325" height="60" rx="12" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
+  <text x="445" y="266" fill="#334155" font-size="18" font-weight="900">📚 1樓～2樓：ジュンク堂 (淳久堂書店)</text>
+  <text x="445" y="288" fill="#475569" font-size="15" font-weight="700">看到這個白底藍字招牌走進去搭手扶梯</text>
+  <!-- B1 Surugaya -->
+  <rect x="430" y="310" width="325" height="115" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="445" y="342" fill="#92400e" font-size="20" font-weight="900">🃏 地下1樓 (B1)：駿河屋 沖映通店</text>
+  <text x="445" y="370" fill="#0f172a" font-size="17" font-weight="900">• 全那霸最大寶可夢 PTCG 單卡尋寶牆</text>
+  <text x="445" y="396" fill="#0f172a" font-size="17" font-weight="900">• ¥30～¥100 平價卡磚 ‧ 滿 ¥5,000 免稅！</text>
+</svg>
