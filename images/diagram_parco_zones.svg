@@ -14,13 +14,14 @@
   <text x="217" y="210" text-anchor="middle" fill="#166534" font-size="15" font-weight="700">（明太子吃到飽午餐①）</text>
 
   <rect x="340" y="118" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="4"/>
-  <text x="457" y="146" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">⚡【第2步】兄妹天堂！</text>
-  <text x="457" y="174" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• Hobby Zone ＆ HMV寶可夢</text>
+  <text x="457" y="146" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">⚡【第2步】寶可夢＆吉卜力</text>
+  <text x="457" y="174" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• Hobby Zone(卡牌+陀螺)‧HMV</text>
   <text x="457" y="198" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• namco機台 ‧ 吉卜力 ‧ 森林家族</text>
 
-  <rect x="590" y="118" width="185" height="110" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-  <text x="682" y="168" text-anchor="middle" fill="#0c4a6e" font-size="17" font-weight="900">EDION 愛電王</text>
-  <text x="682" y="196" text-anchor="middle" fill="#0369a1" font-size="15" font-weight="700">大型電器 ‧ 玩具</text>
+  <rect x="590" y="118" width="185" height="110" rx="12" fill="#fef08a" stroke="#0284c7" stroke-width="4"/>
+  <text x="682" y="146" text-anchor="middle" fill="#0c4a6e" font-size="17" font-weight="900">🌀 EDION 愛電王</text>
+  <text x="682" y="174" text-anchor="middle" fill="#b91c1c" font-size="16" font-weight="900">戰鬥陀螺 X 官方B4店</text>
+  <text x="682" y="200" text-anchor="middle" fill="#0369a1" font-size="14" font-weight="900">（直接打85折＋免稅！）</text>
 
   <!-- 2F Row -->
   <rect x="25" y="242" width="75" height="110" rx="12" fill="#334155"/><text x="62" y="306" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="900">2F</text>
@@ -36,7 +37,7 @@
 
   <rect x="590" y="242" width="185" height="110" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
   <text x="682" y="288" text-anchor="middle" fill="#0c4a6e" font-size="18" font-weight="900">無印良品 MUJI</text>
-  <text x="682" y="316" text-anchor="middle" fill="#0369a1" font-size="16" font-weight="700">San-A 百貨服飾區</text>
+  <text x="682" y="316" text-anchor="middle" fill="#0369a1" font-size="16" font-weight="700">San-A 百貨玩具服飾</text>
 
   <!-- 1F Row -->
   <rect x="25" y="366" width="75" height="110" rx="12" fill="#334155"/><text x="62" y="430" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="900">1F</text>
