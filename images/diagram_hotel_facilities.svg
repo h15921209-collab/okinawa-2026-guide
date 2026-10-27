@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="540" rx="24" fill="#0f172a" stroke="#10b981" stroke-width="4"/>
+  <text x="400" y="42" text-anchor="middle" fill="#34d399" font-size="23" font-weight="900">🏨 【自由花園酒店 設施全攻略】電視看 YT/Netflix 秘訣 ＆ 1F/2F 免費神物</text>
+
+  <!-- Left Top Box: TV & YouTube / Netflix Truth -->
+  <rect x="25" y="64" width="370" height="225" rx="16" fill="#1e293b" stroke="#f43f5e" stroke-width="3"/>
+  <rect x="25" y="64" width="370" height="42" rx="13" fill="#e11d48"/>
+  <text x="210" y="92" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="900">📺 房間電視能看 YouTube / Netflix 嗎？</text>
+  <text x="42" y="128" fill="#fda4af" font-size="17" font-weight="900">❌ 實測真相：房內為「一般日本數位液晶電視」</text>
+  <text x="42" y="152" fill="#e2e8f0" font-size="14" font-weight="700">（非內建 App 的智慧 TV，可直接看日本寶可夢/陀螺動畫台）</text>
+  <rect x="40" y="166" width="340" height="108" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="2"/>
+  <text x="54" y="192" fill="#fde047" font-size="16" font-weight="900">💡 秒變智慧 TV 看 YT / Netflix 兩大自備神器：</text>
+  <text x="54" y="218" fill="#ffffff" font-size="14" font-weight="700">① 帶【Chromecast / 小米電視棒 / Fire TV Stick】</text>
+  <text x="54" y="240" fill="#38bdf8" font-size="14" font-weight="700">② 或帶【手機轉 HDMI 投影線】插電視 HDMI 孔＋房內免費 Wi-Fi</text>
+  <text x="54" y="262" fill="#a7f3d0" font-size="13" font-weight="700">（1F 櫃檯亦可免費借用手機充電器、有線網路線！）</text>
+
+  <!-- Right Top Box: 1F & 2F Floor Facilities -->
+  <rect x="410" y="64" width="365" height="225" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+  <rect x="410" y="64" width="365" height="42" rx="13" fill="#0284c7"/>
+  <text x="592" y="92" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="900">🏢 1樓 ＆ 2樓 必用公共設施位置</text>
+  <rect x="426" y="118" width="333" height="75" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="440" y="142" fill="#38bdf8" font-size="16" font-weight="900">📍【1F 大廳】微波爐 ＆ 備品吧 ＆ 免費寄行李</text>
+  <text x="440" y="164" fill="#e2e8f0" font-size="14" font-weight="700">• 免費微波爐（加熱 Main Place 超市半價熟食超神！）</text>
+  <text x="440" y="184" fill="#e2e8f0" font-size="14" font-weight="700">• 免費公用電腦 ‧ 1F 餐廳早餐 (6:30-10:00 / ¥1,500)</text>
+
+  <rect x="426" y="202" width="333" height="75" rx="10" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="440" y="226" fill="#fde047" font-size="16" font-weight="900">📍【2F 專區】24H 洗烘衣機 ＆ 免費製冰機</text>
+  <text x="440" y="248" fill="#e2e8f0" font-size="14" font-weight="700">• 洗衣機2台(¥200/次‧自動投入洗劑免買洗衣精！)</text>
+  <text x="440" y="268" fill="#e2e8f0" font-size="14" font-weight="700">• 烘衣機2台(¥100/30分) ‧ 24H免費製冰機 ‧ 啤酒販賣機</text>
+
+  <!-- Bottom Left Box: In-Room Equipment & Free Rentals -->
+  <rect x="25" y="302" width="370" height="215" rx="16" fill="#ffffff" stroke="#10b981" stroke-width="3"/>
+  <rect x="25" y="302" width="370" height="42" rx="13" fill="#059669"/>
+  <text x="210" y="330" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="900">🛏️ 房間內建設備 ＆ 1F 櫃檯免費借用</text>
+  <text x="42" y="366" fill="#065f46" font-size="16" font-weight="900">✅ 房內標配（全室席夢思 120cm 寬名床）：</text>
+  <text x="42" y="390" fill="#0f172a" font-size="14" font-weight="700">• 空冰箱、快煮壺、隱藏式咖啡茶包組、連身睡衣</text>
+  <text x="42" y="412" fill="#0f172a" font-size="14" font-weight="700">• 衣物除臭噴霧、全身鏡(180cm)、高水壓SPA按摩蓮蓬頭</text>
+  <rect x="40" y="426" width="340" height="76" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+  <text x="52" y="450" fill="#047857" font-size="15" font-weight="900">🎁 向 1F 櫃檯「免費借用」隱藏清單（先借先贏）：</text>
+  <text x="52" y="472" fill="#0f172a" font-size="14" font-weight="700">加濕器、空氣清淨機、手機充電器、額外毛毯、</text>
+  <text x="52" y="492" fill="#0f172a" font-size="14" font-weight="700">體溫計、指甲剪、熨斗、開瓶器、雨傘（雨天）</text>
+
+  <!-- Bottom Right Box: Check-in / Kids Rule -->
+  <rect x="410" y="302" width="365" height="215" rx="16" fill="#fffbeb" stroke="#f59e0b" stroke-width="3"/>
+  <rect x="410" y="302" width="365" height="42" rx="13" fill="#d97706"/>
+  <text x="592" y="330" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="900">⏰ 入住退房時間 ＆ 小學生訂房防呆</text>
+  <text x="426" y="366" fill="#92400e" font-size="16" font-weight="900">🕒 入住 15:00 後 ／ 退房 11:00 前（比10:00晚1小時！）</text>
+  <text x="426" y="390" fill="#0f172a" font-size="14" font-weight="700">• 退房後行李可免費寄放 1F 櫃檯到下午 15:40 領取</text>
+  <text x="426" y="412" fill="#0f172a" font-size="14" font-weight="700">• 房門採非接觸式 IC 感應房卡，入住時先結清房費</text>
+  <rect x="426" y="426" width="333" height="76" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="438" y="448" fill="#b91c1c" font-size="15" font-weight="900">⚠️ 官網規定：免費不佔床僅限「未就學幼童(6歲以下)」</text>
+  <text x="438" y="470" fill="#7f1d1d" font-size="13" font-weight="700">11歲群祐＆7歲唯唯屬小學生，訂房網請設定「2大2小」</text>
+  <text x="438" y="490" fill="#7f1d1d" font-size="13" font-weight="700">推薦訂【かりゆし3床房(3張120cm床)】或家庭方案最寬敞！</text>
+</svg>
