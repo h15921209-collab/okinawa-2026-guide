@@ -1,38 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
   <rect width="800" height="440" rx="24" fill="#0f172a"/>
-  <text x="400" y="44" text-anchor="middle" fill="#fbbf24" font-size="24" font-weight="900">🛫 【新手防呆圖解 ⑨】Day 4 回程那霸機場「先逛國內線、再去國際線」</text>
+  <text x="400" y="44" text-anchor="middle" fill="#fbbf24" font-size="23" font-weight="900">🛫 【新手防呆圖解 ⑨】那霸機場「先逛國內線2F ➔ 國際線3F先過X光機再報到」</text>
   <!-- Box 1: Monorail -->
   <rect x="25" y="75" width="220" height="335" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
-  <text x="135" y="115" text-anchor="middle" fill="#38bdf8" font-size="21" font-weight="900">① 17:40 下單軌</text>
-  <text x="135" y="155" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="700">那覇空港駅</text>
-  <text x="135" y="195" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">刷 QR Code 出站後</text>
-  <text x="135" y="225" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">順著空橋走進航廈</text>
+  <text x="135" y="115" text-anchor="middle" fill="#38bdf8" font-size="21" font-weight="900">① 17:50 下單軌</text>
+  <text x="135" y="155" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="700">赤嶺駅 ➔ 那覇空港駅</text>
+  <text x="135" y="190" text-anchor="middle" fill="#cbd5e1" font-size="15" font-weight="700">（僅1站‧車程3分鐘！）</text>
+  <text x="135" y="222" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">刷 QR 票出站走空橋</text>
   <rect x="45" y="260" width="180" height="120" rx="12" fill="#0284c7"/>
   <text x="135" y="305" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="900">您踏進航廈的地方</text>
   <text x="135" y="335" text-anchor="middle" fill="#fde047" font-size="20" font-weight="900">就是【國內線 2F】</text>
   <text x="135" y="362" text-anchor="middle" fill="#e0f2fe" font-size="15" font-weight="700">先別急著走去國際線！</text>
 
   <!-- Box 2: Domestic 2F -->
-  <rect x="265" y="75" width="270" height="335" rx="18" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
-  <text x="400" y="115" text-anchor="middle" fill="#713f12" font-size="22" font-weight="900">② 17:45–19:10 必逛！</text>
-  <text x="400" y="148" text-anchor="middle" fill="#9a3412" font-size="20" font-weight="900">🛍️ 國內線航廈 2 樓</text>
-  <text x="285" y="188" fill="#0f172a" font-size="17" font-weight="900">✅ 全機場 90% 伴手禮都在這：</text>
-  <text x="285" y="220" fill="#0f172a" font-size="17" font-weight="700">• Calbee+ 現炸紫薯薯條(必吃)</text>
-  <text x="285" y="250" fill="#0f172a" font-size="17" font-weight="700">• 御菓子御殿 (紅芋塔)</text>
-  <text x="285" y="280" fill="#0f172a" font-size="17" font-weight="700">• 福砂屋長崎蛋糕</text>
-  <text x="285" y="310" fill="#0f172a" font-size="17" font-weight="700">• Royce 石垣鹽巧克力洋芋片</text>
-  <rect x="285" y="335" width="230" height="55" rx="10" fill="#ffffff"/>
-  <text x="400" y="368" text-anchor="middle" fill="#b91c1c" font-size="16" font-weight="900">💡 拿免費手推車推行李慢慢逛</text>
+  <rect x="265" y="75" width="260" height="335" rx="18" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
+  <text x="395" y="115" text-anchor="middle" fill="#713f12" font-size="22" font-weight="900">② 17:55–19:10 必逛！</text>
+  <text x="395" y="148" text-anchor="middle" fill="#9a3412" font-size="20" font-weight="900">🛍️ 國內線航廈 2 樓</text>
+  <text x="282" y="188" fill="#0f172a" font-size="17" font-weight="900">✅ 全機場 90% 伴手禮都在這：</text>
+  <text x="282" y="220" fill="#0f172a" font-size="16" font-weight="700">• Calbee+ 現炸紫薯薯條(必吃)</text>
+  <text x="282" y="250" fill="#0f172a" font-size="16" font-weight="700">• 御菓子御殿 (紅芋塔)</text>
+  <text x="282" y="280" fill="#0f172a" font-size="16" font-weight="700">• 福砂屋長崎蛋糕</text>
+  <text x="282" y="310" fill="#0f172a" font-size="16" font-weight="700">• Royce 石垣鹽巧克力洋芋片</text>
+  <rect x="282" y="335" width="226" height="55" rx="10" fill="#ffffff"/>
+  <text x="395" y="368" text-anchor="middle" fill="#b91c1c" font-size="16" font-weight="900">💡 拿免費手推車推行李慢慢逛</text>
 
   <!-- Box 3: International 3F -->
-  <rect x="555" y="75" width="220" height="335" rx="18" fill="#1e293b" stroke="#34d399" stroke-width="3"/>
-  <text x="665" y="115" text-anchor="middle" fill="#34d399" font-size="21" font-weight="900">③ 19:15 報到</text>
-  <text x="665" y="148" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="900">✈️ 國際線航廈 3 樓</text>
-  <text x="665" y="190" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">順著 2F 指標「国際線」</text>
-  <text x="665" y="218" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">走室內連通道 5 分鐘</text>
-  <text x="665" y="246" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">搭電梯上【3樓出境大廳】</text>
-  <rect x="575" y="275" width="180" height="115" rx="12" fill="#065f46"/>
-  <text x="665" y="312" text-anchor="middle" fill="#fde047" font-size="18" font-weight="900">台灣虎航 IT289</text>
-  <text x="665" y="340" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="900">21:30 起飛 ➔ 高雄</text>
-  <text x="665" y="368" text-anchor="middle" fill="#a7f3d0" font-size="14" font-weight="700">託運行李 ➔ 安檢出境</text>
+  <rect x="545" y="75" width="230" height="335" rx="18" fill="#1e293b" stroke="#f43f5e" stroke-width="4"/>
+  <text x="660" y="112" text-anchor="middle" fill="#fda4af" font-size="20" font-weight="900">③ 19:15 國際線 3F</text>
+  <text x="660" y="142" text-anchor="middle" fill="#fde047" font-size="17" font-weight="900">🚨 順序別錯（免重排！）</text>
+  <rect x="560" y="158" width="200" height="72" rx="10" fill="#9f1239"/>
+  <text x="660" y="185" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="900">Step A：先過行李 X 光機</text>
+  <text x="660" y="212" text-anchor="middle" fill="#fecdd3" font-size="14" font-weight="700">大行李箱先掃描貼封條！</text>
+  <rect x="560" y="242" width="200" height="72" rx="10" fill="#065f46"/>
+  <text x="660" y="269" text-anchor="middle" fill="#fde047" font-size="16" font-weight="900">Step B：再去虎航櫃檯報到</text>
+  <text x="660" y="296" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">IT289 託運 ➔ 隨身安檢出境</text>
+  <text x="660" y="348" text-anchor="middle" fill="#cbd5e1" font-size="15" font-weight="700">21:30 起飛 ➔ 22:25 抵高雄</text>
+  <text x="660" y="378" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="700">（國內線2F走連通道5分鐘即達）</text>
 </svg>

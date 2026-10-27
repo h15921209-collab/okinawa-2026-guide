@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
   <rect width="800" height="500" rx="24" fill="#0f172a"/>
-  <text x="400" y="42" text-anchor="middle" fill="#fbbf24" font-size="24" font-weight="900">🏬 【新手樓層圖解 ④】PARCO CITY「綠區 / 橘區 / 藍區」闖關順序</text>
+  <text x="400" y="42" text-anchor="middle" fill="#fbbf24" font-size="23" font-weight="900">🏬 【新手樓層圖解 ④】PARCO CITY 真實樓層「1F ➔ 2F ➔ 3F」順路攻略</text>
   <!-- Column Headers -->
   <rect x="110" y="62" width="215" height="42" rx="10" fill="#16a34a"/><text x="217" y="90" text-anchor="middle" fill="#fff" font-size="20" font-weight="900">🟢 綠區 (Green)</text>
   <rect x="340" y="62" width="235" height="42" rx="10" fill="#ea580c"/><text x="457" y="90" text-anchor="middle" fill="#fff" font-size="20" font-weight="900">🟠 橘區 (Orange)</text>
@@ -8,51 +8,50 @@
 
   <!-- 3F Row -->
   <rect x="25" y="118" width="75" height="110" rx="12" fill="#334155"/><text x="62" y="182" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="900">3F</text>
-  <rect x="110" y="118" width="215" height="110" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
-  <text x="217" y="152" text-anchor="middle" fill="#14532d" font-size="18" font-weight="900">🏝️ 沖縄宝島 (限定伴手禮)</text>
-  <text x="217" y="182" text-anchor="middle" fill="#9a3412" font-size="17" font-weight="900">🍤 博多天婦羅 たかお</text>
-  <text x="217" y="210" text-anchor="middle" fill="#166534" font-size="15" font-weight="700">（明太子吃到飽午餐①）</text>
+  <rect x="110" y="118" width="215" height="110" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+  <text x="217" y="146" text-anchor="middle" fill="#14532d" font-size="17" font-weight="900">🤖【第4步】G-SouL 模型玩具</text>
+  <text x="217" y="174" text-anchor="middle" fill="#0f172a" font-size="15" font-weight="900">• Village Vanguard 動漫雜貨</text>
+  <text x="217" y="202" text-anchor="middle" fill="#9a3412" font-size="15" font-weight="900">• 博多天婦羅たかお(明太子吃到飽)</text>
 
-  <rect x="340" y="118" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="4"/>
-  <text x="457" y="146" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">⚡【第2步】寶可夢＆動漫雜貨</text>
-  <text x="457" y="174" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• Hobby Zone(卡牌+陀螺)‧HMV</text>
-  <text x="457" y="198" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• namco機台 ‧ Village Vanguard</text>
+  <rect x="340" y="118" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="457" y="158" text-anchor="middle" fill="#9a3412" font-size="17" font-weight="900">🎬 3F 中央海景步道區</text>
+  <text x="457" y="188" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">連結 3F 綠區與 3F 藍區通道</text>
 
-  <rect x="590" y="118" width="185" height="110" rx="12" fill="#fef08a" stroke="#0284c7" stroke-width="4"/>
-  <text x="682" y="146" text-anchor="middle" fill="#0c4a6e" font-size="17" font-weight="900">🌀 EDION 愛電王</text>
-  <text x="682" y="174" text-anchor="middle" fill="#b91c1c" font-size="16" font-weight="900">戰鬥陀螺 X 官方B4店</text>
-  <text x="682" y="200" text-anchor="middle" fill="#0369a1" font-size="14" font-weight="900">（直接打85折＋免稅！）</text>
+  <rect x="590" y="118" width="185" height="110" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="4"/>
+  <text x="682" y="146" text-anchor="middle" fill="#0c4a6e" font-size="16" font-weight="900">⚡【第5步】3F 藍區雙神店</text>
+  <text x="682" y="174" text-anchor="middle" fill="#b91c1c" font-size="15" font-weight="900">• HMV (PTCG寶可夢卡牌)</text>
+  <text x="682" y="200" text-anchor="middle" fill="#0369a1" font-size="15" font-weight="900">• namco (寶可夢機台/扭蛋)</text>
 
   <!-- 2F Row -->
   <rect x="25" y="242" width="75" height="110" rx="12" fill="#334155"/><text x="62" y="306" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="900">2F</text>
-  <rect x="110" y="242" width="215" height="110" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-  <text x="217" y="278" text-anchor="middle" fill="#14532d" font-size="18" font-weight="900">🌊 無敵海景美食街</text>
-  <text x="217" y="308" text-anchor="middle" fill="#166534" font-size="16" font-weight="900">極味や漢堡排 ＋ きじむなぁ塔可飯</text>
-  <text x="217" y="334" text-anchor="middle" fill="#15803d" font-size="15" font-weight="700">（不挑食午餐選擇③）</text>
+  <rect x="110" y="242" width="215" height="110" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+  <text x="217" y="270" text-anchor="middle" fill="#14532d" font-size="17" font-weight="900">🍽️【第3步】2F 海景美食街</text>
+  <text x="217" y="298" text-anchor="middle" fill="#166534" font-size="15" font-weight="900">• 鳥玉(親子丼)‧きじむなぁ塔可飯</text>
+  <text x="217" y="326" text-anchor="middle" fill="#15803d" font-size="14" font-weight="700">• PLAZA美妝 ‧ URBAN RESEARCH</text>
 
-  <rect x="340" y="242" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
-  <text x="457" y="275" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">🥚 鳥玉 (黃金親子丼②)</text>
-  <text x="457" y="305" text-anchor="middle" fill="#0f172a" font-size="17" font-weight="900">🧥 #ワークマン女子 (Workman)</text>
-  <text x="457" y="332" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">PLAZA 日本美妝雜貨 ‧ 日系女裝</text>
+  <rect x="340" y="242" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="4"/>
+  <text x="457" y="270" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">🏠 Francfranc 質感生活雜貨</text>
+  <text x="457" y="298" text-anchor="middle" fill="#0f172a" font-size="15" font-weight="900">• 極味や 鐵板漢堡排 (Food Hall)</text>
+  <text x="457" y="326" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">• A&amp;W 漢堡 ‧ 2F 夕陽看海露台</text>
 
   <rect x="590" y="242" width="185" height="110" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-  <text x="682" y="288" text-anchor="middle" fill="#0c4a6e" font-size="18" font-weight="900">San-A 直營服飾百貨</text>
-  <text x="682" y="316" text-anchor="middle" fill="#0369a1" font-size="16" font-weight="700">San-A 百貨玩具服飾</text>
+  <text x="682" y="286" text-anchor="middle" fill="#0c4a6e" font-size="17" font-weight="900">👕 San-A 百貨專區</text>
+  <text x="682" y="314" text-anchor="middle" fill="#0369a1" font-size="15" font-weight="700">手扶梯直上 3F 藍區</text>
 
   <!-- 1F Row -->
   <rect x="25" y="366" width="75" height="110" rx="12" fill="#334155"/><text x="62" y="430" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="900">1F</text>
   <rect x="110" y="366" width="215" height="110" rx="12" fill="#fef08a" stroke="#ca8a04" stroke-width="4"/>
-  <text x="217" y="398" text-anchor="middle" fill="#713f12" font-size="18" font-weight="900">🥇【第1步】下車先進這！</text>
-  <text x="217" y="426" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• 投 ¥100 退幣寄物櫃塞外套</text>
-  <text x="217" y="452" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• 服務台拿中文樓層圖＆退稅</text>
+  <text x="217" y="394" text-anchor="middle" fill="#713f12" font-size="17" font-weight="900">🥇【第1步】下車先進 1F 綠區</text>
+  <text x="217" y="422" text-anchor="middle" fill="#b91c1c" font-size="15" font-weight="900">• ちいかわ 吉伊卡哇沖繩限定店</text>
+  <text x="217" y="450" text-anchor="middle" fill="#0f172a" font-size="15" font-weight="900">• ¥100 退幣免費寄物櫃塞外套</text>
 
   <rect x="340" y="366" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
-  <text x="457" y="405" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">🛒 3COINS+plus 雜貨</text>
-  <text x="457" y="435" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="700">San-A 食品館 ‧ 沖繩美妝專區</text>
-  <text x="457" y="460" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">沖繩伴手禮專區</text>
+  <text x="457" y="396" text-anchor="middle" fill="#9a3412" font-size="17" font-weight="900">🛒 3COINS+plus 百圓神店</text>
+  <text x="457" y="424" text-anchor="middle" fill="#0f172a" font-size="15" font-weight="900">• 🏝️ 沖縄宝島 (動漫限定伴手禮)</text>
+  <text x="457" y="452" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">• 🍎 San-A 食品館超市</text>
 
   <rect x="590" y="366" width="185" height="110" rx="12" fill="#bae6fd" stroke="#0284c7" stroke-width="4"/>
-  <text x="682" y="398" text-anchor="middle" fill="#0c4a6e" font-size="18" font-weight="900">🚌【第5步】16:10集合</text>
-  <text x="682" y="426" text-anchor="middle" fill="#0369a1" font-size="16" font-weight="900">16:20 直達歌町站巴士</text>
-  <text x="682" y="452" text-anchor="middle" fill="#b91c1c" font-size="15" font-weight="900">（2大2小現金 ¥900）</text>
+  <text x="682" y="394" text-anchor="middle" fill="#0c4a6e" font-size="16" font-weight="900">🌀【第2步】EDION愛電王(1F)</text>
+  <text x="682" y="420" text-anchor="middle" fill="#b91c1c" font-size="15" font-weight="900">戰鬥陀螺X 市售85折＋免稅</text>
+  <text x="682" y="448" text-anchor="middle" fill="#0369a1" font-size="14" font-weight="900">🚌15:10/16:20上車先投¥900</text>
 </svg>
