@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
   <rect width="800" height="470" rx="24" fill="#fff7ed" stroke="#ea580c" stroke-width="4"/>
-  <text x="400" y="44" text-anchor="middle" fill="#9a3412" font-size="24" font-weight="900">🏮 【新手動線圖解 ⑤】第一牧志公設市場避坑 ➔ 駿河屋＆大創同棟攻略</text>
+  <text x="400" y="44" text-anchor="middle" fill="#9a3412" font-size="24" font-weight="900">🏮 【新手動線圖解 ⑤】第一牧志公設市場避坑 ➔ D-naha 駿河屋挖寶攻略</text>
   <!-- Left Box: Makishi Market -->
   <rect x="25" y="70" width="365" height="375" rx="18" fill="#ffffff" stroke="#ea580c" stroke-width="3"/>
   <rect x="25" y="70" width="365" height="46" rx="14" fill="#ea580c"/>
@@ -25,12 +25,12 @@
   <text x="592" y="100" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="900">STEP 2：走3分鐘進 D-naha 大樓</text>
   <!-- 3F Daiso -->
   <rect x="430" y="132" width="325" height="95" rx="12" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
-  <text x="445" y="162" fill="#9d174d" font-size="20" font-weight="900">🛷 3樓：DAISO 大創百元店</text>
+  <text x="445" y="162" fill="#9d174d" font-size="20" font-weight="900">🛷 滑草板：Can★Do 百圓店 / San-A 玩具部</text>
   <text x="445" y="190" fill="#0f172a" font-size="17" font-weight="900">必買 2 個【¥110 塑膠滑草板】！</text>
   <text x="445" y="215" fill="#be185d" font-size="15" font-weight="700">（等一下去奧武山公園溜超長滾輪滑梯神器）</text>
   <!-- 1F-2F Junkudo -->
   <rect x="430" y="238" width="325" height="60" rx="12" fill="#f1f5f9" stroke="#64748b" stroke-width="2"/>
-  <text x="445" y="266" fill="#334155" font-size="18" font-weight="900">📚 1樓～2樓：ジュンク堂 (淳久堂書店)</text>
+  <text x="445" y="266" fill="#334155" font-size="18" font-weight="900">📚 1樓：D-naha 商場書店（買コロコロ月刊）</text>
   <text x="445" y="288" fill="#475569" font-size="15" font-weight="700">看到這個白底藍字招牌走進去搭手扶梯</text>
   <!-- B1 Surugaya -->
   <rect x="430" y="310" width="325" height="115" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>

@@ -9,14 +9,14 @@
   <!-- 3F Row -->
   <rect x="25" y="118" width="75" height="110" rx="12" fill="#334155"/><text x="62" y="182" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="900">3F</text>
   <rect x="110" y="118" width="215" height="110" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
-  <text x="217" y="152" text-anchor="middle" fill="#14532d" font-size="18" font-weight="900">👗 UNIQLO / ABC-Mart</text>
+  <text x="217" y="152" text-anchor="middle" fill="#14532d" font-size="18" font-weight="900">🏝️ 沖縄宝島 (限定伴手禮)</text>
   <text x="217" y="182" text-anchor="middle" fill="#9a3412" font-size="17" font-weight="900">🍤 博多天婦羅 たかお</text>
   <text x="217" y="210" text-anchor="middle" fill="#166534" font-size="15" font-weight="700">（明太子吃到飽午餐①）</text>
 
   <rect x="340" y="118" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="4"/>
-  <text x="457" y="146" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">⚡【第2步】寶可夢＆吉卜力</text>
+  <text x="457" y="146" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">⚡【第2步】寶可夢＆動漫雜貨</text>
   <text x="457" y="174" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• Hobby Zone(卡牌+陀螺)‧HMV</text>
-  <text x="457" y="198" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• namco機台 ‧ 吉卜力 ‧ 森林家族</text>
+  <text x="457" y="198" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="900">• namco機台 ‧ Village Vanguard</text>
 
   <rect x="590" y="118" width="185" height="110" rx="12" fill="#fef08a" stroke="#0284c7" stroke-width="4"/>
   <text x="682" y="146" text-anchor="middle" fill="#0c4a6e" font-size="17" font-weight="900">🌀 EDION 愛電王</text>
@@ -27,16 +27,16 @@
   <rect x="25" y="242" width="75" height="110" rx="12" fill="#334155"/><text x="62" y="306" text-anchor="middle" fill="#fbbf24" font-size="28" font-weight="900">2F</text>
   <rect x="110" y="242" width="215" height="110" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
   <text x="217" y="278" text-anchor="middle" fill="#14532d" font-size="18" font-weight="900">🌊 無敵海景美食街</text>
-  <text x="217" y="308" text-anchor="middle" fill="#166534" font-size="16" font-weight="900">極味や漢堡排 ＋ 一風堂</text>
+  <text x="217" y="308" text-anchor="middle" fill="#166534" font-size="16" font-weight="900">極味や漢堡排 ＋ きじむなぁ塔可飯</text>
   <text x="217" y="334" text-anchor="middle" fill="#15803d" font-size="15" font-weight="700">（不挑食午餐選擇③）</text>
 
   <rect x="340" y="242" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
   <text x="457" y="275" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">🥚 鳥玉 (黃金親子丼②)</text>
-  <text x="457" y="305" text-anchor="middle" fill="#0f172a" font-size="17" font-weight="900">🛍️ GU ‧ ZARA ‧ 媽媽服飾</text>
-  <text x="457" y="332" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">アカチャンホンポ 阿卡將</text>
+  <text x="457" y="305" text-anchor="middle" fill="#0f172a" font-size="17" font-weight="900">🧥 #ワークマン女子 (Workman)</text>
+  <text x="457" y="332" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">PLAZA 日本美妝雜貨 ‧ 日系女裝</text>
 
   <rect x="590" y="242" width="185" height="110" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-  <text x="682" y="288" text-anchor="middle" fill="#0c4a6e" font-size="18" font-weight="900">無印良品 MUJI</text>
+  <text x="682" y="288" text-anchor="middle" fill="#0c4a6e" font-size="18" font-weight="900">San-A 直營服飾百貨</text>
   <text x="682" y="316" text-anchor="middle" fill="#0369a1" font-size="16" font-weight="700">San-A 百貨玩具服飾</text>
 
   <!-- 1F Row -->
@@ -48,7 +48,7 @@
 
   <rect x="340" y="366" width="235" height="110" rx="12" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
   <text x="457" y="405" text-anchor="middle" fill="#9a3412" font-size="18" font-weight="900">🛒 3COINS+plus 雜貨</text>
-  <text x="457" y="435" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="700">マツモトキヨシ 松本清藥妝</text>
+  <text x="457" y="435" text-anchor="middle" fill="#0f172a" font-size="16" font-weight="700">San-A 食品館 ‧ 沖繩美妝專區</text>
   <text x="457" y="460" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">沖繩伴手禮專區</text>
 
   <rect x="590" y="366" width="185" height="110" rx="12" fill="#bae6fd" stroke="#0284c7" stroke-width="4"/>
