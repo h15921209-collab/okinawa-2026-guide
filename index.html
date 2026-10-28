@@ -233,6 +233,24 @@
         </div>
       </div>
 
+      <!-- Hotel Architectural Diagrams Showcase -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+        <div onclick="openImgModal('images/diagram_nest_facilities.svg', 'THE NEST NAHA 飯店設施與家庭四大升級亮點：14F 恆溫泳池、4 張獨立席夢思床、智慧電視、自助洗脫烘')" class="rounded-2xl overflow-hidden border-2 border-sky-400/50 cursor-pointer active:scale-98 transition bg-slate-900 shadow-sm hover:shadow-md">
+          <img src="images/diagram_nest_facilities.svg" alt="巢飯店設施圖解" class="w-full h-44 object-contain mx-auto">
+          <div class="p-2.5 bg-slate-900 text-amber-300 font-black text-xs truncate flex items-center justify-between">
+            <span>✨ 飯店設施與四大升級亮點圖解</span>
+            <span class="text-[11px] text-white/80 bg-sky-700/80 px-2 py-0.5 rounded font-normal"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大看細節</span>
+          </div>
+        </div>
+        <div onclick="openImgModal('images/diagram_nest_map.svg', 'THE NEST NAHA 旭橋生活圈 5 分鐘步行地圖：單軌、西町超市、傑克牛排、波上宮方位圖解')" class="rounded-2xl overflow-hidden border-2 border-sky-400/50 cursor-pointer active:scale-98 transition bg-slate-900 shadow-sm hover:shadow-md">
+          <img src="images/diagram_nest_map.svg" alt="巢飯店周邊步行地圖" class="w-full h-44 object-contain mx-auto">
+          <div class="p-2.5 bg-slate-900 text-amber-300 font-black text-xs truncate flex items-center justify-between">
+            <span>🗺️ 旭橋生活圈 5 分鐘步行地圖</span>
+            <span class="text-[11px] text-white/80 bg-sky-700/80 px-2 py-0.5 rounded font-normal"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大看細節</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Stop 1: Check-in & 4 Beds -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
         <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
@@ -406,7 +424,9 @@
             <span class="bg-amber-100 text-amber-900 text-xs font-black px-2.5 py-1 rounded-md">步行 6~7 分鐘</span>
             <h4 class="font-black text-slate-900 text-base mt-1.5">📍 第六關：oHacorté Bakery 泉崎店（2025新址）</h4>
           </div>
-          <img src="images/store_oHacorte.jpg" alt="oHacorte 法式水果塔" class="w-full h-40 object-cover rounded-xl border border-slate-200">
+          <div onclick="openImgModal('images/store_oHacorte.jpg', 'oHacorté Bakery 泉崎店：沖繩第一法式水果塔專賣店（2025/10/6 盛大回歸新址）')" class="cursor-pointer active:scale-98 transition rounded-xl overflow-hidden border border-slate-200">
+            <img src="images/store_oHacorte.jpg" alt="oHacorte 法式水果塔" class="w-full h-40 object-cover">
+          </div>
           <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
             <strong>2025/10/6 盛大回歸那霸市泉崎 1-4-10！</strong> 沖繩第一法式水果塔專賣店，7cm 酥脆手工塔皮盛載滿滿多汁草莓、白葡萄與香濃卡士達，唯唯 Mia 與媽媽午後甜點絕配！
           </p>
@@ -418,7 +438,9 @@
             <span class="bg-emerald-100 text-emerald-900 text-xs font-black px-2.5 py-1 rounded-md">步行 4 分鐘</span>
             <h4 class="font-black text-slate-900 text-base mt-1.5">📍 第七關：龜かめそば（Kame Kame Soba）排骨麵</h4>
           </div>
-          <img src="images/okinawa_soba.jpg" alt="沖繩軟骨排骨麵" class="w-full h-40 object-cover rounded-xl border border-slate-200">
+          <div onclick="openImgModal('images/okinawa_soba.jpg', '龜かめそば招牌軟骨排骨麵：大骨精燉濃郁白湯，軟骨燉至在嘴裡融化')" class="cursor-pointer active:scale-98 transition rounded-xl overflow-hidden border border-slate-200">
+            <img src="images/okinawa_soba.jpg" alt="沖繩軟骨排骨麵" class="w-full h-40 object-cover">
+          </div>
           <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
             那霸老饕私房排骨麵！大骨精燉濃郁白湯，軟骨燉至在嘴裡融化。桌上洗淨新鮮野生艾草免費自取加入，清香回甘。（★核實注意：週六正常營業，週日固定公休）。
           </p>
@@ -879,6 +901,25 @@
           <span class="bg-emerald-50 text-emerald-800 text-xs font-black px-2.5 py-1 rounded-full">沖繩必訪能量景點</span>
         </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+          <div onclick="openImgModal('images/diagram_naminoue_shrine.svg', '【新手參拜踏浪圖解】琉球八社之首「波上宮」祈福 ＆ 波之上海灘踏浪：步行路線、參拜順序、小書包御守指南')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition bg-slate-900 shadow-sm">
+            <img src="images/diagram_naminoue_shrine.svg" alt="波上宮參拜踏浪圖解" class="w-full h-44 object-contain mx-auto">
+            <div class="p-2 bg-slate-900 text-amber-300 text-xs font-bold truncate flex items-center justify-between">
+              <span>⛩️ 波上宮參拜 ＆ 踩沙踏浪圖解指南</span>
+              <span class="text-[11px] text-white/80 bg-emerald-700/80 px-2 py-0.5 rounded font-normal"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大看細節</span>
+            </div>
+          </div>
+          <div class="bg-emerald-50/90 p-4 rounded-xl border border-emerald-200 text-xs sm:text-sm text-emerald-950 flex flex-col justify-center space-y-2">
+            <p class="font-bold text-base text-emerald-900"><i class="fa-solid fa-torii-gate text-emerald-600 mr-1.5"></i>參拜 ＆ 踏浪核心攻略：</p>
+            <ul class="space-y-1.5 text-xs text-slate-700">
+              <li>• <strong>平坦林蔭散步：</strong>從 NEST NAHA 出發步行僅 10 分鐘（800m），經若狹公園直達，全程無陡坡。</li>
+              <li>• <strong>斷崖紅瓦神殿：</strong>登上珊瑚礁岩頂參拜，投入 5 円有緣祈福，為全家求平安。</li>
+              <li>• <strong>必買小書包御守：</strong>唯唯 Mia 最愛粉色迷你日式書包造型交通安全御守（掛書包超吸睛）。</li>
+              <li>• <strong>海灘踩沙踏浪：</strong>神社右側木棧道階梯直通波之上海灘，細白軟沙踩浪看海天一色！</li>
+            </ul>
+          </div>
+        </div>
+
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="font-black text-emerald-900 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
@@ -1157,6 +1198,25 @@
           <span class="bg-rose-50 text-rose-800 text-xs font-black px-2.5 py-1 rounded-full">招牌辛子辣豆芽免費</span>
         </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+          <div onclick="openImgModal('images/diagram_tondo_ramen.svg', '【新手點餐圖解】琉球新麵 通堂 本店（小祿站）「男人麵 ＆ 女人麵」指南與免費辛子辣豆芽菜')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition bg-slate-900 shadow-sm">
+            <img src="images/diagram_tondo_ramen.svg" alt="通堂拉麵點餐圖解" class="w-full h-44 object-contain mx-auto">
+            <div class="p-2 bg-slate-900 text-amber-300 text-xs font-bold truncate flex items-center justify-between">
+              <span>🍜 通堂拉麵點餐 ＆ 雙湯頭指南</span>
+              <span class="text-[11px] text-white/80 bg-rose-700/80 px-2 py-0.5 rounded font-normal"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大看細節</span>
+            </div>
+          </div>
+          <div class="bg-rose-50/90 p-4 rounded-xl border border-rose-200 text-xs sm:text-sm text-rose-950 flex flex-col justify-center space-y-2">
+            <p class="font-bold text-base text-rose-900"><i class="fa-solid fa-bowl-food text-rose-600 mr-1.5"></i>通堂拉麵美味秘訣：</p>
+            <ul class="space-y-1.5 text-xs text-slate-700">
+              <li>• <strong>おとこ味（男人麵）：</strong>黑蒜麻油豚骨特濃湯頭，香氣濃烈厚重，肉食派群祐與爸爸首選！</li>
+              <li>• <strong>おんな味（女人麵）：</strong>久米島地雞甘甜清湯，細麵脆筍，清澈回甘，唯唯與媽媽最愛！</li>
+              <li>• <strong>靈魂辣豆芽菜（辛子もやし）：</strong>桌上整盆免費夾！微辣爽脆，一口豆芽一口麵，完美解膩！</li>
+              <li>• <strong>黃金一口薄皮煎餃：</strong>皮薄餡滿多汁，剛出爐熱呼呼，小朋友一口一顆！</li>
+            </ul>
+          </div>
+        </div>
+
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="font-black text-rose-900 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
@@ -1189,9 +1249,9 @@
             <img src="images/event_kokusai_transit_mall.jpg" alt="國際通步行者天國" class="w-full h-44 object-cover">
             <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🚶 週日國際通封街步行者天國</div>
           </div>
-          <div onclick="openImgModal('images/calbee_poteriko.jpg', 'Calbee+ 現炸 Poteriko 沖繩紅芋薯條')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/calbee_poteriko.jpg" alt="Calbee+ 薯條" class="w-full h-44 object-cover">
-            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🍟 Calbee+ 現炸溫熱紅芋薯條</div>
+          <div onclick="openImgModal('images/store_okinawa_takarajima.jpg', '國際通伴手禮旗艦專賣店實景：紅芋塔、雪鹽金楚糕、石垣牛仙貝一次買齊')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+            <img src="images/store_okinawa_takarajima.jpg" alt="國際通伴手禮旗艦專賣店" class="w-full h-44 object-cover">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🛍️ 國際通伴手禮旗艦專賣店</div>
           </div>
         </div>
 
@@ -1242,6 +1302,20 @@
             <h3 class="text-lg sm:text-xl font-black text-white mt-2">📍 第六關：虎航 IT289 報到托運 ➔ 免稅店最後巡禮 ➔ 起飛凱旋抵達小港</h3>
           </div>
           <span class="bg-sky-400 text-slate-950 text-xs font-black px-2.5 py-1 rounded-full">平安凱旋</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+          <div onclick="openImgModal('images/diagram_airport_return.svg', '【新手防呆圖解 ⑨】那霸機場「計程車直送 ➔ 國內線2F伴手禮 ➔ 國際線3F報到」')" class="rounded-xl overflow-hidden border border-slate-700 cursor-pointer active:scale-98 transition bg-slate-900 shadow-sm">
+            <img src="images/diagram_airport_return.svg" alt="那霸機場返台防呆圖解" class="w-full h-44 object-contain mx-auto">
+            <div class="p-2 bg-slate-800 text-amber-300 text-xs font-bold truncate flex items-center justify-between">
+              <span>🗺️ 那霸機場回程出境防呆流程圖</span>
+              <span class="text-[11px] text-white/80 bg-sky-700/80 px-2 py-0.5 rounded font-normal"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大看細節</span>
+            </div>
+          </div>
+          <div onclick="openImgModal('images/naha_airport_2f_shops.jpg', '那霸機場 2F 國內線伴手禮大街實景：全沖繩 90% 名產伴手禮匯集在此，免稅最後大補貨')" class="rounded-xl overflow-hidden border border-slate-700 cursor-pointer active:scale-98 transition">
+            <img src="images/naha_airport_2f_shops.jpg" alt="那霸機場 2F 伴手禮大街" class="w-full h-44 object-cover">
+            <div class="p-2 bg-slate-800 text-white text-xs font-bold truncate">🛍️ 那霸機場 2F 伴手禮大街實景</div>
+          </div>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-200">

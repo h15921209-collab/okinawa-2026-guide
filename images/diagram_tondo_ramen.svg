@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="450" rx="24" fill="#0f172a"/>
+  <text x="400" y="44" text-anchor="middle" fill="#fde047" font-size="22" font-weight="900">🍜 【新手點餐圖解】琉球新麵 通堂 本店（小祿站）「男人麵 ＆ 女人麵」指南</text>
+
+  <!-- Box 1: Getting there & Vending Machine -->
+  <rect x="25" y="70" width="220" height="350" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+  <rect x="38" y="85" width="194" height="38" rx="10" fill="#0284c7"/>
+  <text x="135" y="111" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="900">① 交通 ＆ 食券機</text>
+  <text x="38" y="150" fill="#f8fafc" font-size="15" font-weight="900">🚖 計程車直達門口：</text>
+  <text x="38" y="178" fill="#cbd5e1" font-size="13" font-weight="700">• 泊港出發走國道331號</text>
+  <text x="38" y="202" fill="#cbd5e1" font-size="13" font-weight="700">• 車程約 12 分鐘（約 1,200 円）</text>
+  <text x="38" y="226" fill="#cbd5e1" font-size="13" font-weight="700">• 停在通堂拉麵小祿本店正門</text>
+  <text x="38" y="255" fill="#fde047" font-size="15" font-weight="900">🎫 入口投幣買食券：</text>
+  <text x="38" y="280" fill="#cbd5e1" font-size="13" font-weight="700">• 支援 1,000/5,000/10,000円</text>
+  <text x="38" y="304" fill="#cbd5e1" font-size="13" font-weight="700">• 按鈕有中文與大張照片</text>
+  <rect x="38" y="325" width="194" height="75" rx="10" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="135" y="352" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="900">💡 買好食券交給店員</text>
+  <text x="135" y="375" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="700">帶位進塌塌米或方桌座席</text>
+
+  <!-- Box 2: Men vs Women Ramen -->
+  <rect x="260" y="70" width="280" height="350" rx="18" fill="#1e293b" stroke="#f43f5e" stroke-width="3"/>
+  <rect x="275" y="85" width="250" height="38" rx="10" fill="#e11d48"/>
+  <text x="400" y="111" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="900">② 兩大經典招牌對決</text>
+  
+  <!-- Otoko Sub-box -->
+  <rect x="275" y="135" width="250" height="125" rx="12" fill="#881337" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="400" y="162" text-anchor="middle" fill="#fde047" font-size="16" font-weight="900">👨 おとこ味（男人麵）黑蒜豚骨</text>
+  <text x="285" y="190" fill="#ffffff" font-size="13" font-weight="700">• 18小時大火精熬特濃豚骨高湯</text>
+  <text x="285" y="212" fill="#ffffff" font-size="13" font-weight="700">• 淋上特製黑蒜麻油＋厚切軟嫩叉燒</text>
+  <text x="285" y="235" fill="#fecdd3" font-size="13" font-weight="900">👉 群祐（12歲）與爸爸重口味首選！</text>
+
+  <!-- Onna Sub-box -->
+  <rect x="275" y="275" width="250" height="125" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="400" y="302" text-anchor="middle" fill="#a7f3d0" font-size="16" font-weight="900">👩 おんな味（女人麵）地雞甘甜</text>
+  <text x="285" y="330" fill="#ffffff" font-size="13" font-weight="700">• 久米島地雞＋昆布清甜慢火清湯</text>
+  <text x="285" y="352" fill="#ffffff" font-size="13" font-weight="700">• 清爽回甘無負擔＋爽脆細筍乾</text>
+  <text x="285" y="375" fill="#a7f3d0" font-size="13" font-weight="900">👉 唯唯（7歲）與媽媽清爽首選！</text>
+
+  <!-- Box 3: Secret Weapon Sprouts -->
+  <rect x="555" y="70" width="220" height="350" rx="18" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+  <rect x="568" y="85" width="194" height="38" rx="10" fill="#d97706"/>
+  <text x="665" y="111" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="900">③ 免費靈魂小菜 ＆ 煎餃</text>
+  <text x="568" y="150" fill="#fde047" font-size="15" font-weight="900">🌶️ 通堂必備【辛子辣豆芽】：</text>
+  <text x="568" y="178" fill="#cbd5e1" font-size="13" font-weight="700">• 每張桌上皆有大鋼盆豆芽菜</text>
+  <text x="568" y="202" fill="#cbd5e1" font-size="13" font-weight="700">• 免費無限自取！辣中帶香脆</text>
+  <text x="568" y="226" fill="#cbd5e1" font-size="13" font-weight="700">• 夾進豚骨湯裡解膩爽口度倍增</text>
+  <text x="568" y="255" fill="#fde047" font-size="15" font-weight="900">🥟 必加點【一口黃金煎餃】：</text>
+  <text x="568" y="280" fill="#cbd5e1" font-size="13" font-weight="700">• 外皮薄脆、咬下肉汁爆漿</text>
+  <text x="568" y="304" fill="#cbd5e1" font-size="13" font-weight="700">• 小朋友一口一個停不下來！</text>
+  <rect x="568" y="325" width="194" height="75" rx="10" fill="#78350f" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="665" y="352" text-anchor="middle" fill="#fef08a" font-size="14" font-weight="900">💡 壓蒜器自榨生蒜泥</text>
+  <text x="665" y="375" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">桌上備有生大蒜，現榨入湯更香！</text>
+</svg>

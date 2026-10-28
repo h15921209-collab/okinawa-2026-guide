@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Noto Sans TC, Microsoft JhengHei, sans-serif">
+  <rect width="800" height="450" rx="24" fill="#0f172a"/>
+  <text x="400" y="44" text-anchor="middle" fill="#38bdf8" font-size="22" font-weight="900">⛩️ 【新手參拜踏浪圖解】琉球八社之首「波上宮」祈福 ＆ 波之上海灘踏浪</text>
+
+  <!-- Box 1: Walk Route -->
+  <rect x="25" y="70" width="230" height="350" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+  <rect x="40" y="85" width="200" height="38" rx="10" fill="#0284c7"/>
+  <text x="140" y="111" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="900">① 步行路線（僅10分）</text>
+  <text x="40" y="150" fill="#f8fafc" font-size="16" font-weight="900">🚶 飯店出發超輕鬆：</text>
+  <text x="40" y="180" fill="#cbd5e1" font-size="14" font-weight="700">• THE NEST NAHA 門口右轉</text>
+  <text x="40" y="208" fill="#cbd5e1" font-size="14" font-weight="700">• 沿若狹大通直行約 800m</text>
+  <text x="40" y="236" fill="#cbd5e1" font-size="14" font-weight="700">• 全程人行道平坦寬敞無坡</text>
+  <text x="40" y="264" fill="#cbd5e1" font-size="14" font-weight="700">• 穿過若狹海濱公園綠蔭</text>
+  <rect x="40" y="295" width="200" height="105" rx="12" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.5"/>
+  <text x="140" y="328" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="900">💡 親子推車/散步首選</text>
+  <text x="140" y="354" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="700">唯唯 Mia 沿途看花看海</text>
+  <text x="140" y="378" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="700">完全不喊累，吹海風超舒服</text>
+
+  <!-- Box 2: Shrine Praying -->
+  <rect x="275" y="70" width="250" height="350" rx="18" fill="#1e293b" stroke="#f43f5e" stroke-width="3"/>
+  <rect x="290" y="85" width="220" height="38" rx="10" fill="#e11d48"/>
+  <text x="400" y="111" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="900">② 波上宮祈福參拜</text>
+  <text x="290" y="150" fill="#fde047" font-size="16" font-weight="900">⛩️ 矗立珊瑚礁海崖名勝：</text>
+  <text x="290" y="180" fill="#cbd5e1" font-size="14" font-weight="700">• 鳥居前輕輕一鞠躬表示敬意</text>
+  <text x="290" y="208" fill="#cbd5e1" font-size="14" font-weight="700">• 手水舍「洗手漱口淨心儀式」</text>
+  <text x="290" y="236" fill="#cbd5e1" font-size="14" font-weight="700">• 賽錢箱投 5 円（象徵有緣）</text>
+  <text x="290" y="264" fill="#cbd5e1" font-size="14" font-weight="700">• 「二禮二拍手一禮」祈平安</text>
+  <rect x="290" y="295" width="220" height="105" rx="12" fill="#881337"/>
+  <text x="400" y="328" text-anchor="middle" fill="#fecdd3" font-size="15" font-weight="900">🎒 必買【小書包御守】</text>
+  <text x="400" y="354" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">唯唯 Mia 專屬粉紅交通安全守</text>
+  <text x="400" y="378" text-anchor="middle" fill="#fecdd3" font-size="13" font-weight="700">掛在國小書包上超萌又平安！</text>
+
+  <!-- Box 3: Beach Playing -->
+  <rect x="545" y="70" width="230" height="350" rx="18" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+  <rect x="560" y="85" width="200" height="38" rx="10" fill="#059669"/>
+  <text x="660" y="111" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="900">③ 波之上海灘踏浪</text>
+  <text x="560" y="150" fill="#a7f3d0" font-size="16" font-weight="900">🏖️ 神社旁步道直通白沙：</text>
+  <text x="560" y="180" fill="#cbd5e1" font-size="14" font-weight="700">• 神社右側木棧道階梯直下沙灘</text>
+  <text x="560" y="208" fill="#cbd5e1" font-size="14" font-weight="700">• 那霸市區唯一天然白沙海灘</text>
+  <text x="560" y="236" fill="#cbd5e1" font-size="14" font-weight="700">• 12月冬日沖繩陽光溫煦不曬</text>
+  <text x="560" y="264" fill="#cbd5e1" font-size="14" font-weight="700">• 唯唯脫鞋襪踩細沙、拾貝殼</text>
+  <rect x="560" y="295" width="200" height="105" rx="12" fill="#064e3b"/>
+  <text x="660" y="328" text-anchor="middle" fill="#6ee7b7" font-size="15" font-weight="900">📸 經典斷崖神社海天拍照</text>
+  <text x="660" y="354" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="700">抬頭仰望斷崖上的朱紅神殿</text>
+  <text x="660" y="378" text-anchor="middle" fill="#a7f3d0" font-size="13" font-weight="700">拍下絕美全家海天蔚藍合影！</text>
+</svg>
