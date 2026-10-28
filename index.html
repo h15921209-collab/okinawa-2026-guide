@@ -1528,8 +1528,8 @@
               <span class="font-black text-sky-700">33,572 円（已預付）</span>
             </div>
             <div class="flex justify-between py-1 border-b border-slate-50">
-              <span>全行程計程車交通費預估</span>
-              <span class="font-black text-slate-800">約 8,500 円</span>
+              <span>全行程計程車交通費預估（4天全包）</span>
+              <span class="font-black text-slate-800">約 13,000～14,000 円</span>
             </div>
             <div class="flex justify-between py-1 border-b border-slate-50">
               <span>全家海鮮牛排餐飲美食</span>
@@ -1650,7 +1650,7 @@
       const jpy10 = Math.round(jpy / 1.1);
       const twd10 = Math.round(jpy10 * rate);
 
-      const jpy8 = Math.round(jpy * (1 - 0.074));
+      const jpy8 = Math.round(jpy / 1.08);
       const twd8 = Math.round(jpy8 * rate);
 
       document.getElementById('calc-twd').innerText = '約 NT$ ' + twd.toLocaleString();
