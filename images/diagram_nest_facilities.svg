@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="100%" height="100%" style="background:#0b1329; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="card_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="fshadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="30" y="20" width="840" height="65" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="50" y="58" fill="#38bdf8" font-size="22" font-weight="900">✨【THE NEST NAHA】飯店設施與家庭四大升級亮點</text>
+  <text x="650" y="58" fill="#94a3b8" font-size="14" font-weight="bold">2025 全新旗艦館</text>
+
+  <!-- 4 Cards Grid -->
+  <!-- Card 1: 14F Heated Infinity Pool -->
+  <g transform="translate(30, 105)" filter="url(#fshadow)">
+    <rect width="405" height="230" rx="20" fill="url(#card_grad)" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="20" y="20" width="46" height="46" rx="14" fill="#0284c7"/>
+    <text x="43" y="52" fill="#ffffff" font-size="24" text-anchor="middle">🏊</text>
+    <text x="80" y="42" fill="#38bdf8" font-size="18" font-weight="900">14F 全年溫水無邊際泳池</text>
+    <text x="80" y="62" fill="#94a3b8" font-size="13" font-weight="bold">那霸市區最大 22公尺高空絕景</text>
+    <line x1="20" y1="80" x2="385" y2="80" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="110" fill="#e2e8f0" font-size="14" font-weight="bold">● 12 月冬天依然恆溫開放，小孩隨時能下水</text>
+    <text x="25" y="140" fill="#e2e8f0" font-size="14" font-weight="bold">● 遠眺那霸海平線、夕陽與飛機起降絕景</text>
+    <text x="25" y="170" fill="#fde047" font-size="14" font-weight="900">🍹 18:00~19:00 免費 Happy Hour（池畔暢飲）</text>
+    <text x="45" y="195" fill="#cbd5e1" font-size="13">紅白酒、Orion生啤酒、果汁軟性飲料免費提供！</text>
+  </g>
+
+  <!-- Card 2: 4-Bed Family Room -->
+  <g transform="translate(465, 105)" filter="url(#fshadow)">
+    <rect width="405" height="230" rx="20" fill="url(#card_grad)" stroke="#a855f7" stroke-width="2"/>
+    <rect x="20" y="20" width="46" height="46" rx="14" fill="#7e22ce"/>
+    <text x="43" y="52" fill="#ffffff" font-size="24" text-anchor="middle">🛏️</text>
+    <text x="80" y="42" fill="#c084fc" font-size="18" font-weight="900">尊爵雙床房（4張獨立床！）</text>
+    <text x="80" y="62" fill="#94a3b8" font-size="13" font-weight="bold">26㎡ 空間 ‧ 全家一人一張床</text>
+    <line x1="20" y1="80" x2="385" y2="80" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="110" fill="#e2e8f0" font-size="14" font-weight="bold">● 2 張小型雙人床（110cm）＋ 2 張獨立沙發床</text>
+    <text x="25" y="140" fill="#e2e8f0" font-size="14" font-weight="bold">● 群祐(12歲) 唯唯(7歲) 各自一張床，告別擁擠！</text>
+    <text x="25" y="170" fill="#fde047" font-size="14" font-weight="900">🚿 乾濕分離三點獨立衛浴</text>
+    <text x="45" y="195" fill="#cbd5e1" font-size="13">獨立浴缸泡澡放鬆 ‧ 洗手台與免治馬桶完全分開</text>
+  </g>
+
+  <!-- Card 3: Smart TV & Wi-Fi -->
+  <g transform="translate(30, 355)" filter="url(#fshadow)">
+    <rect width="405" height="225" rx="20" fill="url(#card_grad)" stroke="#10b981" stroke-width="2"/>
+    <rect x="20" y="20" width="46" height="46" rx="14" fill="#047857"/>
+    <text x="43" y="52" fill="#ffffff" font-size="24" text-anchor="middle">📺</text>
+    <text x="80" y="42" fill="#34d399" font-size="18" font-weight="900">房內原生智慧電視 (Smart TV)</text>
+    <text x="80" y="62" fill="#94a3b8" font-size="13" font-weight="bold">免轉接線！遙控器直接點選開播</text>
+    <line x1="20" y1="80" x2="385" y2="80" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="110" fill="#e2e8f0" font-size="14" font-weight="bold">● 2025新機型，內建 YouTube / Netflix / Prime</text>
+    <text x="25" y="140" fill="#e2e8f0" font-size="14" font-weight="bold">● 手機無線投影 (Cast / AirPlay) 一秒投放大螢幕</text>
+    <text x="25" y="170" fill="#e2e8f0" font-size="14" font-weight="bold">● 群祐晚上隨時能看戰鬥陀螺與寶可夢最新卡通！</text>
+    <text x="25" y="198" fill="#fde047" font-size="13" font-weight="bold">全室獨立高速 Wi-Fi，追劇打電動零延遲</text>
+  </g>
+
+  <!-- Card 4: Lobby & Laundry -->
+  <g transform="translate(465, 355)" filter="url(#fshadow)">
+    <rect width="405" height="225" rx="20" fill="url(#card_grad)" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="20" y="20" width="46" height="46" rx="14" fill="#b45309"/>
+    <text x="43" y="52" fill="#ffffff" font-size="24" text-anchor="middle">🧺</text>
+    <text x="80" y="42" fill="#fbbf24" font-size="18" font-weight="900">1F 圖書館大廳 ＆ 自助洗衣</text>
+    <text x="80" y="62" fill="#94a3b8" font-size="13" font-weight="bold">微波爐 ‧ 製冰機 ‧ 洗脫烘衣機</text>
+    <line x1="20" y1="80" x2="385" y2="80" stroke="#334155" stroke-width="1.5"/>
+    <text x="25" y="110" fill="#e2e8f0" font-size="14" font-weight="bold">● 1F 自助投幣式洗脫烘衣機（自動投入洗劑）</text>
+    <text x="25" y="140" fill="#e2e8f0" font-size="14" font-weight="bold">● 免費微波爐與製冰機，宵夜加熱超方便</text>
+    <text x="25" y="170" fill="#e2e8f0" font-size="14" font-weight="bold">● 挑高開放式木質圖書館大廳，候車休憩質感極佳</text>
+    <text x="25" y="198" fill="#fde047" font-size="13" font-weight="bold">櫃檯 24 小時服務，可免費寄放全家行李箱</text>
+  </g>
+</svg>

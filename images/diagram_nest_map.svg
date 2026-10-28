@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="100%" height="100%" style="background:#0f172a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="grad_hotel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="grad_jacks" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+    <linearGradient id="grad_station" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="grad_naminoue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="30" y="25" width="840" height="60" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="50" y="62" fill="#38bdf8" font-size="22" font-weight="900">🗺️ 【THE NEST NAHA】旭橋生活圈 5分鐘步行步行地圖</text>
+  <text x="640" y="62" fill="#94a3b8" font-size="14" font-weight="bold">單軌・牛排・泳池・波上宮</text>
+
+  <!-- Route Connections (Dashed Lines) -->
+  <!-- Station to Hotel -->
+  <path d="M 680 200 L 450 200" stroke="#f59e0b" stroke-width="6" stroke-dasharray="8,8" fill="none"/>
+  <rect x="520" y="175" width="90" height="26" rx="13" fill="#f59e0b"/>
+  <text x="565" y="193" fill="#0f172a" font-size="13" font-weight="900" text-anchor="middle">步行 5 分鐘</text>
+
+  <!-- Hotel to Jack's -->
+  <path d="M 330 250 L 330 400" stroke="#e11d48" stroke-width="6" stroke-dasharray="8,8" fill="none"/>
+  <rect x="285" y="315" width="90" height="26" rx="13" fill="#e11d48"/>
+  <text x="330" y="333" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle">步行 3 分鐘</text>
+
+  <!-- Hotel to MaxValu -->
+  <path d="M 330 150 L 220 150 L 220 280" stroke="#06b6d4" stroke-width="4" stroke-dasharray="6,6" fill="none"/>
+  <rect x="180" y="138" width="80" height="24" rx="12" fill="#06b6d4"/>
+  <text x="220" y="155" fill="#0f172a" font-size="12" font-weight="900" text-anchor="middle">步行 7 分</text>
+
+  <!-- Hotel to Naminoue -->
+  <path d="M 330 150 L 120 150 L 120 400" stroke="#10b981" stroke-width="5" stroke-dasharray="6,6" fill="none"/>
+  <rect x="75" y="270" width="90" height="26" rx="13" fill="#10b981"/>
+  <text x="120" y="288" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle">步行 10-12 分</text>
+
+  <!-- Node 1: Asahibashi Station -->
+  <g transform="translate(640, 140)" filter="url(#shadow)">
+    <rect width="210" height="120" rx="20" fill="url(#grad_station)" stroke="#fef3c7" stroke-width="3"/>
+    <text x="105" y="40" fill="#0f172a" font-size="18" font-weight="900" text-anchor="middle">🚝 單軌 旭橋站</text>
+    <text x="105" y="65" fill="#451a03" font-size="13" font-weight="bold" text-anchor="middle">那霸巴士總站 / OPA商場</text>
+    <rect x="20" y="80" width="170" height="28" rx="8" fill="#0f172a"/>
+    <text x="105" y="99" fill="#fde68a" font-size="13" font-weight="bold" text-anchor="middle">✈️ 機場直達 5站 11分鐘</text>
+  </g>
+
+  <!-- Node 2: THE NEST NAHA (Centerpiece) -->
+  <g transform="translate(260, 130)" filter="url(#shadow)">
+    <rect width="260" height="150" rx="24" fill="url(#grad_hotel)" stroke="#7dd3fc" stroke-width="4"/>
+    <rect x="15" y="-12" width="130" height="26" rx="13" fill="#38bdf8"/>
+    <text x="80" y="6" fill="#0f172a" font-size="12" font-weight="900" text-anchor="middle">★ 2025 全新旗艦</text>
+    <text x="130" y="45" fill="#ffffff" font-size="20" font-weight="900" text-anchor="middle">🏨 THE NEST NAHA</text>
+    <text x="130" y="70" fill="#bae6fd" font-size="13" font-weight="bold" text-anchor="middle">那霸市西 1-6-1（旭橋站徒步5分）</text>
+    <line x1="20" y1="85" x2="240" y2="85" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5"/>
+    <text x="130" y="108" fill="#fef08a" font-size="14" font-weight="900" text-anchor="middle">🏊 14F 全年溫水無邊際泳池</text>
+    <text x="130" y="130" fill="#e0f2fe" font-size="13" font-weight="bold" text-anchor="middle">🍹 每日 18:00~19:00 免費調酒</text>
+  </g>
+
+  <!-- Node 3: Jack's Steak House -->
+  <g transform="translate(245, 380)" filter="url(#shadow)">
+    <rect width="210" height="110" rx="20" fill="url(#grad_jacks)" stroke="#fecdd3" stroke-width="3"/>
+    <rect x="15" y="-12" width="100" height="24" rx="12" fill="#fb7185"/>
+    <text x="65" y="5" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle">下樓走3分鐘！</text>
+    <text x="105" y="42" fill="#ffffff" font-size="18" font-weight="900" text-anchor="middle">🥩 傑克牛排館</text>
+    <text x="105" y="66" fill="#ffe4e6" font-size="13" font-weight="bold" text-anchor="middle">Jack's Steak House</text>
+    <rect x="20" y="76" width="170" height="24" rx="6" fill="#881337"/>
+    <text x="105" y="93" fill="#fecdd3" font-size="12" font-weight="bold" text-anchor="middle">吃完秒回房 ‧ 不用搭車！</text>
+  </g>
+
+  <!-- Node 4: 24H MaxValu 若狹店 -->
+  <g transform="translate(130, 260)" filter="url(#shadow)">
+    <rect width="180" height="90" rx="16" fill="#1e293b" stroke="#06b6d4" stroke-width="2.5"/>
+    <text x="90" y="35" fill="#22d3ee" font-size="16" font-weight="900" text-anchor="middle">🛒 24H MaxValu 超市</text>
+    <text x="90" y="58" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">若狹店（步行7分鐘）</text>
+    <text x="90" y="78" fill="#fde047" font-size="12" font-weight="bold" text-anchor="middle">草莓・鮮奶・熟食宵夜補貨</text>
+  </g>
+
+  <!-- Node 5: Naminoue Shrine & Beach -->
+  <g transform="translate(30, 390)" filter="url(#shadow)">
+    <rect width="180" height="110" rx="18" fill="url(#grad_naminoue)" stroke="#a7f3d0" stroke-width="3"/>
+    <text x="90" y="40" fill="#ffffff" font-size="18" font-weight="900" text-anchor="middle">⛩️ 波上宮 ＆ 海灘</text>
+    <text x="90" y="65" fill="#ecfdf5" font-size="13" font-weight="bold" text-anchor="middle">懸崖紅色海邊鳥居</text>
+    <rect x="15" y="76" width="150" height="24" rx="6" fill="#064e3b"/>
+    <text x="90" y="93" fill="#a7f3d0" font-size="12" font-weight="bold" text-anchor="middle">Day 4 晨間散步絕景</text>
+  </g>
+
+  <!-- Bottom Tip Banner -->
+  <rect x="30" y="525" width="840" height="70" rx="16" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+  <text x="50" y="555" fill="#38bdf8" font-size="15" font-weight="900">💡 旭橋生活圈實戰優勢：</text>
+  <text x="50" y="580" fill="#e2e8f0" font-size="14" font-weight="bold">① 機場搭單軌 5 站（11分鐘）直達！ ② 傑克牛排吃完走路 3 分鐘回房！ ③ Day 3 奧武山公園溜滑梯電車僅 1 站（2分鐘）！</text>
+</svg>
