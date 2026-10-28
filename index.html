@@ -158,131 +158,171 @@
     <div id="page-hotel" class="page-view block space-y-6">
       
       <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-sky-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-sky-400/40">
-        <div class="relative z-10 space-y-2.5">
-          <div class="inline-flex items-center gap-1.5 bg-sky-500/30 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-sky-200 border border-sky-400/40">
-            <i class="fa-solid fa-star text-amber-300"></i> 2025 全新開幕旗艦・全家 4 張獨立席夢思名床
+      <div class="bg-gradient-to-r from-sky-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-sky-400/50">
+        <div class="relative z-10 space-y-3">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 bg-sky-500/30 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-sky-200 border border-sky-400/40">
+              <i class="fa-solid fa-star text-amber-300"></i> 2025 全新開幕旗艦・全家 4 張獨立席夢思名床
+            </span>
+            <span class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full shadow">
+              Agoda 訂單編號：68796074
+            </span>
           </div>
-          <h2 class="text-2xl sm:text-4xl font-black tracking-tight leading-snug">THE NEST NAHA（那霸巢飯店）</h2>
+          <h2 class="text-2xl sm:text-4xl font-black tracking-tight leading-snug">THE NEST NAHA（那霸巢飯店）新手操作手冊</h2>
           <p class="text-sky-100 text-xs sm:text-base leading-relaxed max-w-3xl font-medium">
-            📍 地址：沖繩縣那霸市西 1-6-1｜Agoda 訂單編號：68796074｜3 晚總房費：33,572 円<br>
-            🚶 交通位置：單軌電車「旭橋站」西口步行約 5~7 分鐘，全段平坦無階梯障礙，推大行李超省力！
+            📍 <strong>官方地址：</strong>沖縄県那覇市西 1-6-1｜📞 <strong>電話：</strong>098-868-1118<br>
+            💴 <strong>3 晚實付房費：</strong>33,572 円（全額已預付完成，現場零加價）｜⏰ <strong>入住 15:00 / 退房 11:00</strong><br>
+            🚶 <strong>交通動線：</strong>單軌電車「旭橋站」西口步行 5~7 分鐘，全段平坦無階梯障礙，推大行李超省力！
           </p>
         </div>
       </div>
 
+      <!-- YouTube Video Guide Box -->
+      <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
+        <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
+          <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
+          <span>🎬 飯店現場實拍導覽影片（點擊直接搜尋 YouTube 開箱）</span>
+        </div>
+        <a href="https://www.youtube.com/results?search_query=THE+NEST+NAHA+那霸巢飯店" target="_blank" rel="noopener" class="flex items-center justify-between gap-2.5 bg-white hover:bg-rose-50 active:scale-98 transition p-3 rounded-xl border border-rose-200 shadow-sm text-left">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="bg-red-600 text-white w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow">
+              <i class="fa-brands fa-youtube text-xl"></i>
+            </span>
+            <div class="min-w-0">
+              <div class="text-[11px] font-black text-rose-700">▶ 點擊觀看 YouTube 實拍導覽</div>
+              <div class="text-xs sm:text-sm font-black text-slate-900 truncate">THE NEST NAHA 2025新飯店開箱、頂樓無邊際泳池＆四人房實拍</div>
+            </div>
+          </div>
+          <span class="bg-slate-900 text-amber-300 text-xs font-black px-2.5 py-1.5 rounded-lg shrink-0">即時搜尋</span>
+        </a>
+      </div>
+
       <!-- Hotel Photos Showcase (可點圖放大) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div onclick="openImgModal('images/nest_hotel_exterior.jpg', 'THE NEST NAHA 時尚大氣建築外觀（2025嶄新開幕）')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div onclick="openImgModal('images/nest_hotel_exterior.jpg', 'THE NEST NAHA 外觀實景：2025嶄新落成，時尚挑高大門與林蔭步道')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
-            <img src="images/nest_hotel_exterior.jpg" alt="THE NEST NAHA 外觀" class="w-full h-36 sm:h-40 object-cover">
+            <img src="images/nest_hotel_exterior.jpg" alt="THE NEST NAHA 外觀" class="w-full h-36 sm:h-44 object-cover">
             <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🏨 飯店外觀</span>
+            <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[11px] font-bold px-2 py-0.5 rounded"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大</span>
           </div>
-          <div class="p-2 bg-white text-slate-800 font-bold text-xs truncate">NEST NAHA 外觀實景</div>
+          <div class="p-2 bg-white text-slate-800 font-black text-xs truncate">NEST NAHA 時尚外觀</div>
         </div>
-        <div onclick="openImgModal('images/nest_hotel_room.jpg', '舒適四人房實景：4 張獨立席夢思 Simmons 名床，群祐擁有專屬獨立大床')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+        <div onclick="openImgModal('images/nest_hotel_room.jpg', '舒適四人房實景：4 張獨立 Simmons 席夢思頂級名床，群祐擁有獨立專屬大床')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
-            <img src="images/nest_hotel_room.jpg" alt="四人房名床實景" class="w-full h-36 sm:h-40 object-cover">
-            <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🛏️ 4 張名床</span>
+            <img src="images/nest_hotel_room.jpg" alt="四人房名床實景" class="w-full h-36 sm:h-44 object-cover">
+            <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🛏️ 4 張獨立床</span>
+            <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[11px] font-bold px-2 py-0.5 rounded"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大</span>
           </div>
-          <div class="p-2 bg-white text-slate-800 font-bold text-xs truncate">4 張獨立席夢思床</div>
+          <div class="p-2 bg-white text-slate-800 font-black text-xs truncate">4 張獨立席夢思名床</div>
         </div>
-        <div onclick="openImgModal('images/nest_hotel_pool.jpg', '14F 頂樓溫水無邊際泳池：冬季恆溫開放，俯瞰那霸港夕陽與海天一色（唯唯最愛）')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+        <div onclick="openImgModal('images/nest_hotel_pool.jpg', '14F 頂樓溫水無邊際泳池：冬季恆溫開放，俯瞰那霸港海景與落日餘暉（唯唯最愛）')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
-            <img src="images/nest_hotel_pool.jpg" alt="14F 頂樓無邊際泳池" class="w-full h-36 sm:h-40 object-cover">
-            <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🏊 頂樓泳池</span>
+            <img src="images/nest_hotel_pool.jpg" alt="14F 頂樓無邊際泳池" class="w-full h-36 sm:h-44 object-cover">
+            <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🏊 溫水泳池</span>
+            <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[11px] font-bold px-2 py-0.5 rounded"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大</span>
           </div>
-          <div class="p-2 bg-white text-slate-800 font-bold text-xs truncate">14F 溫水無邊際泳池</div>
+          <div class="p-2 bg-white text-slate-800 font-black text-xs truncate">14F 頂樓無邊際泳池</div>
         </div>
-        <div onclick="openImgModal('images/nest_hotel_restaurant.jpg', '2F 晨光森林景觀餐廳：現烤香檬可頌、阿古豬香腸與現打新鮮蔬果汁')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+        <div onclick="openImgModal('images/nest_hotel_restaurant.jpg', '2F 晨光森林景觀餐廳：供應現烤可頌、阿古豬香腸與現打新鮮蔬果汁')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
-            <img src="images/nest_hotel_restaurant.jpg" alt="2F 晨光森林餐廳" class="w-full h-36 sm:h-40 object-cover">
+            <img src="images/nest_hotel_restaurant.jpg" alt="2F 晨光森林餐廳" class="w-full h-36 sm:h-44 object-cover">
             <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🍽️ 森林餐廳</span>
+            <span class="absolute bottom-2 right-2 bg-black/75 text-white text-[11px] font-bold px-2 py-0.5 rounded"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i>放大</span>
           </div>
-          <div class="p-2 bg-white text-slate-800 font-bold text-xs truncate">2F 晨光森林餐廳</div>
+          <div class="p-2 bg-white text-slate-800 font-black text-xs truncate">2F 晨光景觀餐廳</div>
         </div>
       </div>
 
       <!-- Stop 1: Check-in & 4 Beds -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-sky-100 text-sky-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">設施核心指南</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：抵達 NEST NAHA 辦理入住 ＆ 4 張獨立席夢思名床分配</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-sky-100 text-sky-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">住宿核心指引</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：抵達 NEST NAHA 辦理入住 ＆ 4 張獨立席夢思名床分配</h3>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-2.5 py-1 rounded-full">實付 33,572 円極致性價比</span>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="font-black text-sky-800 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>1F 大廳辦理入住：</strong>走進 1F 挑高大廳，出示全家 4 本護照 ＋ Agoda 訂房確認單（訂單編號：68796074，入住人：林勝穩），櫃台人員會迅速核對，並交付 4 張感應房卡與 14F 頂樓泳池專屬手環。</p>
+            <p><strong>1F 挑高大廳出示憑證：</strong>走進 1F 挑高大理石大廳，向櫃檯服務人員出示全家 4 本護照正本 ＋ Agoda 訂房確認單（訂單編號：68796074，登記姓名：林勝穩）。櫃檯核對後會請您在電子觸控板簽名，並交付 4 張感應房卡與 14F 泳池專屬感應手環。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
-            <p><strong>4 張獨立 Simmons 席夢思床分配：</strong>房間內配置 4 張真正標準單人名床（寬約 100~110cm），<strong>群祐（12歲，小六）擁有自己的獨立大床</strong>，翻身打滾零干擾；唯唯 Mia（7歲）與媽媽、爸爸各睡一張，徹底消除加床或沙發床的腰酸背痛！</p>
+            <p><strong>4 張真正獨立名床（告別折疊沙發床）：</strong>走進四人房，房內配置 4 張標準單人獨立席夢思 Simmons 名床（每張寬約 100~110cm），床墊支撐力極佳！<strong>群祐（12歲，小六）享有專屬獨立大床</strong>，夜間翻身無干擾；唯唯 Mia（7歲）與媽媽、爸爸各睡一張，連續 3 晚深度好眠充電！</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">3</span>
-            <p><strong>乾濕分離衛浴與獨立大浴缸：</strong>浴室與廁所完全分離獨立，配備大型深泡浴缸，每晚逛街回房後放一缸熱水泡澡，能迅速消除雙腿疲勞。</p>
+            <p><strong>衛浴乾濕完全分離 ＆ 獨立深泡大浴缸：</strong>淋浴間、洗手台、免治馬桶徹底獨立三分離，配備大型深泡浴缸與日系植物洗沐備品。每晚逛街回來放滿一缸熱水泡澡，迅速消除雙腿與腳底疲勞。</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="step-badge">4</span>
+            <p><strong>房內多組快充座配置：</strong>床頭與書桌設有 6 組以上通用插座及 USB-A/Type-C 接口，手機、相機、Switch、行動電源同時充飽，完全無需額外帶延長線。</p>
           </div>
         </div>
 
         <div class="bg-sky-50/80 p-4 rounded-xl border border-sky-200 text-xs sm:text-sm text-sky-950 space-y-1">
-          <p><strong>💡【攻略與小秘訣】：</strong>房內設有多組 USB-A、Type-C 及標準插座，床頭兩側皆有獨立閱讀燈與充電孔，全家手機、行動電源、Switch 同時充電無壓力。</p>
+          <p><strong>👨 勝穩爸爸指揮提醒：</strong>房卡為感應電梯專用，出門每人可隨身帶一張；房內冷暖空調可獨立手動微調至 24 度，通風安靜無雜音。</p>
         </div>
       </div>
 
       <!-- Stop 2: 14F Pool & Happy Hour -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-sky-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">唯唯 Mia 最期待亮點</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：14F 頂樓溫水無邊際泳池 ＆ Happy Hour 說明書</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">唯唯 Mia 最期待亮點</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：14F 頂樓溫水無邊際泳池 ＆ Happy Hour 說明書</h3>
+          </div>
+          <span class="bg-sky-100 text-sky-800 text-xs font-black px-2.5 py-1 rounded-full">冬季恆溫加熱開放</span>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="font-black text-sky-800 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>冬季溫水恆溫加熱開放：</strong>NEST NAHA 14F 泳池於 12 月冬季設有恆溫加熱系統，水溫維持在舒適微溫狀態，無懼海風！唯唯（7歲）穿上可愛泳衣在池畔戲水踏水，哥哥群祐在池中暢遊。</p>
+            <p><strong>12 月冬季恆溫加熱水池：</strong>14F 頂樓無邊際泳池配備恆溫加熱系統，水溫維持在 28~30 度微溫狀態！冬日即使海風微涼，入水依然暖和舒適。水深約 1.1 米，安全防滑，唯唯 Mia（7歲）帶手臂圈即可開心踢水。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
-            <p><strong>無邊際視野俯瞰海港：</strong>池畔直面那霸港灣，向西可眺望夕陽沉入東海，向南可俯瞰那霸市區天際線，是絕佳的拍照打卡位置！池畔備有防滑地墊、救生圈與專用乾淨毛巾。</p>
+            <p><strong>無邊際視野直面那霸港：</strong>向西延伸至無垠東海，傍晚可趴在透明池畔一邊戲水、一邊欣賞落日晚霞染紅海面與港口輪船，拍照效果極致震撼！</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">3</span>
-            <p><strong>傍晚 Happy Hour 房客特權（17:00 - 19:00）：</strong>頂樓 Lounge 每日傍晚提供房客專屬 Happy Hour，免費供應沖繩 Orion 生啤酒、紅白酒、特調無酒精雞尾酒、香檬果汁以及黑糖金楚糕等小點心。</p>
+            <p><strong>傍晚 Happy Hour 房客特權（每日 17:00 - 19:00）：</strong>頂樓 Sky Lounge 專屬開放！房客憑手環免費暢飲沖繩 Orion 生啤酒、紅白酒、特調無酒精雞尾酒、香檬果汁，並無限享用黑糖餅乾等特色小點。</p>
           </div>
         </div>
 
         <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs sm:text-sm text-amber-950">
-          <p><strong>⚠️【防呆必備】：</strong>泳池需配戴入住時發放的感應手環進入，請為孩子自備泳衣與泳鏡；游泳完畢請先在 14F 淋浴間稍微擦乾，再搭電梯回房，避免走道著涼。</p>
+          <p><strong>⚠️【防呆必備】：</strong>泳池需配戴入住時發放的感應手環進入；池畔提供更衣室與毛巾租借，請自備泳衣與泳鏡；游泳完畢請先在 14F 淋浴間稍微擦乾再搭電梯回房，避免著涼感冒。</p>
         </div>
       </div>
 
-      <!-- Stop 3: 2F Breakfast & 1F Laundry -->
+      <!-- Stop 3: 2F Breakfast & Laundry -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
         <div class="border-b-2 border-slate-100 pb-3">
           <span class="bg-emerald-100 text-emerald-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">生活便利設施</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：2F 晨光森林早餐 ＆ 1F 自動洗烘衣機（免買洗衣精）</h3>
+          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：2F 晨光森林景觀餐廳 ＆ 1F 自動洗烘衣機（免買洗衣精）</h3>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>2F 晨光森林景觀自助早餐：</strong>以沖繩在地食材為主題，供應現烤香檬可頌、手工阿古豬香腸、石垣牛燉咖哩、現打熱帶蔬果汁，為全家注入充沛活力。</p>
+            <p><strong>2F 晨光森林自助早餐：</strong>大片綠意景觀窗，供應現烤熱騰騰可頌麵包、手工阿古豬香腸、石垣牛濃郁咖哩、現煎玉子燒以及現打熱帶綜合果汁，為全家一天的冒險注入充沛活力。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
-            <p><strong>24H 投幣式洗烘衣機（コインランドリー）：</strong>位於 1F 公共設施區，洗劑自動注入（完全免自己買洗衣粉！），標準洗烘約 500~600 円，出門前丟進去，回來即可穿上溫熱乾淨衣服，行李大幅輕量化。</p>
+            <p><strong>1F 24H 投幣式洗烘衣機（コインランドリー）：</strong>全自動洗脫烘一體機，<strong>洗衣精為機器自動注入（完全免自己花錢買洗衣粉！）</strong>。標準洗烘一次約 500~600 円，出門前丟入，回來即可直接穿上溫熱乾淨衣服，行李大幅輕量化。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">3</span>
-            <p><strong>1F 迎賓休息區：</strong>全天候免費供應現磨熱咖啡、無糖冰麥茶與兒童糖果，出門散步或回房前可隨時盛裝一杯享用。</p>
+            <p><strong>1F 迎賓休息區：</strong>全天候免費供應現磨美式熱咖啡、無糖冰麥茶與兒童水果糖，出門散步或回房前可隨時盛裝一杯享用。</p>
           </div>
         </div>
       </div>
 
-      <!-- Stop 4: Ryubo Nishimachi Supermarket (450m) -->
+      <!-- Stop 4: Ryubo Nishimachi Supermarket -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
         <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap items-center justify-between gap-2">
           <div>
@@ -294,11 +334,11 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
           <div onclick="openImgModal('images/store_ryubo.jpg', '西町りうぼう超市正門實景：從 NEST NAHA 門口右轉直行 450m 即達')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/store_ryubo.jpg" alt="西町超市正門" class="w-full h-40 object-cover">
+            <img src="images/store_ryubo.jpg" alt="西町超市正門" class="w-full h-44 object-cover">
             <div class="p-2 bg-slate-50 text-xs font-bold text-slate-800 truncate">📸 西町りうぼう超市外觀實景</div>
           </div>
           <div onclick="openImgModal('images/supermarket_hangaku.jpg', '超市晚間 20:00 後半額貼標高潮：生魚片、炸物、便當全面 50% 折扣')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/supermarket_hangaku.jpg" alt="半額貼標" class="w-full h-40 object-cover">
+            <img src="images/supermarket_hangaku.jpg" alt="半額貼標" class="w-full h-44 object-cover">
             <div class="p-2 bg-slate-50 text-xs font-bold text-slate-800 truncate">🍣 晚間半額（50% OFF）熟食戰區</div>
           </div>
         </div>
@@ -307,36 +347,36 @@
           <div class="font-black text-sky-800 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>步行路線：</strong>出飯店大門右轉，沿著「西町大馬路」平坦人行道直走 450 公尺（約 6 分鐘，沿途有明亮路燈，治安極佳），右手邊即看見大型綠色 RYUBO 招牌。</p>
+            <p><strong>超省力步行路線：</strong>出飯店大門右轉，沿著西町寬敞平坦人行道筆直前行 450 公尺（約 6 分鐘，沿途路燈明亮、治安極佳），右手邊即看見大型綠色 RYUBO 招牌。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
-            <p><strong>半額貼標搶購（20:00 - 22:30）：</strong>店員會推推車出來在握壽司、天婦羅、燒肉便當上貼上黃色「半額 (50% OFF)」貼紙！一大盒炙燒鮭魚壽司折合台幣只要 70~90 元，肉質鮮甜厚實。</p>
+            <p><strong>半額貼標搶購高潮（20:00 - 22:30）：</strong>店員會推推車在握壽司、天婦羅、燒肉便當上貼上黃色「半額 (50% OFF)」貼紙！一大盒炙燒鮭魚壽司只要 350~450 円（約 NT$ 75~95），鮮甜厚實。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">3</span>
-            <p><strong>全家各取所愛：</strong>唯唯 Mia 挑選山崎草莓鮮奶油蛋糕切片與布丁；群祐挑日清炸醬炒麵；媽媽採買沖繩香檬氣泡水與日本蜜柑；爸爸挑選 Orion 限定生啤酒。</p>
+            <p><strong>全家專屬選購清單：</strong>唯唯 Mia 挑選山崎草莓鮮奶油蛋糕切片與牛乳布丁；群祐挑日清 UFO 炸醬炒麵；媽媽採買沖繩香檬氣泡水與日本蜜柑；爸爸挑選 Orion 限定生啤酒。</p>
           </div>
         </div>
       </div>
 
-      <!-- Stop 5: Jack's Steak House (250m) -->
+      <!-- Stop 5: Jack's Steak House -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
         <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap items-center justify-between gap-2">
           <div>
             <span class="bg-rose-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">走路 3 分鐘・僅 250 公尺</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：傑克牛排館（Jack's Steak House）1953 年美軍復古牛排攻略</h3>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：傑克牛排館（Jack's Steak House）美軍復古牛排全攻略</h3>
           </div>
-          <span class="bg-rose-100 text-rose-800 text-xs font-black px-2.5 py-1 rounded-full">沖繩傳奇名店</span>
+          <span class="bg-rose-100 text-rose-800 text-xs font-black px-2.5 py-1 rounded-full">沖繩 1953 年創始名店</span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
           <div onclick="openImgModal('images/store_jacks_steak.jpg', '傑克牛排館門口實景：紅黃綠燈號看板顯示排隊狀況')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/store_jacks_steak.jpg" alt="傑克牛排館正門" class="w-full h-40 object-cover">
+            <img src="images/store_jacks_steak.jpg" alt="傑克牛排館正門" class="w-full h-44 object-cover">
             <div class="p-2 bg-slate-50 text-xs font-bold text-slate-800 truncate">📸 傑克牛排館復古門面</div>
           </div>
-          <div onclick="openImgModal('images/diagram_jacks_steak.svg', '傑克牛排館走法與招牌菜色圖解')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/diagram_jacks_steak.svg" alt="傑克牛排圖解" class="w-full h-40 object-cover bg-white">
+          <div onclick="openImgModal('images/diagram_jacks_steak.svg', '傑克牛排館走法與招牌菜色圖解')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition bg-white">
+            <img src="images/diagram_jacks_steak.svg" alt="傑克牛排圖解" class="w-full h-44 object-contain mx-auto">
             <div class="p-2 bg-slate-50 text-xs font-bold text-slate-800 truncate">🗺️ 步行 3 分鐘地圖與招牌餐點</div>
           </div>
         </div>
@@ -345,15 +385,15 @@
           <div class="font-black text-rose-900 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>步行直達：</strong>從 NEST NAHA 出發步行僅 250 公尺（3 分鐘），巷口一轉即可看見經典美軍霓虹燈招牌。</p>
+            <p><strong>步行 3 分鐘直達：</strong>從 NEST NAHA 出發步行僅 250 公尺，拐個彎即可看見美軍統治時期延續至今的經典霓虹燈。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
-            <p><strong>燈號看板與抽號碼牌：</strong>門口設有復古紅黃綠交通號誌（綠燈表示直接進場，黃燈需稍候，紅燈滿座）。走進店內在登記板寫下姓氏（如「LIN」）與人數「4」，現場叫號入座。</p>
+            <p><strong>看燈號與登記排隊：</strong>門口設有紅黃綠交通號誌（綠燈直接進場，黃燈稍候，紅燈客滿）。走進玄關在登記本寫下姓名（如「LIN」）與人數「4」，現場叫號入座。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">3</span>
-            <p><strong>必點推薦：</strong>特選沙朗牛排（特選ロースステーキ L/M size）5 分熟（Medium），肉質軟嫩多汁；附贈熱騰騰玉米濃湯、爽脆沙拉與香酥圓麵包。淋上桌上的 No.1 專用牛排酸甜醬，大口咬下超滿足！</p>
+            <p><strong>必點招牌與熟度建議：</strong>特選沙朗牛排（特選ロースステーキ L/M size）建議點 5 分熟（Medium），鐵板保溫效果佳，切開粉紅多汁！附贈熱呼呼古早味玉米濃湯、沙拉與香酥圓麵包。淋上桌上專用 No.1 牛排醬，大口吃肉極度過癮！</p>
           </div>
         </div>
       </div>
@@ -366,9 +406,9 @@
             <span class="bg-amber-100 text-amber-900 text-xs font-black px-2.5 py-1 rounded-md">步行 6~7 分鐘</span>
             <h4 class="font-black text-slate-900 text-base mt-1.5">📍 第六關：oHacorté Bakery 泉崎店（2025新址）</h4>
           </div>
-          <img src="images/store_oHacorte.jpg" alt="oHacorte 法式水果塔" class="w-full h-36 object-cover rounded-xl border border-slate-200">
+          <img src="images/store_oHacorte.jpg" alt="oHacorte 法式水果塔" class="w-full h-40 object-cover rounded-xl border border-slate-200">
           <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            <strong>2025/10/6 盛大回歸泉崎 1-4-10！</strong> 沖繩最強法式水果塔專賣店，7cm 酥脆塔皮盛載滿滿多汁草莓、白葡萄與香濃卡士達，唯唯 Mia 與媽媽午後甜點絕配！
+            <strong>2025/10/6 盛大回歸那霸市泉崎 1-4-10！</strong> 沖繩第一法式水果塔專賣店，7cm 酥脆手工塔皮盛載滿滿多汁草莓、白葡萄與香濃卡士達，唯唯 Mia 與媽媽午後甜點絕配！
           </p>
         </div>
 
@@ -378,9 +418,9 @@
             <span class="bg-emerald-100 text-emerald-900 text-xs font-black px-2.5 py-1 rounded-md">步行 4 分鐘</span>
             <h4 class="font-black text-slate-900 text-base mt-1.5">📍 第七關：龜かめそば（Kame Kame Soba）排骨麵</h4>
           </div>
-          <img src="images/okinawa_soba.jpg" alt="沖繩軟骨排骨麵" class="w-full h-36 object-cover rounded-xl border border-slate-200">
+          <img src="images/okinawa_soba.jpg" alt="沖繩軟骨排骨麵" class="w-full h-40 object-cover rounded-xl border border-slate-200">
           <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            那霸老饕私房名店！大骨精燉甘甜白湯，軟骨排骨燉得在口中直接化開。桌上滿盆新鮮野生艾草免費自取加入湯中，清香回甘。（★核實注意：週六正常營業，週日固定公休）。
+            那霸老饕私房排骨麵！大骨精燉濃郁白湯，軟骨燉至在嘴裡融化。桌上洗淨新鮮野生艾草免費自取加入，清香回甘。（★核實注意：週六正常營業，週日固定公休）。
           </p>
         </div>
       </div>
@@ -402,8 +442,8 @@
     <div id="page-d1" class="page-view hidden space-y-6">
 
       <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-sky-700 via-blue-800 to-indigo-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-sky-400/40">
-        <div class="space-y-2">
+      <div class="bg-gradient-to-r from-sky-700 via-blue-800 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-sky-400/50">
+        <div class="space-y-3">
           <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
             <i class="fa-solid fa-calendar-day"></i> 2026/12/17 (週四) 第一天
           </div>
@@ -416,28 +456,31 @@
 
       <!-- Stop 1: KHH Check-in -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-sky-100 text-sky-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">15:00 鳳山出發 ➔ 17:30 起飛</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：高雄鳳山 ➔ 小港機場 (KHH) 搭虎航 IT728 報到與托運</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-sky-100 text-sky-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">15:00 鳳山出發 ➔ 17:30 起飛</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：高雄鳳山 ➔ 小港機場 (KHH) 搭虎航 IT728 報到與托運</h3>
+          </div>
+          <span class="bg-sky-50 text-sky-800 text-xs font-black px-2.5 py-1 rounded-full">提前 2 小時抵達</span>
         </div>
 
         <!-- YouTube Video Box -->
-        <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3 sm:p-4 space-y-2 my-2">
+        <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
           <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
             <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
             <span>🎬 新手行前必看：現場實拍介紹影片（點擊直接搜尋 YouTube）</span>
           </div>
           <a href="https://www.youtube.com/results?search_query=高雄機場+台灣虎航+沖繩" target="_blank" rel="noopener" class="flex items-center justify-between gap-2.5 bg-white hover:bg-rose-50 active:scale-98 transition p-3 rounded-xl border border-rose-200 shadow-sm text-left">
             <div class="flex items-center gap-2.5 min-w-0">
-              <span class="bg-red-600 text-white w-8 h-8 rounded-lg flex items-center justify-center shrink-0 shadow">
-                <i class="fa-brands fa-youtube text-lg"></i>
+              <span class="bg-red-600 text-white w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow">
+                <i class="fa-brands fa-youtube text-xl"></i>
               </span>
               <div class="min-w-0">
                 <div class="text-[11px] font-black text-rose-700">▶ 點擊觀看 YouTube 現場實拍導覽</div>
-                <div class="text-xs sm:text-sm font-black text-slate-900 truncate">高雄小港機場 台灣虎航 沖繩登機報到完整教學</div>
+                <div class="text-xs sm:text-sm font-black text-slate-900 truncate">高雄小港機場 台灣虎航 沖繩登機報到與出境流程教學</div>
               </div>
             </div>
-            <span class="bg-slate-900 text-amber-300 text-xs font-bold px-2 py-1 rounded-lg shrink-0">即時搜尋</span>
+            <span class="bg-slate-900 text-amber-300 text-xs font-black px-2.5 py-1.5 rounded-lg shrink-0">即時搜尋</span>
           </a>
         </div>
 
@@ -448,7 +491,7 @@
           </div>
           <div onclick="openImgModal('images/tigerair.jpg', '台灣虎航 (Tigerair Taiwan) 客機 — 去程 IT728 (17:30) / 回程 IT289 (21:30)')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
             <img src="images/tigerair.jpg" alt="台灣虎航客機" class="w-full h-44 object-cover">
-            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">📸 台灣虎航 A320 客機實景</div>
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">📸 台灣虎航客機實景</div>
           </div>
         </div>
 
@@ -456,7 +499,7 @@
           <div class="font-black text-sky-800 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>14:50 手機叫車：</strong>在鳳山家中打開 Uber / 叫車 App，設定目的地為<strong>「高雄國際機場 國際線航廈 3F 出境大廳」</strong>（車程約 20~25 分鐘，備註 4 人加行李）。</p>
+            <p><strong>14:50 鳳山叫車出發：</strong>在鳳山家中打開叫車 App，設定目的地為<strong>「高雄國際機場 國際線航廈 3F 出境大廳」</strong>（車程約 20~25 分鐘，備註 4 人加行李箱）。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
@@ -472,54 +515,81 @@
             <p><strong>17:30 準時起飛：</strong>航程僅約 1 小時 25 分鐘。空服員發放紙本入境卡時，因已在手機填妥 Visit Japan Web (VJW) QR Code，直接搖手說不用紙本即可。</p>
           </div>
         </div>
+
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-700 space-y-1">
+          <p><strong>💡【攻略與小秘訣】：</strong>虎航機上無免費餐飲且禁帶外食上機吃，建議過安檢後在候機室先讓兩個小孩吃個麵包或飯糰墊肚子。</p>
+          <p><strong>💴【費用試算】：</strong>鳳山至小港機場計程車資約 <strong>NT$ 250～300</strong>（折合約 1,400 円）。</p>
+        </div>
       </div>
 
-      <!-- Stop 2: OKA Airport Arrival -->
+      <!-- Stop 2: OKA Arrival -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
         <div class="border-b-2 border-slate-100 pb-3">
           <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">19:55 降落那霸 ➔ 20:30 出關</span>
           <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：那霸機場 (OKA) 國際線通關 ＆ 提領行李</h3>
         </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+          <div onclick="openImgModal('images/naha_airport.jpg', '那霸機場國際線航廈外觀實景')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+            <img src="images/naha_airport.jpg" alt="那霸機場" class="w-full h-40 object-cover">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">📸 那霸機場外觀實景</div>
+          </div>
+          <div class="bg-sky-50 p-4 rounded-xl border border-sky-200 text-xs sm:text-sm text-sky-950 flex flex-col justify-center space-y-2">
+            <p class="font-bold text-base text-sky-900"><i class="fa-solid fa-qrcode text-sky-600 mr-1.5"></i>VJW 電子通關實測：</p>
+            <p>下機後沿著入境長廊走，出示手機 VJW 入境審查 QR Code。全家依序按指紋與拍照，約 25~35 分鐘即可順利提領 4 件行李出關！</p>
+          </div>
+        </div>
+
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="font-black text-sky-800 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>下機入境審查：</strong>沿著國際線入境長廊走到底，在入境審查櫃檯前準備好手機打開 VJW 入境審查 QR Code。全家依序按壓指紋與臉部拍照，護照貼上上陸許可貼紙。</p>
+            <p><strong>入境審查蓋章：</strong>排隊出示 4 人手機上的 VJW QR Code，海關人員在護照貼上「上陸許可」貼紙。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
-            <p><strong>提領 4 件行李：</strong>下樓至 1F 行李轉盤區，推 2 台免費手推車，順利領齊 4 個大行李箱。</p>
+            <p><strong>提領 4 件行李：</strong>下電梯至 1F 行李轉盤區，推 2 台免費行李推車，領齊 4 個大行李箱。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">3</span>
-            <p><strong>海關申報通關：</strong>走電子申報機台刷護照與海關申報 QR Code，閘門開啟即順利走出管制區進入 1F 入境大廳！</p>
+            <p><strong>海關申報閘門：</strong>走電子申報機台刷護照與海關 QR Code，閘門自動開啟，順利走出 1F 大廳！</p>
           </div>
         </div>
       </div>
 
-      <!-- Stop 3: Taxi Direct to NEST NAHA -->
+      <!-- Stop 3: Taxi to NEST NAHA -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-amber-400 space-y-4">
         <div class="border-b-2 border-slate-100 pb-3">
           <span class="bg-amber-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">新手無痛省力秘技</span>
           <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：那霸機場直達 THE NEST NAHA（計程車直送手冊）</h3>
         </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+          <div onclick="openImgModal('images/nest_hotel_exterior.jpg', 'THE NEST NAHA 大門車道：計程車直接停靠門口，行李無階梯直推')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+            <img src="images/nest_hotel_exterior.jpg" alt="NEST NAHA 門口" class="w-full h-40 object-cover">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🏨 飯店門口車道實景</div>
+          </div>
+          <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs sm:text-sm text-amber-950 flex flex-col justify-center space-y-2">
+            <p class="font-bold text-base text-amber-900"><i class="fa-solid fa-taxi text-amber-600 mr-1.5"></i>免搭單軌電車超輕鬆：</p>
+            <p>晚間抵達沖繩全家已疲倦，<strong>強烈建議直接在 1F 門口搭計程車</strong>！車程僅 10~12 分鐘，車資約 1,500~1,800 円，司機協助搬卸行李，毫無推拉負擔。</p>
+          </div>
+        </div>
+
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="font-black text-amber-900 text-base">【逐步操作說明書】：</div>
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>走出 1F 大門即達計程車站：</strong>提著行李走出 1F 大廳門口，直奔排班計程車站（タクシー乗り場），完全不需要拖著沉重行李推車爬單軌電車月台！</p>
+            <p><strong>走出 1F 大門即達計程車站：</strong>提著行李走出 1F 航廈大門，排班計程車站（タクシー乗り場）就在眼前。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
             <p><strong>出示手機日文地址給司機看：</strong><br>
             <code class="bg-slate-900 text-amber-300 px-2 py-1 rounded font-bold text-xs">「ネストホテル那覇西（沖縄県那覇市西1-6-1）までお願いします」</code><br>
-            司機會熱情幫忙把 4 件行李搬進後車廂，全家舒舒服服上車吹冷氣。</p>
+            司機會把 4 件行李穩妥搬進後車廂，全家舒舒服服上車。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">3</span>
-            <p><strong>10~12 分鐘極速抵達：</strong>車資僅約 1,500~1,800 円（可刷信用卡或付現金），車子直接停在 NEST NAHA 飯店正門口！</p>
+            <p><strong>10~12 分鐘抵達飯店正門：</strong>車資約 1,500~1,800 円，可刷信用卡或付現金，司機協助下行李，優雅走進 NEST NAHA 大廳！</p>
           </div>
         </div>
       </div>
@@ -534,7 +604,7 @@
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
           <div class="flex items-start gap-3">
             <span class="step-badge">1</span>
-            <p><strong>安頓 4 張席夢思名床：</strong>櫃台領取 4 張房卡，進房將行李攤平在走道上。群祐選好自己的專屬大床，唯唯換上拖鞋，全家放下背包輕鬆外出。</p>
+            <p><strong>安頓 4 張席夢思名床：</strong>櫃台領取 4 張房卡，進房將 4 個大行李箱攤平在走道上。群祐選好自己的專屬獨立大床，唯唯換上室內拖鞋，全家放下背包輕鬆外出。</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="step-badge">2</span>
@@ -567,8 +637,8 @@
     <div id="page-d2" class="page-view hidden space-y-6">
 
       <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-indigo-700 via-purple-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-indigo-400/40">
-        <div class="space-y-2">
+      <div class="bg-gradient-to-r from-indigo-700 via-purple-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-indigo-400/50">
+        <div class="space-y-3">
           <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
             <i class="fa-solid fa-bag-shopping"></i> 2026/12/18 (週五) 第二天
           </div>
@@ -579,15 +649,38 @@
         </div>
       </div>
 
+      <!-- YouTube Video Guide Box -->
+      <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
+        <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
+          <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
+          <span>🎬 PARCO CITY 現場實拍導覽影片（點擊直接搜尋 YouTube 開箱）</span>
+        </div>
+        <a href="https://www.youtube.com/results?search_query=沖繩+PARCO+CITY+逛街+美食" target="_blank" rel="noopener" class="flex items-center justify-between gap-2.5 bg-white hover:bg-rose-50 active:scale-98 transition p-3 rounded-xl border border-rose-200 shadow-sm text-left">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="bg-red-600 text-white w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow">
+              <i class="fa-brands fa-youtube text-xl"></i>
+            </span>
+            <div class="min-w-0">
+              <div class="text-[11px] font-black text-rose-700">▶ 點擊觀看 YouTube 實拍導覽</div>
+              <div class="text-xs sm:text-sm font-black text-slate-900 truncate">沖繩 PARCO CITY 無敵海景＋爆逛250間店＆美食街全攻略</div>
+            </div>
+          </div>
+          <span class="bg-slate-900 text-amber-300 text-xs font-black px-2.5 py-1.5 rounded-lg shrink-0">即時搜尋</span>
+        </a>
+      </div>
+
       <!-- Stop 1: Taxi to PARCO CITY -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-indigo-100 text-indigo-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">08:30 起床 ➔ 09:45 叫車 ➔ 10:15 抵達</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：NEST NAHA 直達浦添 PARCO CITY（計程車直送操作說明書）</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-indigo-100 text-indigo-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">08:30 起床 ➔ 09:45 叫車 ➔ 10:15 抵達</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：NEST NAHA 直達浦添 PARCO CITY（計程車直送操作說明書）</h3>
+          </div>
+          <span class="bg-indigo-50 text-indigo-800 text-xs font-black px-2.5 py-1 rounded-full">車程 20 分鐘直達</span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
-          <div onclick="openImgModal('images/parco_city.jpg', 'SAN-A 浦添西海岸 PARCO CITY 壯觀商場全景（臨東海海景第一排）')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+          <div onclick="openImgModal('images/parco_city.jpg', 'SAN-A 浦添西海岸 PARCO CITY 壯觀商場全景（緊鄰無敵海景的全沖繩最大商場）')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
             <img src="images/parco_city.jpg" alt="PARCO CITY 商場全景" class="w-full h-44 object-cover">
             <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">📸 PARCO CITY 臨海商場實景</div>
           </div>
@@ -617,19 +710,26 @@
 
       <!-- Stop 2: 3F Anime & Toys -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-purple-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-purple-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">10:30 - 12:30 上半場</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：3F 娛樂動漫王國・群祐戰鬥陀螺 X ＆ 唯唯三麗鷗吉卜力專賣店</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-purple-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">10:30 - 12:30 上半場</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：3F 娛樂動漫王國・群祐戰鬥陀螺 X ＆ 唯唯三麗鷗吉卜力專賣店</h3>
+          </div>
+          <span class="bg-purple-100 text-purple-800 text-xs font-black px-2.5 py-1 rounded-full">3F 綠區</span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-2">
           <div onclick="openImgModal('images/store_namco_parco.jpg', 'PARCO CITY 3F namco 娛樂區與最新機台遊戲')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/store_namco_parco.jpg" alt="PARCO CITY namco" class="w-full h-44 object-cover">
+            <img src="images/store_namco_parco.jpg" alt="PARCO CITY namco" class="w-full h-40 object-cover">
             <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🎮 3F namco 動漫遊戲王國</div>
           </div>
           <div onclick="openImgModal('images/beyblade_x_shop.jpg', '戰鬥陀螺 X (Beyblade X) 日本限定發射器與戰鬥盤專區')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/beyblade_x_shop.jpg" alt="戰鬥陀螺專櫃" class="w-full h-44 object-cover">
+            <img src="images/beyblade_x_shop.jpg" alt="戰鬥陀螺專櫃" class="w-full h-40 object-cover">
             <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🔥 戰鬥陀螺 X 旗艦貨架</div>
+          </div>
+          <div onclick="openImgModal('images/diagram_beyblade_x.svg', '【群祐必看】戰鬥陀螺 X 型號挑選指南與 QR Code 說明')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition bg-slate-900">
+            <img src="images/diagram_beyblade_x.svg" alt="陀螺圖解" class="w-full h-40 object-contain mx-auto">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🌀 戰鬥陀螺攻略圖解</div>
           </div>
         </div>
 
@@ -652,19 +752,26 @@
 
       <!-- Stop 3: 2F Food Hall Lunch -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-rose-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-rose-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">12:30 - 14:00 午餐時間</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：2F 海景第一排美食廣場（Food Hall）午餐盛宴</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-rose-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">12:30 - 14:00 午餐時間</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：2F 海景第一排美食廣場（Food Hall）午餐盛宴</h3>
+          </div>
+          <span class="bg-rose-100 text-rose-800 text-xs font-black px-2.5 py-1 rounded-full">海景第一排</span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-2">
           <div onclick="openImgModal('images/store_foodhall_parco.jpg', 'PARCO CITY 2F 面海落地窗美食廣場（Food Hall）坐擁蔚藍東海海景')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/store_foodhall_parco.jpg" alt="海景美食廣場" class="w-full h-44 object-cover">
+            <img src="images/store_foodhall_parco.jpg" alt="海景美食廣場" class="w-full h-40 object-cover">
             <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🌊 2F 海景第一排美食街</div>
           </div>
           <div onclick="openImgModal('images/food_kiwamiya.jpg', '極味屋（極味や）伊萬里黑毛和牛漢堡排：在炙熱小鐵石上滋滋作響')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
-            <img src="images/food_kiwamiya.jpg" alt="極味屋和牛漢堡排" class="w-full h-44 object-cover">
+            <img src="images/food_kiwamiya.jpg" alt="極味屋和牛漢堡排" class="w-full h-40 object-cover">
             <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🥩 極味屋和牛漢堡排實拍</div>
+          </div>
+          <div onclick="openImgModal('images/food_aw_rootbeer.jpg', 'A&W 美式漢堡：沖繩限定沙士（Root Beer）搭配莫札瑞拉起司漢堡與捲捲薯條')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+            <img src="images/food_aw_rootbeer.jpg" alt="A&W 漢堡沙士" class="w-full h-40 object-cover">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🍔 A&W 漢堡捲捲薯條</div>
           </div>
         </div>
 
@@ -687,9 +794,27 @@
 
       <!-- Stop 4: Shopping & Jack's Steak -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">14:00 - 17:00 購物 ➔ 18:30 晚餐</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：全家免稅服飾生活血拚 ＆ 海景露台下午茶 ➔ 傑克牛排晚餐</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">14:00 - 17:00 購物 ➔ 18:30 晚餐</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：全家免稅服飾生活血拚 ＆ 海景露台下午茶 ➔ 傑克牛排晚餐</h3>
+          </div>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-black px-2.5 py-1 rounded-full">免稅 10% 優惠</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-2">
+          <div onclick="openImgModal('images/store_3coins_parco.jpg', '3COINS+plus PARCO CITY 店：精緻日系生活雜貨與兒童文具專區')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+            <img src="images/store_3coins_parco.jpg" alt="3COINS 店面" class="w-full h-40 object-cover">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🛍️ 3COINS 生活雜貨</div>
+          </div>
+          <div onclick="openImgModal('images/parco_sunset.jpg', 'PARCO CITY 戶外觀海甲板：欣賞絕美夕陽染紅東海')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+            <img src="images/parco_sunset.jpg" alt="觀海甲板夕陽" class="w-full h-40 object-cover">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🌅 戶外露台夕陽拍照</div>
+          </div>
+          <div onclick="openImgModal('images/store_jacks_steak.jpg', '傑克牛排館（Jack Steak House）夜間外觀實景')" class="rounded-xl overflow-hidden border border-slate-200 cursor-pointer active:scale-98 transition">
+            <img src="images/store_jacks_steak.jpg" alt="傑克牛排" class="w-full h-40 object-cover">
+            <div class="p-2 bg-white text-xs font-bold text-slate-800 truncate">🥩 傑克牛排大口吃肉</div>
+          </div>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
@@ -732,8 +857,8 @@
     <div id="page-d3" class="page-view hidden space-y-6">
 
       <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-teal-700 via-emerald-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-emerald-400/40">
-        <div class="space-y-2">
+      <div class="bg-gradient-to-r from-teal-700 via-emerald-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-emerald-400/50">
+        <div class="space-y-3">
           <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
             <i class="fa-solid fa-umbrella-beach"></i> 2026/12/19 (週六) 第三天
           </div>
@@ -746,9 +871,12 @@
 
       <!-- Stop 1: Naminoue Shrine & Beach -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-emerald-100 text-emerald-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">09:30 - 11:45 步行 10 分鐘即達</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：琉球八社之首「波上宮」祈福 ＆ 波之上海灘踩沙</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-emerald-100 text-emerald-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">09:30 - 11:45 步行 10 分鐘即達</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：琉球八社之首「波上宮」祈福 ＆ 波之上海灘踩沙</h3>
+          </div>
+          <span class="bg-emerald-50 text-emerald-800 text-xs font-black px-2.5 py-1 rounded-full">沖繩必訪能量景點</span>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
@@ -770,9 +898,12 @@
 
       <!-- Stop 2: Kame Kame Soba Lunch -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-emerald-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">12:00 - 13:00 週六正常營業・核實準確</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：順路排隊名店：龜かめそば（Kame Kame Soba）濃郁排骨麵</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-emerald-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">12:00 - 13:00 週六正常營業・核實準確</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：順路排隊名店：龜かめそば（Kame Kame Soba）濃郁排骨麵</h3>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-2.5 py-1 rounded-full">週六營業・週日公休</span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
@@ -827,9 +958,12 @@
 
       <!-- Stop 4: Pool & Happy Hour -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-sky-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">14:45 - 16:30 唯唯 Mia 最愛</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：14F 頂樓溫水無邊際泳池戲水盛宴 ＆ Happy Hour</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">14:45 - 16:30 唯唯 Mia 最愛</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：14F 頂樓溫水無邊際泳池戲水盛宴 ＆ Happy Hour</h3>
+          </div>
+          <span class="bg-sky-100 text-sky-800 text-xs font-black px-2.5 py-1 rounded-full">冬季溫水恆溫</span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
@@ -846,9 +980,12 @@
 
       <!-- Stop 5: Kokusai Dori -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-indigo-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">17:00 - 21:00 核心必去</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：國際通漫步 ＆ Calbee+ 現炸薯條 ＆ 驚安殿堂唐吉訶德免稅</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">17:00 - 21:00 核心必去</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：國際通漫步 ＆ Calbee+ 現炸薯條 ＆ 驚安殿堂唐吉訶德免稅</h3>
+          </div>
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-black px-2.5 py-1 rounded-full">夜市繁華購物</span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-2">
@@ -903,8 +1040,8 @@
     <div id="page-d4" class="page-view hidden space-y-6">
 
       <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-amber-600 via-rose-700 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-amber-400/40">
-        <div class="space-y-2">
+      <div class="bg-gradient-to-r from-amber-600 via-rose-700 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-amber-400/50">
+        <div class="space-y-3">
           <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
             <i class="fa-solid fa-fish-fins"></i> 2026/12/20 (週日) 第四天
           </div>
@@ -915,11 +1052,34 @@
         </div>
       </div>
 
+      <!-- YouTube Video Guide Box -->
+      <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
+        <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
+          <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
+          <span>🎬 泊港魚市場實拍導覽影片（點擊直接搜尋 YouTube 開箱）</span>
+        </div>
+        <a href="https://www.youtube.com/results?search_query=沖繩+泊港魚市場+泊いゆまち+海鮮" target="_blank" rel="noopener" class="flex items-center justify-between gap-2.5 bg-white hover:bg-rose-50 active:scale-98 transition p-3 rounded-xl border border-rose-200 shadow-sm text-left">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="bg-red-600 text-white w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow">
+              <i class="fa-brands fa-youtube text-xl"></i>
+            </span>
+            <div class="min-w-0">
+              <div class="text-[11px] font-black text-rose-700">▶ 點擊觀看 YouTube 實拍導覽</div>
+              <div class="text-xs sm:text-sm font-black text-slate-900 truncate">那霸泊港魚市場（泊いゆまち）：現剖黑鮪魚大腹刺身＆現烤明太子龍蝦全攻略</div>
+            </div>
+          </div>
+          <span class="bg-slate-900 text-amber-300 text-xs font-black px-2.5 py-1.5 rounded-lg shrink-0">即時搜尋</span>
+        </a>
+      </div>
+
       <!-- Stop 1: Check-out & Luggage -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-amber-100 text-amber-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">08:30 退房出發</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：辦理退房（Check-out）＆ 行李全數免費寄存在 NEST NAHA</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-amber-100 text-amber-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">08:30 退房出發</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：辦理退房（Check-out）＆ 行李全數免費寄存在 NEST NAHA</h3>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 text-xs font-black px-2.5 py-1 rounded-full">免費寄存至 18:00</span>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
@@ -989,9 +1149,12 @@
 
       <!-- Stop 3: Ryukyu Shinmen Tondo Lunch -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-rose-100 text-rose-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">11:45 - 13:45 沖繩拉麵名店</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：午餐名店：琉球新麵 通堂 本店（小祿站）</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-rose-100 text-rose-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">11:45 - 13:45 沖繩拉麵名店</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：午餐名店：琉球新麵 通堂 本店（小祿站）</h3>
+          </div>
+          <span class="bg-rose-50 text-rose-800 text-xs font-black px-2.5 py-1 rounded-full">招牌辛子辣豆芽免費</span>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
@@ -1051,9 +1214,12 @@
 
       <!-- Stop 5: Pick Luggage & Taxi to Airport -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">18:15 取行李 ➔ 18:45 計程車直達機場</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：回 NEST NAHA 取行李 ➔ 計程車直達那霸機場 (OKA)</h3>
+        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+          <div>
+            <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">18:15 取行李 ➔ 18:45 計程車直達機場</span>
+            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：回 NEST NAHA 取行李 ➔ 計程車直達那霸機場 (OKA)</h3>
+          </div>
+          <span class="bg-sky-50 text-sky-800 text-xs font-black px-2.5 py-1 rounded-full">車程僅 12 分鐘</span>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-800">
@@ -1115,7 +1281,7 @@
 
       <!-- Page Hero Banner -->
       <div class="bg-gradient-to-r from-slate-800 via-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-slate-600/50">
-        <div class="space-y-2">
+        <div class="space-y-3">
           <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
             <i class="fa-solid fa-toolbox"></i> 第一次去沖繩・全能實用工具庫
           </div>
