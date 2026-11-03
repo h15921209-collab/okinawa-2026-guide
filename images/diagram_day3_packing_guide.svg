@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#bg3)"/>
+  <rect x="30" y="30" width="740" height="55" rx="12" fill="url(#accent3)"/>
+  <text x="400" y="65" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">🌙 Day 3 唐吉訶德夜巡 ➔ 4 大行李箱秤重防呆全攻略</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(50, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#059669"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">1</text>
+    <text x="60" y="38" fill="#34d399" font-size="14" font-weight="bold">20:30 唐吉掃貨</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">國際通 24H 旗艦店</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 晚餐後直衝唐吉訶德</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 伴手禮/零食/美妝全包</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 滿 5,500 円現場免稅</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 封箱透明免稅專用袋</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#047857"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">一次購足免四處奔波</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(245, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#059669"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">2</text>
+    <text x="60" y="38" fill="#34d399" font-size="14" font-weight="bold">21:40 7分回宿</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">計程車大包小包直送</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 門口隨手招計程車</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 大免稅袋放入後車廂</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 7 分鐘直抵飯店大門</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 全家免走路省體力</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#047857"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">優雅滿載而歸</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(440, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#059669"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">3</text>
+    <text x="60" y="38" fill="#34d399" font-size="14" font-weight="bold">22:00 4箱打包</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">分工分流完美配置</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 液體/泡盛放託運底層</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 免稅透明袋切勿拆封</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 易碎品夾衣物中間層</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 護照與隨身物留背包</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#047857"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">出境通關零卡關</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(635, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#059669"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">4</text>
+    <text x="60" y="38" fill="#34d399" font-size="14" font-weight="bold">22:40 秤重安眠</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">向櫃檯借秤防超重</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 1F 借行李手提秤</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 每箱控制 18~19.5kg</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 泡熱水澡放鬆安歇</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 23:00 全家深沉熟睡</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#10b981"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">迎接 Day4 步行者天國</text>
+  </g>
+</svg>

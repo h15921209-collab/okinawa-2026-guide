@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#bg2)"/>
+  <rect x="30" y="30" width="740" height="55" rx="12" fill="url(#accent2)"/>
+  <text x="400" y="65" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">🌙 Day 2 牛排夜行防呆動線：波之上海風 ➔ 投幣洗衣 ➔ 深度泡澡</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(50, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#d97706"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">1</text>
+    <text x="60" y="38" fill="#fbbf24" font-size="14" font-weight="bold">19:45 辻町散步</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">吃完牛排吹海風</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 傑克牛排步出 3 分鐘</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 沿若狹辻町大道散策</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 漫步至波之上臨海側</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 享受清爽冬季海風</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#b45309"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">飯後散步助消化</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(245, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#d97706"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">2</text>
+    <text x="60" y="38" fill="#fbbf24" font-size="14" font-weight="bold">20:20 特色超商</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">波之上深夜挖寶</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 造訪周邊特色便利店</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 沖繩限定寶可夢點心</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 大人挑泡盛微醺沙瓦</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 孩子挑香檸優格冰棒</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#b45309"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">街頭零食補給</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(440, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#d97706"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">3</text>
+    <text x="60" y="38" fill="#fbbf24" font-size="14" font-weight="bold">20:50 飯店洗衣</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">NEST 2F 投幣洗衣</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 前兩天換洗衣物投入</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 洗脫烘一體機免加精</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 設定 120 分鐘全烘乾</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 零髒衣無負擔輕鬆行</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#b45309"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">回台免洗大批衣服</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(635, 115)">
+    <rect width="155" height="290" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#d97706"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">4</text>
+    <text x="60" y="38" fill="#fbbf24" font-size="14" font-weight="bold">21:40 泡澡入眠</text>
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">深浸浴缸 ＆ 充能</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 舒舒服服熱水泡澡</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 開箱 PARCO 戰利品</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 設鬧鐘儲備全家精力</text>
+    <text x="15" y="185" fill="#94a3b8" font-size="11">• 22:30 安穩就寢</text>
+    <rect x="15" y="225" width="125" height="45" rx="8" fill="#10b981"/>
+    <text x="77" y="252" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">迎接 Day3 水族館</text>
+  </g>
+</svg>
