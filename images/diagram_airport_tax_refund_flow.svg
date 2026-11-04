@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%\" stop-color="#091e3a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="hdrFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="820" height="480" rx="16" fill="url(#bgFlow)"/>
+  
+  <!-- Header Banner -->
+  <rect x="25" y="20" width="770" height="55" rx="12" fill="url(#hdrFlow)"/>
+  <text x="410" y="55" fill="#ffffff" font-size="20" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">🛫 那霸機場 3F 出境退稅四大步：先機台核驗 ➔ 再前往虎航托運（新手防呆全流程）</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(35, 100)">
+    <rect width="170" height="345" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#0284c7"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">1</text>
+    <text x="60" y="38" fill="#38bdf8" font-size="14" font-weight="bold">抵達機場 3F</text>
+    
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">切勿先去托運！</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 提早 2.5~3 小時到</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 推著 4 大行李箱</text>
+    <text x="15" y="160" fill="#f87171" font-size="11" font-weight="bold">⚠️ 嚴禁先交給地勤</text>
+    <text x="15" y="185" fill="#cbd5e1" font-size="11">• 免稅商品在箱子裡</text>
+    <text x="15" y="210" fill="#cbd5e1" font-size="11">• 準備全家護照</text>
+    
+    <rect x="15" y="275" width="140" height="50" rx="8" fill="#0369a1"/>
+    <text x="85" y="297" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">第一步：</text>
+    <text x="85" y="314" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">直奔退稅機台專區</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M215 255 L230 255" stroke="#38bdf8" stroke-width="3" stroke-dasharray="4"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(235, 100)">
+    <rect width="170" height="345" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#0284c7"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">2</text>
+    <text x="60" y="38" fill="#38bdf8" font-size="14" font-weight="bold">KIOSK 掃描</text>
+    
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">掃描護照登錄</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 點選繁體中文介面</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 掃描護照相片頁</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 連線 VJW 或掃條碼</text>
+    <text x="15" y="185" fill="#cbd5e1" font-size="11">• 系統自動勾稽</text>
+    <text x="15" y="210" fill="#cbd5e1" font-size="11">• 等待畫面燈號</text>
+    
+    <rect x="15" y="275" width="140" height="50" rx="8" fill="#0369a1"/>
+    <text x="85" y="297" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">第二步：</text>
+    <text x="85" y="314" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">判讀螢幕 🟢 / 🔴</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M415 255 L430 255" stroke="#38bdf8" stroke-width="3" stroke-dasharray="4"/>
+
+  <!-- Step 3 (Dual branches 🟢 / 🔴) -->
+  <g transform="translate(435, 100)">
+    <rect width="180" height="345" rx="12" fill="#1e293b" stroke="#e2e8f0" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#475569"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">3</text>
+    <text x="60" y="38" fill="#ffffff" font-size="14" font-weight="bold">海關核驗判定</text>
+    
+    <!-- Green Box -->
+    <rect x="10" y="65" width="160" height="120" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="20" y="88" fill="#34d399" font-size="13" font-weight="bold">🟢 綠燈（Completed）</text>
+    <text x="20" y="110" fill="#a7f3d0" font-size="11">• 恭喜免查驗通過！</text>
+    <text x="20" y="130" fill="#a7f3d0" font-size="11">• 立即推行李至虎航櫃檯</text>
+    <text x="20" y="150" fill="#a7f3d0" font-size="11">• 辦理報到與行李托運</text>
+    <text x="20" y="170" fill="#fef08a" font-size="10" font-weight="bold">★ 90% 以上旅客為綠燈</text>
+
+    <!-- Red Box -->
+    <rect x="10" y="195" width="160" height="135" rx="8" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="20" y="218" fill="#fca5a5" font-size="13" font-weight="bold">🔴 紅燈（抽查受檢）</text>
+    <text x="20" y="238" fill="#fecaca" font-size="11">• 需人工實物查驗</text>
+    <text x="20" y="258" fill="#fecaca" font-size="11">• 推行李至海關檢查室</text>
+    <text x="20" y="278" fill="#fecaca" font-size="11">• 開箱出示免稅商品</text>
+    <text x="20" y="298" fill="#fecaca" font-size="11">• 官員蓋章放行</text>
+    <text x="20" y="318" fill="#fef08a" font-size="10" font-weight="bold">★ 蓋章後再去虎航托運！</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M625 255 L640 255" stroke="#38bdf8" stroke-width="3" stroke-dasharray="4"/>
+
+  <!-- Step 4 -->
+  <g transform="translate(645, 100)">
+    <rect width="145" height="345" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <rect x="15" y="15" width="36" height="36" rx="18" fill="#059669"/>
+    <text x="33" y="39" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">4</text>
+    <text x="60" y="38" fill="#34d399" font-size="14" font-weight="bold">托運 ＆ 退款</text>
+    
+    <text x="15" y="80" fill="#f8fafc" font-size="13" font-weight="bold">安心托運登機</text>
+    <text x="15" y="110" fill="#94a3b8" font-size="11">• 虎航櫃檯托運行李</text>
+    <text x="15" y="135" fill="#94a3b8" font-size="11">• 領取四人登機證</text>
+    <text x="15" y="160" fill="#94a3b8" font-size="11">• 兩手空空通過安檢</text>
+    <text x="15" y="185" fill="#cbd5e1" font-size="11">• 進入管制區候機</text>
+    <text x="15" y="210" fill="#cbd5e1" font-size="11">• 稅款自動刷退信用卡</text>
+    <text x="15" y="235" fill="#cbd5e1" font-size="11">• 約 1~3 週帳單扣抵</text>
+    
+    <rect x="15" y="275" width="115" height="50" rx="8" fill="#047857"/>
+    <text x="72" y="297" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">第四步：</text>
+    <text x="72" y="314" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">凱旋返台！</text>
+  </g>
+</svg>
