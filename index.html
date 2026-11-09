@@ -11,61 +11,110 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Japanese Editorial & Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --paper-bg: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --text-main: #242120;
+      --text-muted: #57534E;
+      --text-subtle: #8C8680;
+      --border-subtle: #E8E4DC;
+      --border-card: #E5E0D6;
+      --ryukyu-indigo: #1E3A5F;
+      --ryukyu-deep: #142842;
+      --terracotta: #C05640;
+      --terracotta-soft: #F9ECE8;
+      --sand-gold: #9B7038;
+      --sand-soft: #F6F1EA;
+    }
+
     html.font-scale-md { font-size: 16px !important; }
     html.font-scale-lg { font-size: 19px !important; } /* 預設：特大清晰字級 */
     html.font-scale-xl { font-size: 22px !important; } /* 超大 A+ 字級 */
 
     body {
-      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #f1f5f9;
-      line-height: 1.75;
+      font-family: 'Zen Kaku Gothic New', 'Noto Sans TC', -apple-system, sans-serif;
+      background-color: var(--paper-bg);
+      color: var(--text-main);
+      line-height: 1.8;
       -webkit-tap-highlight-color: transparent;
+      letter-spacing: 0.015em;
     }
 
-    .card-shadow {
-      box-shadow: 0 6px 24px -4px rgba(15, 23, 42, 0.08), 0 2px 8px -2px rgba(15, 23, 42, 0.05);
+    .font-serif {
+      font-family: 'Shippori Mincho', 'Noto Serif TC', serif;
+    }
+    .font-roman {
+      font-family: 'Cinzel', serif;
+    }
+
+    .card-shadow, .editorial-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: 1.25rem;
+      box-shadow: 0 2px 12px -2px rgba(36, 33, 32, 0.04), 0 1px 4px -1px rgba(36, 33, 32, 0.02);
+      transition: all 0.2s ease;
+    }
+    .card-shadow:hover, .editorial-card:hover {
+      box-shadow: 0 6px 20px -3px rgba(36, 33, 32, 0.06);
+      border-color: #D6D0C4;
     }
 
     .step-badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 1.85rem;
-      height: 1.85rem;
+      width: 1.75rem;
+      height: 1.75rem;
       border-radius: 9999px;
-      background: linear-gradient(135deg, #0284c7, #0369a1);
-      color: #ffffff;
-      font-weight: 900;
-      font-size: 0.95rem;
+      background-color: #FAF8F5;
+      border: 1px solid #D6D0C4;
+      color: var(--ryukyu-indigo);
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 700;
+      font-size: 0.85rem;
       flex-shrink: 0;
       margin-top: 0.15rem;
-      box-shadow: 0 2px 6px rgba(2, 132, 199, 0.35);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
     }
 
     .tab-active {
-      background: linear-gradient(135deg, #0284c7, #0369a1) !important;
-      color: #ffffff !important;
-      border-color: #0284c7 !important;
-      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35) !important;
-      transform: translateY(-1px);
+      background-color: #FFFFFF !important;
+      color: var(--ryukyu-indigo) !important;
+      font-weight: 700 !important;
+      border: 1px solid var(--border-subtle) !important;
+      box-shadow: 0 2px 6px rgba(30, 58, 95, 0.06) !important;
+      position: relative;
+    }
+    .tab-active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 15%;
+      width: 70%;
+      height: 2px;
+      background-color: var(--ryukyu-indigo);
+      border-radius: 9999px;
     }
     .tab-inactive {
-      background-color: #ffffff;
-      color: #475569;
-      border-color: #cbd5e1;
+      background-color: transparent;
+      color: var(--text-muted);
+      border: 1px solid transparent;
     }
     .tab-inactive:hover {
-      background-color: #f8fafc;
-      color: #0f172a;
-      border-color: #94a3b8;
+      background-color: rgba(255, 255, 255, 0.7);
+      color: var(--text-main);
+      border-color: var(--border-subtle);
     }
 
     .font-btn-active {
-      background-color: #fbbf24 !important;
-      color: #0f172a !important;
-      font-weight: 900 !important;
+      background-color: var(--ryukyu-indigo) !important;
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
     }
 
     .hide-scrollbar::-webkit-scrollbar { display: none; }
@@ -75,74 +124,79 @@
 <body class="text-slate-900 antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col">
 
   <!-- Top Sticky Navigation (Control Bar + Tabs) -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-md">
-    <!-- Row 1: Header Info & Controls -->
-    <div class="max-w-5xl mx-auto px-3 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-2">
-      <!-- Title & Countdown -->
-      <div class="flex items-center space-x-2.5">
-        <div class="w-9 h-9 rounded-xl bg-sky-600 flex items-center justify-center text-white font-black text-lg shadow-sm">
-          <i class="fa-solid fa-book-open"></i>
+    <!-- Top Sticky Navigation: Japanese Editorial Masthead & Washi Index Tabs -->
+  <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E8E4DC] shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
+    <!-- Row 1: Editorial Masthead & Family Controls -->
+    <div class="max-w-5xl mx-auto px-3 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-2.5 border-b border-[#EFECE6]/80">
+      <!-- Title & Kicker -->
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-[#1E3A5F] flex items-center justify-center text-white font-serif text-sm shadow-sm">
+          <span>誌</span>
         </div>
         <div>
-          <div class="flex items-center gap-1.5">
-            <h1 class="font-black text-sm sm:text-base text-slate-900 leading-tight">沖繩新手保母級步驟說明書</h1>
-            <span class="bg-amber-400 text-slate-950 text-[11px] font-black px-2 py-0.5 rounded-full shadow-sm">巢飯店旗艦版</span>
+          <div class="flex items-center gap-2">
+            <span class="font-roman tracking-wider text-[10px] text-[#8C8680] uppercase font-bold">OKINAWA JOURNAL 2026</span>
+            <span class="text-[#D1CBC1]">|</span>
+            <span class="text-[11px] font-medium text-[#C05640] bg-[#F9ECE8] px-2 py-0.5 rounded-full border border-[#EACEC8]">THE NEST NAHA 特集別冊</span>
           </div>
-          <p class="text-xs text-slate-500 flex items-center gap-1.5 font-medium mt-0.5">
-            <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="countdown-badge"><i class="fa-solid fa-clock"></i> 虎航 IT728 倒數中...</span>
-          </p>
+          <h1 class="font-serif text-sm sm:text-base text-[#1E3A5F] font-bold tracking-tight leading-tight mt-0.5">沖繩四天三夜 私家旅人手帖</h1>
         </div>
       </div>
 
       <!-- Family Members Badges & Font Scaler -->
       <div class="flex items-center space-x-2">
-        <div class="hidden lg:flex items-center space-x-1.5 text-xs bg-slate-100 py-1 px-3 rounded-full text-slate-600 font-bold border border-slate-200">
-          <span>👨 勝穩</span>
-          <span class="text-slate-300">|</span>
-          <span>👩 媽媽</span>
-          <span class="text-slate-300">|</span>
-          <span>👦 群祐 (12歲)</span>
-          <span class="text-slate-300">|</span>
-          <span>👧 唯唯 Mia (7歲)</span>
+        <div class="hidden lg:flex items-center space-x-2 text-xs bg-white py-1 px-3 rounded-full text-[#57534E] font-medium border border-[#E8E4DC] shadow-sm">
+          <span class="text-[#8C8680] font-serif text-[11px]">同行家族</span>
+          <span class="text-[#D1CBC1]">•</span>
+          <span>林勝穩</span>
+          <span class="text-[#D1CBC1]">•</span>
+          <span>媽媽</span>
+          <span class="text-[#D1CBC1]">•</span>
+          <span>群祐 (12)</span>
+          <span class="text-[#D1CBC1]">•</span>
+          <span>唯唯 (7)</span>
+        </div>
+        <!-- Countdown Badge -->
+        <div class="text-[11px] text-[#1E3A5F] bg-[#EBF2FA] px-2.5 py-1 rounded-full font-medium border border-[#D5E3F5] flex items-center gap-1.5 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#1E3A5F] animate-pulse"></span>
+          <span id="countdown-badge"><i class="fa-regular fa-clock"></i> 虎航 IT728 啟程準備中...</span>
         </div>
         <!-- Font Scaler -->
-        <div class="flex items-center bg-slate-900 p-1 rounded-xl shadow-inner gap-1">
-          <span class="text-xs font-black text-amber-300 pl-1.5 hidden sm:inline"><i class="fa-solid fa-text-height"></i></span>
-          <button id="fbtn-md" onclick="setFontScale('md')" class="px-2.5 py-1 text-xs rounded-lg text-slate-200 font-bold hover:bg-slate-800 transition">中</button>
-          <button id="fbtn-lg" onclick="setFontScale('lg')" class="px-2.5 py-1 text-xs rounded-lg font-btn-active transition">特大(預設)</button>
-          <button id="fbtn-xl" onclick="setFontScale('xl')" class="px-2.5 py-1 text-xs rounded-lg text-slate-200 font-bold hover:bg-slate-800 transition">超大A+</button>
+        <div class="flex items-center bg-white p-0.5 rounded-lg border border-[#E8E4DC] shadow-sm gap-0.5">
+          <button id="fbtn-md" onclick="setFontScale('md')" class="px-2 py-0.5 text-xs rounded text-[#78716C] font-medium hover:text-[#242120] transition">標準</button>
+          <button id="fbtn-lg" onclick="setFontScale('lg')" class="px-2 py-0.5 text-xs rounded font-btn-active transition">放大</button>
+          <button id="fbtn-xl" onclick="setFontScale('xl')" class="px-2 py-0.5 text-xs rounded text-[#78716C] font-medium hover:text-[#242120] transition">特大</button>
         </div>
       </div>
     </div>
 
-    <!-- Row 2: Top Tabs Navigation (上面的摺頁 對應一頁・點擊切換獨立頁面) -->
-    <div class="bg-slate-100 border-t border-slate-200">
+    <!-- Row 2: Washi Index Tabs Navigation -->
+    <div class="bg-[#FAF8F5]">
       <div class="max-w-5xl mx-auto px-2 sm:px-4">
-        <nav class="flex space-x-2 py-2 overflow-x-auto hide-scrollbar scroll-smooth" aria-label="Tabs" id="tab-nav-container">
-          <button id="tab-hotel" onclick="switchPage('hotel')" class="tab-btn tab-active px-3.5 py-2 rounded-xl text-xs sm:text-sm font-black flex items-center space-x-1.5 border-2 whitespace-nowrap transition-all duration-150">
-            <i class="fa-solid fa-hotel text-amber-300"></i>
-            <span>🏨 巢飯店設施說明書</span>
+        <nav class="flex space-x-1.5 sm:space-x-2 py-1.5 overflow-x-auto hide-scrollbar scroll-smooth" aria-label="Tabs" id="tab-nav-container">
+          <button id="tab-hotel" onclick="switchPage('hotel')" class="tab-btn tab-active px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium flex items-center space-x-1.5 whitespace-nowrap transition-all duration-150">
+            <span class="font-roman text-[10px] text-[#8C8680]">VOL.00</span>
+            <span>宿泊特輯・NEST NAHA</span>
           </button>
-          <button id="tab-d1" onclick="switchPage('d1')" class="tab-btn tab-inactive px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 border whitespace-nowrap transition-all duration-150">
-            <i class="fa-solid fa-plane-arrival text-slate-400"></i>
-            <span>🗓️ Day 1: 啟程與那霸</span>
+          <button id="tab-d1" onclick="switchPage('d1')" class="tab-btn tab-inactive px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium flex items-center space-x-1.5 whitespace-nowrap transition-all duration-150">
+            <span class="font-roman text-[10px] text-[#8C8680]">DAY 01</span>
+            <span>啟程與旭橋散策</span>
           </button>
-          <button id="tab-d2" onclick="switchPage('d2')" class="tab-btn tab-inactive px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 border whitespace-nowrap transition-all duration-150">
-            <i class="fa-solid fa-fish-fins text-slate-400"></i>
-            <span>🐟 Day 2: 泊港魚市＆PARCO</span>
+          <button id="tab-d2" onclick="switchPage('d2')" class="tab-btn tab-inactive px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium flex items-center space-x-1.5 whitespace-nowrap transition-all duration-150">
+            <span class="font-roman text-[10px] text-[#8C8680]">DAY 02</span>
+            <span>泊港魚市與海景</span>
           </button>
-          <button id="tab-d3" onclick="switchPage('d3')" class="tab-btn tab-inactive px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 border whitespace-nowrap transition-all duration-150">
-            <i class="fa-solid fa-umbrella-beach text-slate-400"></i>
-            <span>🏖️ Day 3: 波上宮海灘</span>
+          <button id="tab-d3" onclick="switchPage('d3')" class="tab-btn tab-inactive px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium flex items-center space-x-1.5 whitespace-nowrap transition-all duration-150">
+            <span class="font-roman text-[10px] text-[#8C8680]">DAY 03</span>
+            <span>波上宮祈福踏浪</span>
           </button>
-          <button id="tab-d4" onclick="switchPage('d4')" class="tab-btn tab-inactive px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 border whitespace-nowrap transition-all duration-150">
-            <i class="fa-solid fa-fire-burner text-slate-400"></i>
-            <span>🥩 Day 4: 本部和牛＆國際通採買</span>
+          <button id="tab-d4" onclick="switchPage('d4')" class="tab-btn tab-inactive px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium flex items-center space-x-1.5 whitespace-nowrap transition-all duration-150">
+            <span class="font-roman text-[10px] text-[#8C8680]">DAY 04</span>
+            <span>和牛與國際通採買</span>
           </button>
-          <button id="tab-info" onclick="switchPage('info')" class="tab-btn tab-inactive px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center space-x-1.5 border whitespace-nowrap transition-all duration-150">
-            <i class="fa-solid fa-toolbox text-slate-400"></i>
-            <span>ℹ️ 實用工具與手冊</span>
+          <button id="tab-info" onclick="switchPage('info')" class="tab-btn tab-inactive px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium flex items-center space-x-1.5 whitespace-nowrap transition-all duration-150">
+            <span class="font-roman text-[10px] text-[#8C8680]">GUIDE</span>
+            <span>旅人便覽與新退稅</span>
           </button>
         </nav>
       </div>
@@ -157,35 +211,40 @@
     <!-- ========================================== -->
     <div id="page-hotel" class="page-view block space-y-6">
       
-      <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-sky-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-sky-400/50">
-        <div class="relative z-10 space-y-3">
+      <!-- Page Hero Banner: Japanese Editorial Cover -->
+      <div class="bg-[#162B4D] text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-[#23416D] shadow-sm">
+        <div class="relative z-10 space-y-4">
           <div class="flex flex-wrap items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 bg-sky-500/30 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-sky-200 border border-sky-400/40">
-              <i class="fa-solid fa-star text-amber-300"></i> 2025 全新開幕旗艦・全家 4 張獨立席夢思名床
+            <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-serif tracking-wider text-[#E8DCD8] border border-white/20">
+              FEATURE 00 ・ 宿泊空間
             </span>
-            <span class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full shadow">
-              Agoda 訂單編號：68796074
+            <span class="text-[11px] font-medium text-[#FAF8F5] bg-[#C05640] px-2.5 py-0.5 rounded-full shadow-sm">
+              Agoda 預訂號：68796074
+            </span>
+            <span class="text-[11px] font-medium text-[#FAF8F5] bg-white/15 px-2.5 py-0.5 rounded-full border border-white/20">
+              2025 全新開幕旗艦
             </span>
           </div>
-          <h2 class="text-2xl sm:text-4xl font-black tracking-tight leading-snug">THE NEST NAHA（那霸巢飯店）新手操作手冊</h2>
-          <p class="text-sky-100 text-xs sm:text-base leading-relaxed max-w-3xl font-medium">
-            📍 <strong>官方地址：</strong>沖縄県那覇市西 1-6-1｜📞 <strong>電話：</strong>098-868-1118<br>
-            💴 <strong>3 晚實付房費：</strong>33,572 円（全額已預付完成，現場零加價）｜⏰ <strong>入住 15:00 / 退房 11:00</strong><br>
-            🚶 <strong>交通動線：</strong>單軌電車「旭橋站」西口步行 5~7 分鐘，全段平坦無階梯障礙，推大行李超省力！
-          </p>
+          <h2 class="font-serif text-2xl sm:text-4xl font-bold tracking-tight leading-snug">
+            THE NEST NAHA｜那霸巢飯店 私家滯在全指南
+          </h2>
+          <div class="text-[#DCE5F0] text-xs sm:text-sm leading-relaxed max-w-3xl space-y-1 font-light">
+            <p><span class="font-medium text-white">官方地址：</span>沖縄県那覇市西 1-6-1 ｜ <span class="font-medium text-white">電話：</span>098-868-1118</p>
+            <p><span class="font-medium text-white">3 晚實付房費：</span>33,572 円（全額已預付完成，現場零加價） ｜ <span class="font-medium text-white">時間：</span>入住 15:00 / 退房 11:00</p>
+            <p><span class="font-medium text-white">交通動線：</span>單軌電車「旭橋站」西口步行 5~7 分鐘，全段平坦無階梯障礙，推大行李超省力</p>
+          </div>
           <div class="pt-2 flex flex-wrap gap-3">
-            <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 active:scale-95 transition text-white text-xs sm:text-sm font-black px-4 py-2 rounded-xl shadow-lg">
-              <i class="fa-solid fa-map-location-dot text-amber-300 text-base"></i>
+            <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#C05640] hover:bg-[#A84834] active:scale-95 transition text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-xl shadow">
+              <i class="fa-regular fa-map text-amber-200"></i>
               <span>開啟 THE NEST NAHA 官方 Google 地圖導航</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-white/80"></i>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
             </a>
           </div>
         </div>
       </div>
 
       <!-- YouTube Video Guide Box -->
-      <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
+      <div class="bg-[#FAF6F5] border border-[#E8DCD8] rounded-2xl p-3.5 sm:p-4 space-y-2">
         <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
           <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
           <span>🎬 飯店現場實拍導覽影片（點擊直接搜尋 YouTube 開箱）</span>
@@ -206,7 +265,7 @@
 
       <!-- Hotel Photos Showcase (可點圖放大) -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div onclick="openImgModal('images/nest_hotel_exterior.jpg?v=9', 'THE NEST NAHA 飯店外觀實景：2025嶄新落成，14層現代度假風地標，距旭橋站僅400米')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+        <div onclick="openImgModal('images/nest_hotel_exterior.jpg?v=9', 'THE NEST NAHA 飯店外觀實景：2025嶄新落成，14層現代度假風地標，距旭橋站僅400米')" class="rounded-2xl overflow-hidden border border-[#E8E4DC] bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
             <img loading="lazy" decoding="async" src="images/nest_hotel_exterior.jpg?v=9" alt="THE NEST NAHA 14層飯店外觀" class="w-full h-36 sm:h-44 object-cover">
             <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🏨 飯店外觀</span>
@@ -214,7 +273,7 @@
           </div>
           <div class="p-2 bg-white text-slate-800 font-black text-xs truncate">NEST NAHA 14層外觀</div>
         </div>
-        <div onclick="openImgModal('images/nest_hotel_room.jpg?v=9', '尊爵客房實景（26㎡）：配備 2 張席夢思名床 ＋ 2 張舒適獨立沙發床，全家一人一張專屬床鋪')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+        <div onclick="openImgModal('images/nest_hotel_room.jpg?v=9', '尊爵客房實景（26㎡）：配備 2 張席夢思名床 ＋ 2 張舒適獨立沙發床，全家一人一張專屬床鋪')" class="rounded-2xl overflow-hidden border border-[#E8E4DC] bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
             <img loading="lazy" decoding="async" src="images/nest_hotel_room.jpg?v=9" alt="尊爵四人獨立床實景" class="w-full h-36 sm:h-44 object-cover">
             <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🛏️ 一人一張獨立床</span>
@@ -222,7 +281,7 @@
           </div>
           <div class="p-2 bg-white text-slate-800 font-black text-xs truncate">尊爵客房 4 人獨立床位</div>
         </div>
-        <div onclick="openImgModal('images/nest_hotel_pool.jpg', '14F 頂樓溫水無邊際泳池：冬季恆溫開放，俯瞰那霸港海景與落日餘暉（唯唯最愛）')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+        <div onclick="openImgModal('images/nest_hotel_pool.jpg', '14F 頂樓溫水無邊際泳池：冬季恆溫開放，俯瞰那霸港海景與落日餘暉（唯唯最愛）')" class="rounded-2xl overflow-hidden border border-[#E8E4DC] bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
             <img loading="lazy" decoding="async" src="images/nest_hotel_pool.jpg" alt="14F 頂樓無邊際泳池" class="w-full h-36 sm:h-44 object-cover">
             <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🏊 溫水泳池</span>
@@ -230,7 +289,7 @@
           </div>
           <div class="p-2 bg-white text-slate-800 font-black text-xs truncate">14F 頂樓無邊際泳池</div>
         </div>
-        <div onclick="openImgModal('images/nest_hotel_restaurant.jpg', '2F 晨光森林景觀餐廳：供應現烤可頌、阿古豬香腸與現打新鮮蔬果汁')" class="rounded-2xl overflow-hidden border-2 border-slate-200 bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
+        <div onclick="openImgModal('images/nest_hotel_restaurant.jpg', '2F 晨光森林景觀餐廳：供應現烤可頌、阿古豬香腸與現打新鮮蔬果汁')" class="rounded-2xl overflow-hidden border border-[#E8E4DC] bg-white shadow-sm hover:shadow-md cursor-pointer active:scale-98 transition">
           <div class="relative">
             <img loading="lazy" decoding="async" src="images/nest_hotel_restaurant.jpg" alt="2F 晨光森林餐廳" class="w-full h-36 sm:h-44 object-cover">
             <span class="absolute top-2 left-2 bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-black px-2 py-0.5 rounded shadow">🍽️ 森林餐廳</span>
@@ -259,13 +318,17 @@
       </div>
 
       <!-- Stop 1: Check-in & 4 Beds -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-sky-100 text-sky-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">住宿核心指引</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：抵達 NEST NAHA 辦理入住 ＆ 尊爵客房 4 人獨立床位分配</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 01</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 宿泊・チェックイン 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">抵達 NEST NAHA 辦理入住 ＆ 尊爵客房 4 人獨立床位分配</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 THE NEST NAHA Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -313,7 +376,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -345,13 +408,17 @@
       </div>
 
       <!-- Stop 2: 14F Pool & Happy Hour -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-sky-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#D1CBC1] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">唯唯 Mia 最期待亮點</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：14F 頂樓溫水無邊際泳池 ＆ Happy Hour 說明書</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 02</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 設施體驗・泳池 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">14F 頂樓溫水無邊際泳池 ＆ Happy Hour 體驗手冊</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 THE NEST NAHA 14F 泳池地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -395,7 +462,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -427,12 +494,16 @@
       </div>
 
       <!-- Stop 3: 2F Breakfast & Laundry -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3">
           <span class="bg-emerald-100 text-emerald-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">生活便利設施</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：2F 晨光森林景觀餐廳 ＆ 1F 自動洗烘衣機（免買洗衣精）</h3>
+          <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 03</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 設施體驗・洗滌 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">2F 晨光森林景觀餐廳 ＆ 1F 自動洗烘衣機（免買洗衣精）</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 THE NEST NAHA 2F 餐廳地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -474,7 +545,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -502,13 +573,17 @@
       </div>
 
       <!-- Stop 4: Ryubo Nishimachi Supermarket -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap items-center justify-between gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap items-center justify-between gap-2">
           <div>
             <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">走路 6 分鐘・直行 450 公尺</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：西町りうぼう超市（Ryubo Nishimachi）深夜半額掃貨全攻略</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 04</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 在地超市・採買 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">西町りうぼう超市（Ryubo Nishimachi）深夜半額掃貨指南</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E7%94%BA%E3%82%8A%E3%81%86%E3%81%BC%E3%81%86+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF2-4-24" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E7%94%BA%E3%82%8A%E3%81%86%E3%81%BC%E3%81%86+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF2-4-24" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 西町りうぼう超市 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -556,7 +631,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -586,7 +661,7 @@
       <!-- Stop 5: Jack's Steak House -->
 
         <!-- Nearby Gourmet Pocket Guide: Hotel & West Naha -->
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50/80 border-2 border-amber-300/80 rounded-2xl p-4 space-y-3 shadow-sm my-3">
+        <div class="bg-[#FDFBF7] border border-[#EAE3D2] rounded-2xl p-4 space-y-3 shadow-sm my-3">
           <div class="flex items-center justify-between border-b border-amber-200 pb-2">
             <div class="flex items-center gap-2 text-amber-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-utensils text-amber-600"></i>
@@ -638,13 +713,17 @@
           </div>
         </div>
 
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap items-center justify-between gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap items-center justify-between gap-2">
           <div>
             <span class="bg-rose-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">走路 3 分鐘・僅 250 公尺</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：傑克牛排館（Jack's Steak House）美軍復古牛排全攻略</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 05</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 琉球味覺・老店 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">傑克牛排館（Jack's Steak House）美軍復古牛排全指南</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%BE%BB1-7-3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%BE%BB1-7-3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 傑克牛排館 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -692,7 +771,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -722,12 +801,16 @@
       <!-- Stop 6 & 7: oHacorte & Kame Kame Soba -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <!-- oHacorte -->
-        <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-3">
-          <div class="border-b border-slate-100 pb-2.5">
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-3">
+          <div class="border-b border-[#E8E4DC] pb-2.5">
             <span class="bg-amber-100 text-amber-900 text-xs font-black px-2.5 py-1 rounded-md">步行 6~7 分鐘</span>
-            <h4 class="font-black text-slate-900 text-base mt-1.5">📍 第六關：oHacorté Bakery 泉崎店（2025新址）</h4>
+            <div class="flex items-center gap-2 mb-1 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 06</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 晨光甜點・焙烘 〕</span>
+          </div>
+          <h4 class="font-serif text-base sm:text-lg font-bold text-[#1E3A5F] tracking-tight">oHacorté Bakery 泉崎店（2025 新址晨食特輯）</h4>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=oHacorte+Bakery+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E6%B3%89%E5%B4%8E1-4-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=oHacorte+Bakery+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E6%B3%89%E5%B4%8E1-4-10" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 oHacorté 泉崎新址地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -755,7 +838,7 @@
           </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -783,12 +866,16 @@
         </div>
 
         <!-- Kame Kame Soba -->
-        <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-3">
-          <div class="border-b border-slate-100 pb-2.5">
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-3">
+          <div class="border-b border-[#E8E4DC] pb-2.5">
             <span class="bg-emerald-100 text-emerald-900 text-xs font-black px-2.5 py-1 rounded-md">步行 4 分鐘</span>
-            <h4 class="font-black text-slate-900 text-base mt-1.5">📍 第七關：龜かめそば（Kame Kame Soba）排骨麵</h4>
+            <div class="flex items-center gap-2 mb-1 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 07</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 沖繩名物・麵処 〕</span>
+          </div>
+          <h4 class="font-serif text-base sm:text-lg font-bold text-[#1E3A5F] tracking-tight">龜かめそば（Kame Kame Soba）厚切軟骨排骨麵</h4>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%80%E3%81%8B%E3%82%81%E3%81%9D%E3%81%B0+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-3-11" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%80%E3%81%8B%E3%82%81%E3%81%9D%E3%81%B0+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-3-11" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 龜かめそば Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -816,7 +903,7 @@
           </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -860,27 +947,33 @@
     <!-- ========================================== -->
     <div id="page-d1" class="page-view hidden space-y-6">
 
-      <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-sky-700 via-blue-800 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-sky-400/50">
+      <!-- Page Hero Banner: Japanese Editorial Cover -->
+      <div class="bg-[#1A3357] text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-[#274878] shadow-sm">
         <div class="space-y-3">
-          <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
-            <i class="fa-solid fa-calendar-day"></i> 2026/12/17 (週四) 第一天
+          <div class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-serif tracking-wider text-[#E8DCD8] border border-white/20">
+            DAY 01 ・ 2026.12.17 THU
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">【第一天】小港起飛 ➔ 抵達沖繩 ➔ 單軌直達旭橋 ➔ 西町漫步宵夜 ➔ 暖浴安眠</h2>
-          <p class="text-sky-100 text-xs sm:text-base leading-relaxed max-w-3xl font-medium">
-            行程主軸：搭乘台灣虎航航班抵達那霸，單軌電車 11 分鐘直達旭橋站，安頓四張席夢思名床，漫步西町超市與 Lawson 採買限定宵夜甜點，大浴缸泡澡安歇。
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
+            啟程與初會琉球・旭橋散策與西町冬夜
+          </h2>
+          <p class="text-[#D8E4F0] text-xs sm:text-sm leading-relaxed max-w-3xl font-light">
+            行程主軸：搭乘台灣虎航 IT728 抵達那霸，單軌電車 11 分鐘直達旭橋站，安頓四張席夢思名床，漫步西町超市與 Lawson 採買限定宵夜甜點，大浴缸泡澡安歇。
           </p>
         </div>
       </div>
 
       <!-- Stop 1: KHH Check-in -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-sky-100 text-sky-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">15:00 鳳山出發 ➔ 17:30 起飛</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：高雄鳳山 ➔ 小港機場 (KHH) 搭虎航 IT728 報到與托運</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 01</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 啟程出發・航空 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">高雄鳳山出發 ➔ 小港機場搭乘台灣虎航 IT728 報到與托運</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E9%9B%84%E5%9C%8B%E9%9A%9B%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 高雄國際機場 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -891,7 +984,7 @@
         </div>
 
         <!-- YouTube Video Box -->
-        <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
+        <div class="bg-[#FAF6F5] border border-[#E8DCD8] rounded-2xl p-3.5 sm:p-4 space-y-2">
           <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
             <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
             <span>🎬 新手行前必看：現場實拍介紹影片（點擊直接搜尋 YouTube）</span>
@@ -948,7 +1041,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -981,12 +1074,16 @@
       </div>
 
       <!-- Stop 2: OKA Arrival -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3">
           <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">19:55 降落那霸 ➔ 20:30 出關</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：那霸機場 (OKA) 國際線通關 ＆ 提領行李</h3>
+          <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 02</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 通關手續・入境 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">那霸機場 (OKA) 國際線通關手續 ＆ 提領行李指引</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E8%A6%87%E7%A9%BA%E6%B8%AF+%E5%9B%BD%E9%9A%9B%E7%B7%9A%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E8%A6%87%E7%A9%BA%E6%B8%AF+%E5%9B%BD%E9%9A%9B%E7%B7%9A%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 那霸機場國際線 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1032,7 +1129,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1060,13 +1157,17 @@
       </div>
 
       <!-- Stop 3: Monorail to Asahibashi Station -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">17:00 抵達 ➔ 17:35 飯店</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：那霸機場搭乘單軌電車（Yui Rail）直達「旭橋站」➔ 漫步 10 分鐘抵達 NEST NAHA（大行李防呆全攻略）</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 03</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 單軌電車・動線 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">那霸機場搭乘單軌電車直達「旭橋站」➔ 漫步 10 分鐘抵達 NEST NAHA（大行李防呆指南）</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E6%A9%8B%E9%A7%85+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%97%AD%E6%A9%8B%E9%A7%85+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 單軌旭橋站 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1118,7 +1219,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1148,7 +1249,7 @@
       <!-- Stop 4: Check-in & Supermarket -->
 
         <!-- Nearby Gourmet Pocket Guide: Hotel & West Naha -->
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50/80 border-2 border-amber-300/80 rounded-2xl p-4 space-y-3 shadow-sm my-3">
+        <div class="bg-[#FDFBF7] border border-[#EAE3D2] rounded-2xl p-4 space-y-3 shadow-sm my-3">
           <div class="flex items-center justify-between border-b border-amber-200 pb-2">
             <div class="flex items-center gap-2 text-amber-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-utensils text-amber-600"></i>
@@ -1200,12 +1301,16 @@
           </div>
         </div>
 
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3">
           <span class="bg-emerald-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">21:10 入住 ➔ 21:50 散步</span>
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：NEST NAHA 入住安頓 ➔ 西町超市採買首晚半額宵夜</h3>
+          <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 04</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 客房安頓・超市 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">NEST NAHA 入住安頓 ➔ 西町超市採買首晚半額宵夜</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E7%94%BA%E3%82%8A%E3%81%86%E3%81%BC%E3%81%86+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF2-4-24" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E7%94%BA%E3%82%8A%E3%81%86%E3%81%BC%E3%81%86+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF2-4-24" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 西町りうぼう超市 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1251,7 +1356,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1280,13 +1385,17 @@
 
 
       <!-- Stop 5: Day 1 Evening Routine & Bedtime -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">21:50 街區漫步 ➔ 22:45 暖浴入眠</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：西町夜間生活圈漫步 ➔ Lawson 限定甜點挖掘 ➔ 客房宵夜派對與暖心泡澡安歇</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 05</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 夜行散策・深浴 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">西町夜間生活圈漫步 ➔ Lawson 限定甜點挖掘 ➔ 客房宵夜與暖心泡澡安歇</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=LAWSON+%E9%82%A3%E8%A6%87%E8%A5%BF%E4%BA%8C%E4%B8%81%E7%9B%AE%E5%BA%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF2-2-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=LAWSON+%E9%82%A3%E8%A6%87%E8%A5%BF%E4%BA%8C%E4%B8%81%E7%9B%AE%E5%BA%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF2-2-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 Lawson 那霸西二丁目店 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1338,7 +1447,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1383,21 +1492,23 @@
     <!-- ========================================== -->
     <div id="page-d2" class="page-view hidden space-y-6">
 
-      <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-indigo-700 via-purple-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-indigo-400/50">
+      <!-- Page Hero Banner: Japanese Editorial Cover -->
+      <div class="bg-[#1E3A5F] text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-[#2B4F80] shadow-sm">
         <div class="space-y-3">
-          <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
-            <i class="fa-solid fa-fish-fins"></i> 2026/12/18 (週五) 第二天
+          <div class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-serif tracking-wider text-[#E8DCD8] border border-white/20">
+            DAY 02 ・ 2026.12.18 FRI
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">【第二天】順遊雙饗！泊港海鮮早午餐 ➔ PARCO CITY 親子海景狂歡 ➔ 傑克牛排 ➔ 辻町海風夜行洗衣泡澡</h2>
-          <p class="text-purple-100 text-xs sm:text-base leading-relaxed max-w-3xl font-medium">
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
+            海潮之味與藍海全景・泊港鮮魚與 PARCO CITY
+          </h2>
+          <p class="text-[#DDE6F0] text-xs sm:text-sm leading-relaxed max-w-3xl font-light">
             行程主軸：早晨泊港大啖黑鮪魚烤龍蝦 ➔ PARCO CITY 親子旗艦與海景 ➔ 傍晚傑克牛排大口吃肉 ➔ 飯後波之上海風夜巡散步 ➔ 2F 投幣洗衣與深度泡澡充飽電。
           </p>
         </div>
       </div>
 
       <!-- YouTube Video Guide Box -->
-      <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
+      <div class="bg-[#FAF6F5] border border-[#E8DCD8] rounded-2xl p-3.5 sm:p-4 space-y-2">
         <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
           <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
           <span>🎬 泊港魚市場 ＆ PARCO CITY 現場實拍導覽影片（點擊直接搜尋 YouTube 開箱）</span>
@@ -1431,13 +1542,17 @@
       </div>
 
       <!-- Stop 1: Tomari Iyumachi Fish Market Brunch -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-amber-100 text-amber-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">08:30 起床 ➔ 09:30 叫車 ➔ 09:40 抵達</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：NEST NAHA 直達「泊港魚市場（泊いゆまち）」（四大王牌名攤直擊全攻略）</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 01</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 鮮魚市場・朝食 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">NEST NAHA 直達「泊港魚市場（泊いゆまち）」四大王牌名攤直擊全指南</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%8A%E3%81%84%E3%82%88%E3%81%BE%E3%81%A1+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E6%B8%AF%E7%94%BA1-1-18" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%8A%E3%81%84%E3%82%88%E3%81%BE%E3%81%A1+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E6%B8%AF%E7%94%BA1-1-18" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 泊港魚市場 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1463,7 +1578,7 @@
         </div>
 
         <!-- 4 Ace Stalls Detailed Cards -->
-        <div class="bg-sky-50/70 border-2 border-sky-300 rounded-2xl p-4 space-y-3">
+        <div class="bg-sky-50/70 border border-[#D1CBC1] rounded-2xl p-4 space-y-3">
           <div class="flex items-center justify-between border-b border-sky-200 pb-2">
             <div class="flex items-center gap-2 text-sky-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-crown text-amber-500"></i>
@@ -1558,7 +1673,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1586,13 +1701,17 @@
       </div>
 
       <!-- Stop 2: Taxi from Tomari Port to PARCO CITY -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-indigo-100 text-indigo-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">10:45 叫車 ➔ 11:00 抵達（順路直達完全不塞車）</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：泊港魚市場直送「浦添 PARCO CITY」（計程車直送操作說明書）</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 02</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 計程車專車・接駁 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">泊港魚市場直送「浦添 PARCO CITY」計程車直送操作手冊</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%B3%E3%82%A8%E3%83%BC%E6%B5%A6%E6%B7%BB%E8%A5%BF%E6%B5%B7%E5%B2%B8+PARCO+CITY" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B5%E3%83%B3%E3%82%A8%E3%83%BC%E6%B5%A6%E6%B7%BB%E8%A5%BF%E6%B5%B7%E5%B2%B8+PARCO+CITY" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 浦添 PARCO CITY Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1640,7 +1759,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1668,13 +1787,17 @@
       </div>
 
       <!-- Stop 3: 3F Anime & Toys Kingdom -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-purple-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">11:00 - 13:30 娛樂動漫王國</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：3F 娛樂動漫王國・群祐戰鬥陀螺 X ＆ 唯唯三麗鷗吉卜力專賣店</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 03</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 親子動漫・選品 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">3F 娛樂動漫王國・群祐戰鬥陀螺 X ＆ 唯唯三麗鷗吉卜力專賣店</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%88%E3%82%A4%E3%82%B6%E3%82%89%E3%82%B9+%E6%B5%A6%E6%B7%BB%E8%A5%BF%E6%B5%B7%E5%B2%B8%E3%83%91%E3%83%AB%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3%E5%BA%97" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%88%E3%82%A4%E3%82%B6%E3%82%89%E3%82%B9+%E6%B5%A6%E6%B7%BB%E8%A5%BF%E6%B5%B7%E5%B2%B8%E3%83%91%E3%83%AB%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3%E5%BA%97" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 PARCO CITY 3F 動漫玩具地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1726,7 +1849,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1756,7 +1879,7 @@
       <!-- Stop 4: Christmas Tree & Food Hall Dual-Option / Seaside Afternoon Tea -->
 
         <!-- Nearby Gourmet Pocket Guide: PARCO CITY -->
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50/80 border-2 border-amber-300/80 rounded-2xl p-4 space-y-3 shadow-sm my-3">
+        <div class="bg-[#FDFBF7] border border-[#EAE3D2] rounded-2xl p-4 space-y-3 shadow-sm my-3">
           <div class="flex items-center justify-between border-b border-amber-200 pb-2">
             <div class="flex items-center gap-2 text-amber-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-utensils text-amber-600"></i>
@@ -1808,13 +1931,17 @@
           </div>
         </div>
 
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-amber-500 text-slate-950 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">13:30 - 14:30 聖誕樹拍照 ＆ 美食雙保險</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：2F 挑高中庭巨型聖誕樹全家福 ＆ 美食廣場彈性雙保險 / 海景下午茶</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 04</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 聖誕全家福・海景 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">2F 挑高中庭巨型聖誕樹全家福 ＆ 美食廣場彈性雙保險 / 海景下午茶</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%91%E3%83%AB%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3+%E3%83%95%E3%83%BC%E3%83%89%E3%83%9B%E3%83%BC%E3%83%AB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%91%E3%83%AB%E3%82%B3%E3%82%B7%E3%83%86%E3%82%A3+%E3%83%95%E3%83%BC%E3%83%89%E3%83%9B%E3%83%BC%E3%83%AB" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 2F 美食廣場與觀景台地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1866,7 +1993,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1894,13 +2021,17 @@
       </div>
 
       <!-- Stop 5: Shopping & Jack's Steak -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">14:30 - 17:30 購物 ➔ 18:30 晚餐</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：全家免稅服飾生活血拚 ➔ 搭車回飯店放戰利品 ➔ 傑克牛排館大口吃肉</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 05</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 免稅血拚・牛排 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">全家免稅服飾生活血拚 ➔ 搭車回飯店放戰利品 ➔ 傑克牛排館大口吃肉</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%BE%BB1-7-3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%BE%BB1-7-3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 傑克牛排館 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -1948,7 +2079,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -1977,13 +2108,17 @@
 
 
       <!-- Stop 6: Day 2 Evening Routine & Bedtime -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">19:45 辻町海風散步 ➔ 22:30 投幣洗衣與深浸泡澡</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第六關：辻町與波之上夜間海風漫步 ➔ 波之上深夜超商挖寶 ➔ NEST 2F 投幣洗衣與深浸泡澡充能</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 06</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 海風夜巡・放鬆 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">辻町與波之上夜間海風漫步 ➔ 波之上深夜超商挖寶 ➔ NEST 2F 洗衣泡澡充能</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%A2%E3%81%AE%E4%B8%8A%E3%81%86%E3%81%BF%E3%81%9D%E3%82%89%E5%85%AC%E5%9C%92+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%BE%BB3-3-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%A2%E3%81%AE%E4%B8%8A%E3%81%86%E3%81%BF%E3%81%9D%E3%82%89%E5%85%AC%E5%9C%92+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%BE%BB3-3-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 波之上臨海公園 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2035,7 +2170,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2080,15 +2215,17 @@
     <!-- ========================================== -->
     <div id="page-d3" class="page-view hidden space-y-6">
 
-      <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-teal-700 via-emerald-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-emerald-400/50">
+      <!-- Page Hero Banner: Japanese Editorial Cover -->
+      <div class="bg-[#1B3A4B] text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-[#274F64] shadow-sm">
         <div class="space-y-3">
-          <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
-            <i class="fa-solid fa-umbrella-beach"></i> 2026/12/19 (週六) 第三天
+          <div class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-serif tracking-wider text-[#E8DCD8] border border-white/20">
+            DAY 03 ・ 2026.12.19 SAT
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">【第三天】波上宮祈福踏浪 ＆ 飯店黃金午休 ＆ 頂樓泳池 ＆ 國際通 ➔ 唐吉訶德深夜免稅 ＆ 4箱終極打包</h2>
-          <p class="text-emerald-100 text-xs sm:text-base leading-relaxed max-w-3xl font-medium">
-            行程主軸：早晨波上宮踏浪，中午龜かめそば，下午頂樓泳池，傍晚國際通阿古豬晚餐 ➔ 唐吉訶德 24H 旗艦店免稅大掃貨 ➔ 4 大行李箱秤重配置與安心熟睡。
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
+            海崖古社與冬日微風・波上宮祈福與慢調生活
+          </h2>
+          <p class="text-[#D8E6EC] text-xs sm:text-sm leading-relaxed max-w-3xl font-light">
+            行程主軸：早晨波上宮海崖踏浪，午間龜かめそば排骨麵，午後客房午休與頂樓溫水泳池，傍晚國際通阿古豬與唐吉訶德深夜免稅採買，4 大行李箱妥善配置。
           </p>
         </div>
       </div>
@@ -2096,7 +2233,7 @@
       <!-- Stop 1: Naminoue Shrine & Beach -->
 
         <!-- Nearby Gourmet Pocket Guide: Naminoue -->
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50/80 border-2 border-amber-300/80 rounded-2xl p-4 space-y-3 shadow-sm my-3">
+        <div class="bg-[#FDFBF7] border border-[#EAE3D2] rounded-2xl p-4 space-y-3 shadow-sm my-3">
           <div class="flex items-center justify-between border-b border-amber-200 pb-2">
             <div class="flex items-center gap-2 text-amber-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-utensils text-amber-600"></i>
@@ -2148,13 +2285,17 @@
           </div>
         </div>
 
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-emerald-100 text-emerald-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">09:30 - 11:45 步行 10 分鐘即達</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：琉球八社之首「波上宮」祈福 ＆ 波之上海灘踩沙</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 01</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 神社祈福・踏浪 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">琉球八社之首「波上宮」祈福 ＆ 波之上海灘冬日踏沙</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%A2%E4%B8%8A%E5%AE%AE+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-25-11" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E6%B3%A2%E4%B8%8A%E5%AE%AE+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-25-11" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 波上宮 ＆ 海灘 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2218,7 +2359,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2246,13 +2387,17 @@
       </div>
 
       <!-- Stop 2: Kame Kame Soba Lunch -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-emerald-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">12:00 - 13:00 週六正常營業・核實準確</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：順路排隊名店：龜かめそば（Kame Kame Soba）濃郁排骨麵</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 02</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 琉球名物・排隊店 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">順路排隊名店：龜かめそば（Kame Kame Soba）濃郁軟骨麵</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%80%E3%81%8B%E3%82%81%E3%81%9D%E3%81%B0+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-3-11" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%80%E3%81%8B%E3%82%81%E3%81%9D%E3%81%B0+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%8B%A5%E7%8B%AD1-3-11" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 龜かめそば Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2300,7 +2445,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2332,9 +2477,13 @@
         <div class="border-b-2 border-amber-300 pb-3 flex flex-wrap items-center justify-between gap-2">
           <div>
             <span class="bg-amber-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">13:15 - 14:30 恪守勝穩鐵律</span>
-            <h3 class="text-lg sm:text-xl font-black text-amber-950 mt-2">📍 第三關：NEST NAHA 房間黃金午休充電 75 分鐘</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 03</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 客房午休・充電 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">NEST NAHA 房間黃金午休充電 75 分鐘</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 THE NEST NAHA Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2378,7 +2527,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2406,13 +2555,17 @@
       </div>
 
       <!-- Stop 4: Pool & Happy Hour -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-sky-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#D1CBC1] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">14:45 - 16:30 唯唯 Mia 最愛</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：14F 頂樓溫水無邊際泳池戲水盛宴 ＆ Happy Hour</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 04</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 雲端無邊際・戲水 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">14F 頂樓溫水無邊際泳池戲水盛宴 ＆ Happy Hour</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 THE NEST NAHA 14F 泳池地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2460,7 +2613,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2489,12 +2642,16 @@
 
       <!-- Stop 5: Kokusai Dori -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-indigo-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">17:00 - 21:00 核心必去</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：國際通漫步 ＆ Calbee+ 現炸薯條 ＆ 驚安殿堂唐吉訶德免稅</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 05</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 散策採買・名物 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">國際通漫步 ＆ Calbee+ 現炸薯條 ＆ 驚安殿堂唐吉訶德免稅</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E5%BA%97" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E5%BA%97" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 唐吉訶德 國際通店 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2546,7 +2703,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2576,7 +2733,7 @@
       <!-- Stop 6: Kokusai Dori Dinner -->
 
         <!-- Nearby Gourmet Pocket Guide: Kokusai Dori -->
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50/80 border-2 border-amber-300/80 rounded-2xl p-4 space-y-3 shadow-sm my-3">
+        <div class="bg-[#FDFBF7] border border-[#EAE3D2] rounded-2xl p-4 space-y-3 shadow-sm my-3">
           <div class="flex items-center justify-between border-b border-amber-200 pb-2">
             <div class="flex items-center gap-2 text-amber-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-utensils text-amber-600"></i>
@@ -2649,12 +2806,16 @@
         </div>
 
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-emerald-300 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-emerald-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">19:00 - 20:30 沖繩道地美食</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第六關：國際通沖繩道地晚餐：阿古豬家常料理 ＆ 炒苦瓜定食</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 06</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 琉球家常・晚餐 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">國際通沖繩道地晚餐：阿古豬家常料理 ＆ 炒苦瓜定食</h3>
 <div class="pt-2">
-  <a href="https://www.google.com/maps/search/?api=1&query=%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E3%81%AE%E3%82%8C%E3%82%93%E8%A1%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E7%89%A7%E5%BF%972-2-30" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+  <a href="https://www.google.com/maps/search/?api=1&query=%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E3%81%AE%E3%82%8C%E3%82%93%E8%A1%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E7%89%A7%E5%BF%972-2-30" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
     <i class="fa-solid fa-map-location-dot text-amber-300"></i>
     <span>開啟 國際通橫丁美食街 Google 地圖</span>
     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2702,7 +2863,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2731,13 +2892,17 @@
 
 
       <!-- Stop 7: Day 3 Evening Routine & Bedtime -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-emerald-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">20:30 深夜免稅 ➔ 23:00 4箱打包秤重安歇</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第七關：國際通唐吉訶德旗艦店深夜免稅掃貨 ➔ 計程車 7 分直送回宿 ➔ 4 大行李箱秤重配置與安心入眠</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 07</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 深夜免稅・打包 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">國際通唐吉訶德旗艦店深夜免稅掃貨 ➔ 計程車直送回宿 ➔ 4 大行李箱秤重配置與安心入眠</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E5%BA%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E6%9D%BE%E5%B0%BE2-8-19" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E5%BA%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E6%9D%BE%E5%B0%BE2-8-19" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 唐吉訶德國際通旗艦店 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2789,7 +2954,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2834,21 +2999,23 @@
     <!-- ========================================== -->
     <div id="page-d4" class="page-view hidden space-y-6">
 
-      <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-amber-600 via-rose-700 to-slate-900 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-amber-400/50">
+      <!-- Page Hero Banner: Japanese Editorial Cover -->
+      <div class="bg-[#2B303A] text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-[#3E4554] shadow-sm">
         <div class="space-y-3">
-          <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
-            <i class="fa-solid fa-fire-burner"></i> 2026/12/20 (週日) 第四天
+          <div class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-serif tracking-wider text-[#E8DCD8] border border-white/20">
+            DAY 04 ・ 2026.12.20 SUN
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">【第四天】國際通採買逛到爽！【燒肉本部牧場】頂級和牛盛宴 ＆ 週日步行者天國封街大採購</h2>
-          <p class="text-amber-100 text-xs sm:text-base leading-relaxed max-w-3xl font-medium">
-            行程主軸：退房寄存行李 ➔ 國際通採買逛到爽！晨間悠閒伴手禮巡禮 ➔【燒肉本部牧場】頂級和牛午間盛宴（線上預約100%免排隊）➔ 12:00 無縫銜接「週日步行者天國」封街大道大血拚 ➔ 滿載搭單軌直達那霸機場凱旋歸國！
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
+            琉球之宴與行囊滿載・本部和牛與步行者天國
+          </h2>
+          <p class="text-[#E0E2E6] text-xs sm:text-sm leading-relaxed max-w-3xl font-light">
+            行程主軸：退房寄物 ➔ 晨間伴手禮巡禮 ➔【燒肉本部牧場】頂級和牛午宴 ➔ 封街步行者天國大採購 ➔ 單軌直達機場 ➔ 2026 機場新制退稅核驗凱旋歸國。
           </p>
         </div>
       </div>
 
       <!-- YouTube Video Guide Box -->
-      <div class="bg-rose-50/90 border-2 border-rose-300 rounded-2xl p-3.5 sm:p-4 space-y-2">
+      <div class="bg-[#FAF6F5] border border-[#E8DCD8] rounded-2xl p-3.5 sm:p-4 space-y-2">
         <div class="text-xs sm:text-sm font-black text-rose-900 flex items-center gap-1.5">
           <i class="fa-brands fa-youtube text-red-600 text-lg"></i>
           <span>🎬 國際通採買 ＆ 本部牛燒肉實拍導覽影片（點擊直接搜尋 YouTube 開箱）</span>
@@ -2882,13 +3049,17 @@
       </div>
 
       <!-- Stop 1: Check-out & Luggage Storage -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-slate-800 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">08:30 起床 ➔ 09:30 退房放行李</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第一關：辦理退房（Check-out）＆ 行李全數免費寄存在 NEST NAHA</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 01</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 退房寄存・輕裝 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">辦理退房（Check-out）＆ 行李全數免費寄存在 NEST NAHA</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=THE+NEST+NAHA+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF1-6-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 NEST NAHA Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -2936,7 +3107,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -2964,13 +3135,17 @@
       </div>
 
       <!-- Stop 2: Morning Souvenir Shopping -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-amber-100 text-amber-900 text-xs sm:text-sm font-black px-3 py-1 rounded-lg">09:45 叫車 ➔ 10:00 - 11:20 晨間採買</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第二關：國際通晨間伴手禮免排隊巡禮（御菓子御殿・福木屋年輪蛋糕・塩屋雪鹽霜淇淋）</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 02</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 銘菓巡禮・甜品 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">國際通晨間伴手禮免排隊巡禮（御菓子御殿・福木屋年輪蛋糕・塩屋雪鹽霜淇淋）</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%91%E3%83%AC%E3%83%83%E3%83%88%E3%81%8F%E3%82%82%E3%81%98+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E4%B9%85%E8%8C%82%E5%9C%B01-1-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%91%E3%83%AC%E3%83%83%E3%83%88%E3%81%8F%E3%82%82%E3%81%98+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E4%B9%85%E8%8C%82%E5%9C%B01-1-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 縣廳前國際通起點 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3022,7 +3197,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -3052,7 +3227,7 @@
       <!-- Stop 3: Motobu Farm Yakiniku Wagyu Feast (Zero Waiting) -->
 
         <!-- Nearby Gourmet Pocket Guide: Kokusai Dori -->
-        <div class="bg-gradient-to-r from-amber-50 to-orange-50/80 border-2 border-amber-300/80 rounded-2xl p-4 space-y-3 shadow-sm my-3">
+        <div class="bg-[#FDFBF7] border border-[#EAE3D2] rounded-2xl p-4 space-y-3 shadow-sm my-3">
           <div class="flex items-center justify-between border-b border-amber-200 pb-2">
             <div class="flex items-center gap-2 text-amber-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-utensils text-amber-600"></i>
@@ -3124,13 +3299,17 @@
           </div>
         </div>
 
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-rose-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">11:30 - 12:45 免排隊頂級燒肉盛宴</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第三關：【燒肉本部牧場 那霸店】（焼肉もとぶ牧場）獲獎本部和牛午間盛宴（線上預約・100% 免排隊！）</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 03</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 本部和牛・饗宴 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">【燒肉本部牧場 那霸店】（焼肉もとぶ牧場）獲獎本部和牛午間盛宴（預約免排隊）</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89%E3%82%82%E3%81%A8%E3%81%B6%E7%89%A7%E5%A0%B4+%E9%82%A3%E8%A6%87%E5%BA%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E4%B9%85%E8%8C%82%E5%9C%B02-1-3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89%E3%82%82%E3%81%A8%E3%81%B6%E7%89%A7%E5%A0%B4+%E9%82%A3%E8%A6%87%E5%BA%97+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82%E4%B9%85%E8%8C%82%E5%9C%B02-1-3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 燒肉本部牧場那霸店 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3182,7 +3361,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -3210,13 +3389,17 @@
       </div>
 
       <!-- Stop 4: Sunday Transit Mall Pedestrian Paradise & Donki Shopping -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-purple-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">12:45 - 16:30 封街大採購狂歡</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第四關：國際通「週日步行者天國」（全街封路漫遊無車干擾）最後大採購狂歡</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 04</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 封街盛典・步行街 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">國際通「週日步行者天國」（全街封路漫遊無車干擾）最後大採購狂歡</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E5%BA%97" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86+%E5%9B%BD%E9%9A%9B%E9%80%9A%E3%82%8A%E5%BA%97" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 唐吉訶德國際通店 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3268,7 +3451,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -3296,13 +3479,17 @@
       </div>
 
       <!-- Stop 5: Pick up Luggage & Monorail to Airport -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <span class="bg-indigo-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">16:30 - 17:15 取行李 ➔ 單軌直送機場</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第五關：回 NEST NAHA 取行李 ➔ 漫步 10 分鐘至「旭橋站」搭單軌直達那霸機場（大行李返台防呆攻略）</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 05</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 提行李搭車・動線 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">回 NEST NAHA 取行李 ➔ 漫步 10 分鐘至「旭橋站」搭單軌直達那霸機場（大行李返台防呆指南）</h3>
             <div class="pt-2">
-              <a href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E8%A6%87%E7%A9%BA%E6%B8%AF%E9%A7%85+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E9%82%A3%E8%A6%87%E7%A9%BA%E6%B8%AF%E9%A7%85+%E6%B2%96%E7%B8%84%E7%9C%8C%E9%82%A3%E8%A6%87%E5%B8%82" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-map-location-dot text-amber-300"></i>
                 <span>開啟 單軌那霸機場站 Google 地圖</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3350,7 +3537,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -3379,13 +3566,17 @@
 
       <!-- Stop 6: Tigerair Flight IT289 Home & Tax-Refund Flow -->
       <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-red-400 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex flex-wrap justify-between items-center gap-2">
+        <div class="border-b border-[#E8E4DC] pb-3 flex flex-wrap justify-between items-center gap-2">
           <div>
             <div class="inline-flex items-center gap-1.5 bg-red-600 text-white text-[11px] font-black px-2.5 py-0.5 rounded-md shadow-xs mb-1">
               <i class="fa-solid fa-triangle-exclamation"></i> 2026 退稅新制：切勿先去托運！先機台核驗再交行李
             </div>
             <span class="bg-sky-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">17:00 機台核驗 ➔ 17:25 虎航托運 ➔ 19:40 起飛</span>
-            <h3 class="text-lg sm:text-xl font-black text-slate-900 mt-2">📍 第六關：那霸機場 3F 退稅機台先核驗 ➔ 虎航 IT289 報到托運 ➔ 登機凱旋回高雄</h3>
+            <div class="flex items-center gap-2 mb-1.5 pt-1">
+            <span class="font-roman tracking-wider text-xs font-bold text-[#C05640] uppercase">CHAPTER 06</span>
+            <span class="text-[11px] font-medium text-[#78716C] border border-[#E5E0D6] px-2 py-0.5 rounded-full bg-[#FAF8F5]">〔 機場新退稅・返高 〕</span>
+          </div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] tracking-tight leading-snug">那霸機場 3F 退稅機台先核驗 ➔ 虎航 IT289 報到托運 ➔ 登機凱旋回高雄</h3>
             <div class="pt-2">
               <a href="https://www.tigerairtw.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 active:scale-95 transition text-slate-950 text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
                 <i class="fa-solid fa-plane-departure text-slate-950"></i>
@@ -3439,7 +3630,7 @@
         </div>
 
         <!-- Communication Cue Card -->
-        <div class="bg-gradient-to-r from-sky-50 to-indigo-50/70 border-2 border-sky-200 rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
+        <div class="bg-[#FAF8F5] border border-[#E8E4DC] rounded-xl p-3.5 sm:p-4 space-y-2.5 shadow-sm mt-3">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-sky-200/60 pb-2">
             <div class="flex items-center gap-1.5 text-xs sm:text-sm font-black text-sky-950">
               <i class="fa-solid fa-comments text-sky-500 text-base"></i>
@@ -3485,22 +3676,24 @@
     <!-- ========================================== -->
     <div id="page-info" class="page-view hidden space-y-6">
 
-      <!-- Page Hero Banner -->
-      <div class="bg-gradient-to-r from-slate-800 via-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 card-shadow relative overflow-hidden border-2 border-slate-600/50">
+      <!-- Page Hero Banner: Japanese Editorial Cover -->
+      <div class="bg-[#22252A] text-white rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-[#373B42] shadow-sm">
         <div class="space-y-3">
-          <div class="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-md px-3.5 py-1 rounded-full text-xs sm:text-sm font-black tracking-wider text-white border border-white/30">
-            <i class="fa-solid fa-toolbox"></i> 第一次去沖繩・全能實用工具庫
+          <div class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs font-serif tracking-wider text-[#E8DCD8] border border-white/20">
+            COMPENDIUM ・ 旅人便覽
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">【實用工具】中日手指溝通卡、即時匯率退稅計算機、防呆清單</h2>
-          <p class="text-slate-300 text-xs sm:text-base leading-relaxed max-w-3xl font-medium">
-            提供最安心的旅行後盾，包含一鍵複製日文手指卡、即時匯率退稅換算、行前檢查打勾清單與緊急聯絡電話。
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
+            實用工具集・中日手指溝通・即時匯率與 2026 新制退稅
+          </h2>
+          <p class="text-[#D5D7DA] text-xs sm:text-sm leading-relaxed max-w-3xl font-light">
+            為自由行新手準備的即時隨行後盾，包含一鍵複製日語手指小卡、即時匯率與新退稅換算、行前檢查清單與機場海關機台動線圖解。
           </p>
         </div>
       </div>
 
       
     <!-- Tool 0: 2026 Winter Special Events & Illuminations Showcase -->
-    <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-6 sm:p-7 card-shadow border-2 border-amber-400/70 space-y-5">
+    <div class="bg-white text-[#242120] rounded-3xl p-6 sm:p-7 editorial-card border border-[#E8E4DC] space-y-5">
       <div class="border-b border-indigo-400/30 pb-4 flex flex-wrap items-center justify-between gap-3">
         <div>
           <div class="inline-flex items-center gap-1.5 bg-amber-400/20 text-amber-300 text-xs sm:text-sm font-black px-3 py-1 rounded-full border border-amber-400/40">
@@ -3521,20 +3714,20 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
         <!-- Event 1: Whale Watching (4 mins) -->
-        <div class="bg-slate-800/90 rounded-2xl p-4.5 border-2 border-sky-400/50 space-y-3.5 shadow-md flex flex-col justify-between">
+        <div class="bg-[#FAF8F5] rounded-2xl p-4.5 border border-[#E8E4DC] space-y-3.5 shadow-sm flex flex-col justify-between text-[#242120]">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between gap-2">
               <span class="bg-sky-500 text-white text-xs font-black px-2.5 py-1 rounded-lg">近距首選・車程 4 分鐘</span>
               <span class="text-amber-300 text-xs font-bold">12/19(六) 正式海開首航！</span>
             </div>
-            <h4 class="text-base sm:text-lg font-black text-white">🐋 那霸三重城港・2026 野生座頭鯨賞鯨季首航</h4>
+            <h4 class="text-base sm:text-lg font-black text-[#1E3A5F] font-serif font-bold">🐋 那霸三重城港・2026 野生座頭鯨賞鯨季首航</h4>
             
             <div onclick="openImgModal('images/event_whale_watching.jpg', '那霸三重城港出發：野生座頭鯨冬日洄游沖繩慶良間海域，壯麗破浪跳躍實景（12/19 正式海開）')" class="rounded-xl overflow-hidden border border-slate-700 cursor-pointer active:scale-98 transition shadow-sm">
               <img loading="lazy" decoding="async" src="images/event_whale_watching.jpg" alt="野生座頭鯨破浪跳躍" class="w-full h-44 object-cover">
-              <div class="p-2 bg-slate-900 text-sky-300 text-xs font-bold truncate">📸 慶良間海域野生座頭鯨破浪躍出海面實景</div>
+              <div class="p-2 bg-[#FAF8F5] text-[#57534E] text-xs font-medium border-t border-[#E8E4DC] truncate">📸 慶良間海域野生座頭鯨破浪躍出海面實景</div>
             </div>
 
-            <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed pt-1">
+            <ul class="text-xs text-[#57534E] space-y-1.5 leading-relaxed pt-1">
               <li>• <strong>地點距離：</strong>那霸三重城港（那霸市西 3-20），距離 NEST NAHA 僅 1.3 公里（計程車約 4 分鐘，車資約 600~700 円）。</li>
               <li>• <strong>活動亮點：</strong>每年冬季野生座頭鯨南下交配育幼，12/19 正好為全沖繩首航日！若不上船，下午去港邊長堤吹風、看探鯨船隊集結出港亦是非常壯闊的海景體驗。</li>
               <li>• <strong>孩子亮點：</strong>群祐（12歲）能近距離觀測巨型鯨魚噴水甩尾；唯唯（7歲）穿兒童救生衣搭平穩大船探險。</li>
@@ -3542,7 +3735,7 @@
           </div>
 
           <div class="space-y-2 pt-2 border-t border-slate-700">
-            <a href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E9%87%8D%E5%9F%8E%E6%B8%AF+%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF3-20" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+            <a href="https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E9%87%8D%E5%9F%8E%E6%B8%AF+%E9%82%A3%E8%A6%87%E5%B8%82%E8%A5%BF3-20" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
               <i class="fa-solid fa-map-location-dot text-amber-300"></i>
               <span>開啟 三重城港 Google 地圖導航</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3563,20 +3756,20 @@
         </div>
 
         <!-- Event 2: Itoman Peaceful Illumination (20 mins) -->
-        <div class="bg-slate-800/90 rounded-2xl p-4.5 border-2 border-amber-400/50 space-y-3.5 shadow-md flex flex-col justify-between">
+        <div class="bg-[#FAF8F5] rounded-2xl p-4.5 border border-[#E8E4DC] space-y-3.5 shadow-sm flex flex-col justify-between text-[#242120]">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between gap-2">
               <span class="bg-amber-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-lg">南部亮點・車程 20 分鐘</span>
               <span class="text-amber-300 text-xs font-bold">每日 18:00 ~ 22:00</span>
             </div>
-            <h4 class="text-base sm:text-lg font-black text-white">✨ 糸滿海灘和平彩燈節 2026（いとまんピースフル）</h4>
+            <h4 class="text-base sm:text-lg font-black text-[#1E3A5F] font-serif font-bold">✨ 糸滿海灘和平彩燈節 2026（いとまんピースフル）</h4>
             
             <div onclick="openImgModal('images/event_itoman_illumination.jpg', '糸滿美々海灘和平彩燈節：以「光之王國 琉球」為主題，海濱大型琉球城堡光雕投影與冬夜沙灘燈海')" class="rounded-xl overflow-hidden border border-slate-700 cursor-pointer active:scale-98 transition shadow-sm">
               <img loading="lazy" decoding="async" src="images/event_itoman_illumination.jpg" alt="糸滿和平彩燈節" class="w-full h-44 object-cover">
               <div class="p-2 bg-slate-900 text-amber-300 text-xs font-bold truncate">📸 糸滿美々海灘大型光雕城堡與燈海實景</div>
             </div>
 
-            <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed pt-1">
+            <ul class="text-xs text-[#57534E] space-y-1.5 leading-relaxed pt-1">
               <li>• <strong>地點距離：</strong>美々ビーチいとまん（糸滿市西崎町 1-6-15），搭計程車走南向快速道路約 20~25 分鐘（車資約 3,200~3,600 円）。</li>
               <li>• <strong>活動亮點：</strong>本島南部規模最大的冬季海濱燈節！2026 主題為「光之王國 ～琉球～」，結合光雕投影與海灘步道。</li>
               <li>• <strong>孩子亮點：</strong>現場舉辦專為小朋友設計的<strong>「實境尋寶解謎遊戲」</strong>，群祐與唯唯拿著謎題地圖在燈海中闖關！</li>
@@ -3584,7 +3777,7 @@
           </div>
 
           <div class="space-y-2 pt-2 border-t border-slate-700">
-            <a href="https://www.google.com/maps/search/?api=1&query=%E7%BE%8E%E3%80%85%E3%83%93%E3%83%BC%E3%83%81%E3%81%84%E3%81%A8%E3%81%BE%E3%82%93" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+            <a href="https://www.google.com/maps/search/?api=1&query=%E7%BE%8E%E3%80%85%E3%83%93%E3%83%BC%E3%83%81%E3%81%84%E3%81%A8%E3%81%BE%E3%82%93" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
               <i class="fa-solid fa-map-location-dot text-amber-300"></i>
               <span>開啟 美々海灘彩燈節 Google 地圖導航</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3605,20 +3798,20 @@
         </div>
 
         <!-- Event 3: American Village Christmas (35 mins) -->
-        <div class="bg-slate-800/90 rounded-2xl p-4.5 border-2 border-purple-400/50 space-y-3.5 shadow-md flex flex-col justify-between">
+        <div class="bg-[#FAF8F5] rounded-2xl p-4.5 border border-[#E8E4DC] space-y-3.5 shadow-sm flex flex-col justify-between text-[#242120]">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between gap-2">
               <span class="bg-purple-600 text-white text-xs font-black px-2.5 py-1 rounded-lg">中部經典・車程 35 分鐘</span>
               <span class="text-purple-300 text-xs font-bold">每日 17:00 ~ 24:00 免費</span>
             </div>
-            <h4 class="text-base sm:text-lg font-black text-white">🎅 北谷美浜美國村・Christmas Village 聖誕嘉年華</h4>
+            <h4 class="text-base sm:text-lg font-black text-[#1E3A5F] font-serif font-bold">🎅 北谷美浜美國村・Christmas Village 聖誕嘉年華</h4>
             
             <div onclick="openImgModal('images/event_american_village.jpg', '北谷美浜美國村聖誕夜景：巨型聖誕老人、摩天輪光影與海濱長廊萬顆彩燈')" class="rounded-xl overflow-hidden border border-slate-700 cursor-pointer active:scale-98 transition shadow-sm">
               <img loading="lazy" decoding="async" src="images/event_american_village.jpg" alt="美國村聖誕嘉年華" class="w-full h-44 object-cover">
               <div class="p-2 bg-slate-900 text-purple-300 text-xs font-bold truncate">📸 北谷美國村美式童話聖誕彩燈街景實景</div>
             </div>
 
-            <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed pt-1">
+            <ul class="text-xs text-[#57534E] space-y-1.5 leading-relaxed pt-1">
               <li>• <strong>地點距離：</strong>北谷町美浜，搭計程車走國道 58 號北上約 35~40 分鐘（車資約 4,500~5,000 円）。</li>
               <li>• <strong>活動亮點：</strong>街區全體化身歐美復古聖誕小鎮！街道懸掛數萬顆燈飾、巨型聖誕老人爬牆裝置、雪橇麋鹿與薑餅屋。</li>
               <li>• <strong>孩子亮點：</strong>唯唯 Mia 超愛拍照打卡童話造景；群祐喜歡逛美式玩具古著與海濱步道吃漢堡。</li>
@@ -3626,7 +3819,7 @@
           </div>
 
           <div class="space-y-2 pt-2 border-t border-slate-700">
-            <a href="https://www.google.com/maps/search/?api=1&query=%E7%BE%8E%E6%B5%9C%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%93%E3%83%AC%E3%83%83%E3%82%B8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+            <a href="https://www.google.com/maps/search/?api=1&query=%E7%BE%8E%E6%B5%9C%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%93%E3%83%AC%E3%83%83%E3%82%B8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
               <i class="fa-solid fa-map-location-dot text-amber-300"></i>
               <span>開啟 美國村 Google 地圖導航</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3647,20 +3840,20 @@
         </div>
 
         <!-- Event 4: Southeast Botanical Garden (45 mins) -->
-        <div class="bg-slate-800/90 rounded-2xl p-4.5 border-2 border-emerald-400/50 space-y-3.5 shadow-md flex flex-col justify-between">
+        <div class="bg-[#FAF8F5] rounded-2xl p-4.5 border border-[#E8E4DC] space-y-3.5 shadow-sm flex flex-col justify-between text-[#242120]">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between gap-2">
               <span class="bg-emerald-600 text-white text-xs font-black px-2.5 py-1 rounded-lg">全國頂級・車程 45 分鐘</span>
               <span class="text-emerald-300 text-xs font-bold">日本全國燈節 Top 2</span>
             </div>
-            <h4 class="text-base sm:text-lg font-black text-white">🌟 東南植物樂園・沖繩南國燈飾（400萬顆光之鯨鯊）</h4>
+            <h4 class="text-base sm:text-lg font-black text-[#1E3A5F] font-serif font-bold">🌟 東南植物樂園・沖繩南國燈飾（400萬顆光之鯨鯊）</h4>
             
             <div onclick="openImgModal('images/event_southeast_botanical.jpg', '東南植物樂園沖繩南國燈飾：日本全國大賞 Top 2，400 萬顆光球打造巨型光之座頭鯨與水上睡蓮燈海')" class="rounded-xl overflow-hidden border border-slate-700 cursor-pointer active:scale-98 transition shadow-sm">
               <img loading="lazy" decoding="async" src="images/event_southeast_botanical.jpg" alt="東南植物樂園燈飾" class="w-full h-44 object-cover">
               <div class="p-2 bg-slate-900 text-emerald-300 text-xs font-bold truncate">📸 400 萬顆光球打造巨型花卉與光之鯨鯊燈海實景</div>
             </div>
 
-            <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed pt-1">
+            <ul class="text-xs text-[#57534E] space-y-1.5 leading-relaxed pt-1">
               <li>• <strong>地點距離：</strong>沖縄市知花 2146，搭計程車經沖繩自動車道約 45 分鐘（車資約 6,500~7,500 円；門票大人 2,100 円/兒童 1,000 円）。</li>
               <li>• <strong>活動亮點：</strong>連續多年榮獲全日本「燈節大賞」全國第二名！廣達數萬坪的植物園被 400 萬顆彩燈點亮，設有音樂雷射連動秀。</li>
               <li>• <strong>孩子亮點：</strong>草坪上超震撼的<strong>「光之巨型座頭鯨」</strong>與水上發光蓮花池，是沖繩最具代表性的冬季光影震撼大作。</li>
@@ -3668,7 +3861,7 @@
           </div>
 
           <div class="space-y-2 pt-2 border-t border-slate-700">
-            <a href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E5%8D%97%E6%A4%8D%E7%89%A9%E6%A8%82%E5%9C%92" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition text-white text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
+            <a href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E5%8D%97%E6%A4%8D%E7%89%A9%E6%A8%82%E5%9C%92" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-[#1E3A5F] hover:bg-[#142842] active:scale-95 transition text-white border border-[#142842] text-xs font-black px-3 py-1.5 rounded-xl shadow-sm">
               <i class="fa-solid fa-map-location-dot text-amber-300"></i>
               <span>開啟 東南植物樂園 Google 地圖導航</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/80"></i>
@@ -3692,9 +3885,9 @@
 
 
       <!-- Tool 1: Japanese Communication Cards -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex items-center justify-between">
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex items-center justify-between">
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] flex items-center gap-2">
             <i class="fa-solid fa-language text-sky-600"></i>
             <span>中日手指溝通卡（點擊按鈕直接一鍵複製日文）</span>
           </h3>
@@ -3765,9 +3958,9 @@
       </div>
 
       <!-- Tool 2: Currency & Tax-Free Calculator -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3">
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3">
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] flex items-center gap-2">
             <i class="fa-solid fa-calculator text-amber-500"></i>
             <span>即時日幣換算 ＆ 10% / 8% 退稅試算器</span>
           </h3>
@@ -3807,13 +4000,13 @@
 
       
       <!-- Tool 2.5: 2026 Latest Japan Tax-Free Refund Master Guide -->
-      <div class="bg-white rounded-3xl p-6 sm:p-7 card-shadow border-2 border-red-500/80 space-y-6">
-        <div class="border-b-2 border-red-100 pb-4 flex flex-wrap justify-between items-center gap-2">
+      <div class="bg-white rounded-3xl p-6 sm:p-7 card-shadow editorial-card border border-[#E8E4DC] space-y-6">
+        <div class="border-b border-[#E8E4DC] pb-4 flex flex-wrap justify-between items-center gap-2">
           <div>
-            <div class="inline-flex items-center gap-1.5 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm mb-1">
+            <div class="inline-flex items-center gap-1.5 bg-[#C05640] text-white text-xs font-serif font-bold px-3 py-1 rounded-full shadow-sm mb-1">
               <i class="fa-solid fa-triangle-exclamation"></i> 2026年11月全面實施・歷史性大改革
             </div>
-            <h3 class="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1E3A5F] flex items-center gap-2">
               <i class="fa-solid fa-passport text-red-600"></i>
               <span>🎌 2026 最新日本退稅新手全攻略（先付後退 ＆ 機場核驗全解密）</span>
             </h3>
@@ -3826,14 +4019,14 @@
 
         <!-- 2 Visual SVG Diagrams -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div onclick="openImgModal('images/diagram_tax_free_2026_diff.svg', '【日本退稅新舊制 5 大核心差異對照】舊制現場直接扣稅 vs 2026 新制先付後退、取消分類限制、取消 50 萬上限')" class="rounded-2xl overflow-hidden border-2 border-slate-200 cursor-pointer active:scale-98 transition bg-slate-950 shadow-md">
+          <div onclick="openImgModal('images/diagram_tax_free_2026_diff.svg', '【日本退稅新舊制 5 大核心差異對照】舊制現場直接扣稅 vs 2026 新制先付後退、取消分類限制、取消 50 萬上限')" class="rounded-2xl overflow-hidden border border-[#E8E4DC] cursor-pointer active:scale-98 transition bg-slate-950 shadow-md">
             <img loading="lazy" decoding="async" src="images/diagram_tax_free_2026_diff.svg" alt="退稅新舊制差異對照" class="w-full h-56 sm:h-64 object-contain mx-auto">
             <div class="p-2.5 bg-slate-900 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5">
               <i class="fa-solid fa-table-columns text-amber-400"></i>
               <span>📊 舊制 vs 2026 新制 5 大核心差異對照圖（點擊放大）</span>
             </div>
           </div>
-          <div onclick="openImgModal('images/diagram_airport_tax_refund_flow.svg', '【那霸機場 3F 出境退稅四大步】先機台核驗 🟢/🔴 ➔ 再前往虎航托運 ➔ 通過安檢 ➔ 信用卡退款')" class="rounded-2xl overflow-hidden border-2 border-slate-200 cursor-pointer active:scale-98 transition bg-slate-950 shadow-md">
+          <div onclick="openImgModal('images/diagram_airport_tax_refund_flow.svg', '【那霸機場 3F 出境退稅四大步】先機台核驗 🟢/🔴 ➔ 再前往虎航托運 ➔ 通過安檢 ➔ 信用卡退款')" class="rounded-2xl overflow-hidden border border-[#E8E4DC] cursor-pointer active:scale-98 transition bg-slate-950 shadow-md">
             <img loading="lazy" decoding="async" src="images/diagram_airport_tax_refund_flow.svg" alt="那霸機場出境退稅流程" class="w-full h-56 sm:h-64 object-contain mx-auto">
             <div class="p-2.5 bg-slate-900 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5">
               <i class="fa-solid fa-route text-sky-400"></i>
@@ -3911,7 +4104,7 @@
         </div>
 
         <!-- 3 Rescue Communication Cue Cards -->
-        <div class="bg-gradient-to-r from-red-50 via-amber-50 to-orange-50 border-2 border-red-300 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-sm">
+        <div class="bg-[#FDF8F7] border border-[#EACEC8] rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-sm">
           <div class="flex items-center justify-between border-b border-red-200 pb-2">
             <div class="flex items-center gap-2 text-red-950 font-black text-sm sm:text-base">
               <i class="fa-solid fa-comments text-red-600"></i>
@@ -3975,9 +4168,9 @@
 
 
       <!-- Tool 3: Interactive Checklist -->
-      <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-4">
-        <div class="border-b-2 border-slate-100 pb-3 flex items-center justify-between">
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
+      <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-4">
+        <div class="border-b border-[#E8E4DC] pb-3 flex items-center justify-between">
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-[#1E3A5F] flex items-center gap-2">
             <i class="fa-solid fa-list-check text-emerald-600"></i>
             <span>行前防呆打勾檢查清單（自動儲存進度）</span>
           </h3>
@@ -3988,8 +4181,8 @@
 
       <!-- Tool 4: Emergency Contacts & Weather -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-3">
-          <h3 class="font-black text-slate-900 text-base flex items-center gap-2 border-b border-slate-100 pb-2">
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-3">
+          <h3 class="font-serif font-bold text-[#1E3A5F] text-base flex items-center gap-2 border-b border-[#E8E4DC] pb-2">
             <i class="fa-solid fa-phone text-rose-600"></i> 日本緊急聯絡與辦事處電話
           </h3>
           <div class="space-y-2 text-xs sm:text-sm text-slate-700">
@@ -4012,8 +4205,8 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-5 card-shadow border-2 border-slate-200 space-y-3">
-          <h3 class="font-black text-slate-900 text-base flex items-center gap-2 border-b border-slate-100 pb-2">
+        <div class="bg-white rounded-2xl p-5 card-shadow border border-[#E8E4DC] space-y-3">
+          <h3 class="font-serif font-bold text-[#1E3A5F] text-base flex items-center gap-2 border-b border-[#E8E4DC] pb-2">
             <i class="fa-solid fa-coins text-amber-500"></i> 4 人全家核心開銷預算表
           </h3>
           <div class="space-y-1.5 text-xs sm:text-sm text-slate-700">
